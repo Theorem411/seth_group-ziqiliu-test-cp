@@ -1,0 +1,870 @@
+clang-14: warning: -ldl: 'linker' input unused [-Wunused-command-line-argument]
+clang-14: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:54:9: warning:  OPENCILKDEFAULT_ENABLED  [-W#pragma-messages]
+#pragma message (" OPENCILKDEFAULT_ENABLED ")
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:84:9: warning:  MAXGRAINSIZE 2048 [-W#pragma-messages]
+#pragma message (" MAXGRAINSIZE " STRING(MAXGRAINSIZE))
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:101:37: warning: '__cilkrts_get_worker_number' is deprecated [-Wdeprecated-declarations]
+ inline size_t worker_id() { return __cilkrts_get_worker_number(); }
+                                    ^
+/afs/ece/project/seth_group/ziqiliu/cheetah/build/include/cilk/cilk_api.h:17:66: note: '__cilkrts_get_worker_number' has been explicitly marked deprecated here
+extern unsigned __cilkrts_get_worker_number(void) __attribute__((deprecated));
+                                                                 ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/block_allocator.h:86:39)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/block_allocator.h:86:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/block_allocator.h:86:39)>' requested here
+    parallel_for (0, list_length - 1, [&] (size_t i) {
+    ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/block_allocator.h:124:32)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/block_allocator.h:124:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/block_allocator.h:124:32)>' requested here
+    parallel_for(0, num_lists, [&] (size_t i) {
+    ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:517:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:517:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:517:28)>' requested here
+        parallel_for(0, n, [ptr](size_t i) {
+        ^
+/afs/ece/project/seth_group/ziqiliu/GCC-12.2.0/lib/gcc/x86_64-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/unique_ptr.h:669:4: note: in instantiation of member function 'parlay::internal::unique_array_deleter<parlay::internal::block_allocator>::operator()' requested here
+          get_deleter()(__ptr);
+          ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/pool_allocator.h:103:3: note: in instantiation of member function 'std::unique_ptr<parlay::internal::block_allocator[], parlay::internal::unique_array_deleter<parlay::internal::block_allocator>>::~unique_ptr' requested here
+  ~pool_allocator() {
+  ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:552:22)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:552:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:552:22)>' requested here
+  parallel_for(1, n, [&](size_t i) {
+  ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/pool_allocator.h:154:25)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/pool_allocator.h:154:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/pool_allocator.h:154:25)>' requested here
+    parallel_for(0, bc, [&] (size_t i) {
+    ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/pool_allocator.h:157:25)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/pool_allocator.h:157:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/pool_allocator.h:157:25)>' requested here
+    parallel_for(0, bc, [&] (size_t i) {
+    ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+        parallel_for(0, n, [&](size_t i) { destroy(&current_buffer[i]); });
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:202:9: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<unsigned long, parlay::allocator<unsigned long>, false>::storage_impl::destroy_all' requested here
+        destroy_all();
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:170:23: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<unsigned long, parlay::allocator<unsigned long>, false>::storage_impl::clear' requested here
+    ~storage_impl() { clear(); }
+                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:583:3: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<unsigned long, parlay::allocator<unsigned long>, false>::storage_impl::~storage_impl' requested here
+  sequence_base() : storage() {}
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:486:44: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<unsigned long, parlay::allocator<unsigned long>, false>::sequence_base' requested here
+  sequence(size_t n, _uninitialized_tag) : sequence_base_type() {
+                                           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:460:57: note: in instantiation of member function 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::sequence' requested here
+  static sequence_type uninitialized(size_t n) { return sequence_type(n, _uninitialized_tag{}); }
+                                                        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:247:28: note: in instantiation of member function 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::uninitialized' requested here
+  auto sums = sequence<T>::uninitialized(l);
+                           ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:173:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+  parallel_for(0, l, body, 1, 0 != (fl & fl_conservative));
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:248:3: note: in instantiation of function template specialization 'parlay::internal::sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:248:30)>' requested here
+  sliced_for(n, _block_size, [&](size_t i, size_t s, size_t e) {
+  ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:173:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+  parallel_for(0, l, body, 1, 0 != (fl & fl_conservative));
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:252:3: note: in instantiation of function template specialization 'parlay::internal::sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:252:30)>' requested here
+  sliced_for(n, _block_size, [&](size_t i, size_t s, size_t e) {
+  ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+        parallel_for(0, n, [&](size_t i) { destroy(&current_buffer[i]); });
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:202:9: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<char, parlay::allocator<char>, true>::storage_impl::destroy_all' requested here
+        destroy_all();
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:170:23: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<char, parlay::allocator<char>, true>::storage_impl::clear' requested here
+    ~storage_impl() { clear(); }
+                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:583:3: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<char, parlay::allocator<char>, true>::storage_impl::~storage_impl' requested here
+  sequence_base() : storage() {}
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:486:44: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<char, parlay::allocator<char>, true>::sequence_base' requested here
+  sequence(size_t n, _uninitialized_tag) : sequence_base_type() {
+                                           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:460:57: note: in instantiation of member function 'parlay::sequence<char, parlay::allocator<char>, true>::sequence' requested here
+  static sequence_type uninitialized(size_t n) { return sequence_type(n, _uninitialized_tag{}); }
+                                                        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:42:23: note: in instantiation of member function 'parlay::sequence<char, parlay::allocator<char>, true>::uninitialized' requested here
+  auto chars = chars::uninitialized(static_cast<size_t>(n) + null_terminate);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:541:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:541:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:541:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:199:68: note: in instantiation of member function 'parlay::sequence<char, parlay::allocator<char>, true>::initialize_fill' requested here
+  sequence(size_t n, const value_type& t) : sequence_base_type() { initialize_fill(n, t); }
+                                                                   ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:274:10: note: in instantiation of member function 'parlay::sequence<char, parlay::allocator<char>, true>::sequence' requested here
+  return chars(1, c);
+         ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:586:5: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::initialize_range<char *>' requested here
+    initialize_range(first, last, typename std::iterator_traits<Iterator_>::iterator_category());
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:205:5: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::initialize_dispatch<char *>' requested here
+    initialize_dispatch(i, j, std::is_integral<Iterator_>());
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:285:10: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::sequence<char *>' requested here
+  return chars(s, s + (std::min)(max_len - 1, l));
+         ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:338:41)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:338:17: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:338:41)>' requested here
+  return chars::from_function(s.size(), [&](size_t i) -> char { return s[i]; });
+                ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:343:34)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:343:17: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:343:34)>' requested here
+  return chars::from_function(l, [&](size_t i) -> char { return s[i]; });
+                ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:979:44)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:979:44)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:986:42)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:986:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:986:42)>' requested here
+    parallel_for(0, parlay::size(it[i]), [=] (size_t j) {
+    ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:983:36)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:983:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:983:36)>' requested here
+  parallel_for(0, parlay::size(r), [&, it = std::begin(r)](size_t i) {
+  ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:129:19)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:128:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:129:19)>' requested here
+        parallel_for(
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:584:55: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<char, parlay::allocator<char>, true>::storage_impl::storage_impl' requested here
+  explicit sequence_base(const storage_impl& other) : storage(other) {}
+                                                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:106:38: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<char, parlay::allocator<char>, true>::sequence_base' requested here
+  sequence(const sequence_type& s) : sequence_base_type(s.storage) {}
+                                     ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/io.h:386:10: note: in instantiation of member function 'parlay::sequence<char, parlay::allocator<char>, true>::sequence' requested here
+  return s;
+         ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:586:5: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::initialize_range<const char *>' requested here
+    initialize_range(first, last, typename std::iterator_traits<Iterator_>::iterator_category());
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:205:5: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::initialize_dispatch<const char *>' requested here
+    initialize_dispatch(i, j, std::is_integral<Iterator_>());
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:765:10: note: in instantiation of function template specialization 'parlay::sequence<char, parlay::allocator<char>, true>::sequence<const char *>' requested here
+  return {std::begin(r), std::end(r)};
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1125:41: note: in instantiation of function template specialization 'parlay::to_short_sequence<parlay::slice<const char *, const char *>>' requested here
+  auto to_token = [](auto&& x) { return to_short_sequence(std::forward<decltype(x)>(x)); };
+                                        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+        parallel_for(0, n, [&](size_t i) { destroy(&current_buffer[i]); });
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:202:9: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::storage_impl::destroy_all' requested here
+        destroy_all();
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:170:23: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::storage_impl::clear' requested here
+    ~storage_impl() { clear(); }
+                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:583:3: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::storage_impl::~storage_impl' requested here
+  sequence_base() : storage() {}
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:103:16: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::sequence_base' requested here
+  sequence() : sequence_base_type() {}
+               ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1030:17: note: in instantiation of member function 'parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::sequence' requested here
+    else return sequence<f_return_type>();
+                ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:384:31)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:384:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:384:31)>' requested here
+    parallel_for(0, n_chunks, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:451:3: note: in instantiation of function template specialization 'parlay::uninitialized_relocate_n_a<unsigned long *, unsigned long *, std::allocator<unsigned long>>' requested here
+  uninitialized_relocate_n_a(to, from, n, a);
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:87:5: note: in instantiation of function template specialization 'parlay::uninitialized_relocate_n<unsigned long *, unsigned long *>' requested here
+    uninitialized_relocate_n(res.begin(), temp.begin(), n);
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:103:10: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>' requested here
+  return block_delayed_filter_op_t<UnderlyingView, UnaryOperator>(
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+        parallel_for(0, n, [&](size_t i) { destroy(&current_buffer[i]); });
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:202:9: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>::storage_impl::destroy_all' requested here
+        destroy_all();
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:170:23: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>::storage_impl::clear' requested here
+    ~storage_impl() { clear(); }
+                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:583:3: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>::storage_impl::~storage_impl' requested here
+  sequence_base() : storage() {}
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:506:7: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>::sequence_base' requested here
+      sequence_base_type() {
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:69:54)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:69:54)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:103:10: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>' requested here
+  return block_delayed_filter_op_t<UnderlyingView, UnaryOperator>(
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:69:54)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:69:54)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:103:10: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>' requested here
+  return block_delayed_filter_op_t<UnderlyingView, UnaryOperator>(
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+        parallel_for(0, n, [&](size_t i) { destroy(&current_buffer[i]); });
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:202:9: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *>, false>::storage_impl::destroy_all' requested here
+        destroy_all();
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:170:23: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *>, false>::storage_impl::clear' requested here
+    ~storage_impl() { clear(); }
+                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:583:3: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *>, false>::storage_impl::~storage_impl' requested here
+  sequence_base() : storage() {}
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:103:16: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *>, false>::sequence_base' requested here
+  sequence() : sequence_base_type() {}
+               ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/flatten.h:49:3: note: in instantiation of member function 'parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> *>, false>::sequence' requested here
+  block_delayed_flatten_t(UV&& v, int) : base(std::forward<UV>(v), 0) {
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:49:7: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>' requested here
+      result(filter_blocks(base_view(), std::forward<UP>(p)), 0) {
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:103:10: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>' requested here
+  return block_delayed_filter_op_t<UnderlyingView, UnaryOperator>(
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+        parallel_for(0, n, [&](size_t i) { destroy(&current_buffer[i]); });
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:202:9: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<unsigned long *, parlay::allocator<unsigned long *>, false>::storage_impl::destroy_all' requested here
+        destroy_all();
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:170:23: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<unsigned long *, parlay::allocator<unsigned long *>, false>::storage_impl::clear' requested here
+    ~storage_impl() { clear(); }
+                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:583:3: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<unsigned long *, parlay::allocator<unsigned long *>, false>::storage_impl::~storage_impl' requested here
+  sequence_base() : storage() {}
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:103:16: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<unsigned long *, parlay::allocator<unsigned long *>, false>::sequence_base' requested here
+  sequence() : sequence_base_type() {}
+               ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/flatten.h:49:3: note: in instantiation of member function 'parlay::sequence<unsigned long *, parlay::allocator<unsigned long *>, false>::sequence' requested here
+  block_delayed_flatten_t(UV&& v, int) : base(std::forward<UV>(v), 0) {
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:49:7: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>' requested here
+      result(filter_blocks(base_view(), std::forward<UP>(p)), 0) {
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:103:10: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>' requested here
+  return block_delayed_filter_op_t<UnderlyingView, UnaryOperator>(
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:586:5: note: in instantiation of function template specialization 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::initialize_range<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>' requested here
+    initialize_range(first, last, typename std::iterator_traits<Iterator_>::iterator_category());
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:205:5: note: in instantiation of function template specialization 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::initialize_dispatch<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>' requested here
+    initialize_dispatch(i, j, std::is_integral<Iterator_>());
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:754:10: note: in instantiation of function template specialization 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::sequence<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>' requested here
+  return {std::begin(r), std::end(r)};
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/terminal.h:36:18: note: in instantiation of function template specialization 'parlay::to_sequence<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>>' requested here
+  return parlay::to_sequence(std::forward<Range>(v));
+                 ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/flatten.h:53:5: note: in instantiation of member function 'parlay::internal::delayed::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>::initialize_iterators' requested here
+    initialize_iterators();
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:49:7: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>' requested here
+      result(filter_blocks(base_view(), std::forward<UP>(p)), 0) {
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:103:10: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>' requested here
+  return block_delayed_filter_op_t<UnderlyingView, UnaryOperator>(
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/flatten.h:171:41)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/flatten.h:171:15: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/flatten.h:171:41)>' requested here
+      parlay::parallel_for(0, n_blocks, [&](size_t i) {
+              ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/flatten.h:53:5: note: in instantiation of member function 'parlay::internal::delayed::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>::initialize_iterators' requested here
+    initialize_iterators();
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:49:7: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>::block_delayed_flatten_t<parlay::sequence<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::allocator<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>>, false>>' requested here
+      result(filter_blocks(base_view(), std::forward<UP>(p)), 0) {
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/filter_op.h:103:10: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1037:34)>' requested here
+  return block_delayed_filter_op_t<UnderlyingView, UnaryOperator>(
+         ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/terminal.h:51:34)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/terminal.h:51:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/terminal.h:51:34)>' requested here
+  parallel_for(0, num_blocks(v), [&](size_t i) {
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1054:43)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1054:43)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+        parallel_for(0, n, [&](size_t i) { destroy(&current_buffer[i]); });
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:202:9: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::storage_impl::destroy_all' requested here
+        destroy_all();
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:170:23: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::storage_impl::clear' requested here
+    ~storage_impl() { clear(); }
+                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:583:3: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::storage_impl::~storage_impl' requested here
+  sequence_base() : storage() {}
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:103:16: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::sequence_base' requested here
+  sequence() : sequence_base_type() {}
+               ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:46:3: note: in instantiation of member function 'parlay::sequence<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::sequence' requested here
+  block_delayed_scan_t(UV&& v, BinaryOperator f, T identity)
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:154:12: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>>::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &>' requested here
+  auto s = block_delayed_scan_t<UnderlyingView, false, BinaryOperator, T>
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:52:59)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:52:59)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:154:12: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>>::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &>' requested here
+  auto s = block_delayed_scan_t<UnderlyingView, false, BinaryOperator, T>
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:173:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+  parallel_for(0, l, body, 1, 0 != (fl & fl_conservative));
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:248:3: note: in instantiation of function template specialization 'parlay::internal::sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:248:30)>' requested here
+  sliced_for(n, _block_size, [&](size_t i, size_t s, size_t e) {
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:154:12: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>>::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &>' requested here
+  auto s = block_delayed_scan_t<UnderlyingView, false, BinaryOperator, T>
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:173:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+  parallel_for(0, l, body, 1, 0 != (fl & fl_conservative));
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:252:3: note: in instantiation of function template specialization 'parlay::internal::sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:252:30)>' requested here
+  sliced_for(n, _block_size, [&](size_t i, size_t s, size_t e) {
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:154:12: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>>::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &>' requested here
+  auto s = block_delayed_scan_t<UnderlyingView, false, BinaryOperator, T>
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:541:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:541:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:541:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:199:68: note: in instantiation of member function 'parlay::sequence<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::initialize_fill' requested here
+  sequence(size_t n, const value_type& t) : sequence_base_type() { initialize_fill(n, t); }
+                                                                   ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:64:20: note: in instantiation of member function 'parlay::sequence<std::pair<long, long>, parlay::allocator<std::pair<long, long>>, false>::sequence' requested here
+      block_sums = sequence<T>(1, identity);
+                   ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/scan.h:154:12: note: in instantiation of function template specialization 'parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>>::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &>' requested here
+  auto s = block_delayed_scan_t<UnderlyingView, false, BinaryOperator, T>
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/terminal.h:147:34)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/terminal.h:147:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/terminal.h:147:34)>' requested here
+  parallel_for(0, num_blocks(v), [&](size_t i) {
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/terminal.h:159:30: note: in instantiation of function template specialization 'parlay::internal::delayed::for_each<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>> &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1107:33), 0>' requested here
+  parlay::internal::delayed::for_each(std::forward<Range>(v), std::forward<UnaryFunction>(f));
+                             ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1107:24: note: in instantiation of function template specialization 'parlay::internal::delayed::apply<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>> &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:966:44)>> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1107:33)>' requested here
+    internal::delayed::apply(z, [&](auto&& x) {
+                       ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:212:23: note: in instantiation of function template specialization 'parlay::tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>' requested here
+    auto r =  parlay::tokens(S, benchIO::is_space);
+                      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:570:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:214:5: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::initialize_range<const parlay::sequence<char, parlay::allocator<char>, true> *>' requested here
+    initialize_range(std::begin(l), std::end(l),
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:43:31: note: in instantiation of member function 'parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::sequence' requested here
+        sequence<sequence<char>> s = {
+                                     ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:998:5)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:998:5)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:384:31)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:384:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:384:31)>' requested here
+    parallel_for(0, n_chunks, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/delayed/../../utilities.h:451:3: note: in instantiation of function template specialization 'parlay::uninitialized_relocate_n_a<char *, char *, std::allocator<char>>' requested here
+  uninitialized_relocate_n_a(to, from, n, a);
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1002:5: note: in instantiation of function template specialization 'parlay::uninitialized_relocate_n<char *, char *>' requested here
+    uninitialized_relocate_n(std::begin(res)+offsets[i], std::begin(it[i]), it[i].size());
+    ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1001:36)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1001:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1001:36)>' requested here
+  parallel_for(0, parlay::size(r), [&, it = std::begin(r)](size_t i) {
+  ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:192:28)>' requested here
+        parallel_for(0, n, [&](size_t i) { destroy(&current_buffer[i]); });
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:202:9: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>, parlay::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>>, false>::storage_impl::destroy_all' requested here
+        destroy_all();
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:170:23: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>, parlay::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>>, false>::storage_impl::clear' requested here
+    ~storage_impl() { clear(); }
+                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:583:3: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>, parlay::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>>, false>::storage_impl::~storage_impl' requested here
+  sequence_base() : storage() {}
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:103:16: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>, parlay::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>>, false>::sequence_base' requested here
+  sequence() : sequence_base_type() {}
+               ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:51:33: note: in instantiation of member function 'parlay::sequence<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>, parlay::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>>, false>::sequence' requested here
+  parlay::sequence<result_type> R;
+                                ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:129:19)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:128:9: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:129:19)>' requested here
+        parallel_for(
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/sequence_base.h:584:55: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>, parlay::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>>, false>::storage_impl::storage_impl' requested here
+  explicit sequence_base(const storage_impl& other) : storage(other) {}
+                                                      ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/sequence.h:106:38: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>, parlay::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>>, false>::sequence_base' requested here
+  sequence(const sequence_type& s) : sequence_base_type(s.storage) {}
+                                     ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:64:46: note: in instantiation of member function 'parlay::sequence<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>, parlay::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long>>, false>::sequence' requested here
+  if (outFile != NULL) writeHistogramsToFile(R, outFile);
+                                             ^
+46 warnings generated.
+Source filename: /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C

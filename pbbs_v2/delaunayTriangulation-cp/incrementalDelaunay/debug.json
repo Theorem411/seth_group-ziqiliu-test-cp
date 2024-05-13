@@ -1,0 +1,240 @@
+{
+    "loc": {
+        "tokLen": 19, 
+        "line": 337, 
+        "includedFrom": {
+            "file": "./delaunayTriangulation/incrementalDelaunay/parlay/internal/delayed/../../parallel.h"
+        }, 
+        "col": 6, 
+        "offset": 9926
+    }, 
+    "kind": "FunctionTemplateDecl", 
+    "name": "parallel_for_static", 
+    "orig_file": "null", 
+    "range": {
+        "begin": {
+            "tokLen": 8, 
+            "line": 334, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/incrementalDelaunay/parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 1, 
+            "offset": 9841
+        }, 
+        "end": {
+            "tokLen": 1, 
+            "line": 436, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/incrementalDelaunay/parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 2, 
+            "offset": 13855
+        }
+    }, 
+    "id": "0x3c93b10"
+}
+{
+    "lookups": [
+        {
+            "kind": "FunctionTemplateDecl", 
+            "id": "0x3c93b10", 
+            "name": "parallel_for_static"
+        }
+    ], 
+    "kind": "UnresolvedLookupExpr", 
+    "name": "parallel_for_static", 
+    "valueCategory": "lvalue", 
+    "usesADL": true, 
+    "orig_file": "null", 
+    "range": {
+        "begin": {
+            "tokLen": 19, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/incrementalDelaunay/parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 5, 
+            "offset": 14215
+        }, 
+        "end": {
+            "tokLen": 19, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/incrementalDelaunay/parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 5, 
+            "offset": 14215
+        }
+    }, 
+    "type": {
+        "qualType": "<overloaded function type>"
+    }, 
+    "id": "0x3c96f98"
+}
+{
+    "kind": "FunctionTemplateDecl", 
+    "orig_file": "null", 
+    "id": "0x3c93b10", 
+    "name": "parallel_for_static"
+}
+{
+    "lookups": [
+        {
+            "kind": "FunctionTemplateDecl", 
+            "id": "0x3c93b10", 
+            "name": "parallel_for_static"
+        }
+    ], 
+    "kind": "UnresolvedLookupExpr", 
+    "name": "parallel_for_static", 
+    "valueCategory": "lvalue", 
+    "usesADL": true, 
+    "orig_file": "null", 
+    "range": {
+        "begin": {
+            "tokLen": 19, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/incrementalDelaunay/parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 9, 
+            "offset": 15068
+        }, 
+        "end": {
+            "tokLen": 19, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/incrementalDelaunay/parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 9, 
+            "offset": 15068
+        }
+    }, 
+    "type": {
+        "qualType": "<overloaded function type>"
+    }, 
+    "id": "0x3c988b8"
+}
+{
+    "kind": "FunctionTemplateDecl", 
+    "orig_file": "null", 
+    "id": "0x3c93b10", 
+    "name": "parallel_for_static"
+}
+./delaunay.ast.json done
+{
+    "loc": {
+        "tokLen": 19, 
+        "line": 337, 
+        "includedFrom": {
+            "file": "./delaunayTriangulation/bench/common/../parlay/internal/delayed/../../parallel.h"
+        }, 
+        "col": 6, 
+        "offset": 9926
+    }, 
+    "kind": "FunctionTemplateDecl", 
+    "name": "parallel_for_static", 
+    "orig_file": "null", 
+    "range": {
+        "begin": {
+            "tokLen": 8, 
+            "line": 334, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/bench/common/../parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 1, 
+            "offset": 9841
+        }, 
+        "end": {
+            "tokLen": 1, 
+            "line": 436, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/bench/common/../parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 2, 
+            "offset": 13855
+        }
+    }, 
+    "id": "0x31744b0"
+}
+{
+    "lookups": [
+        {
+            "kind": "FunctionTemplateDecl", 
+            "id": "0x31744b0", 
+            "name": "parallel_for_static"
+        }
+    ], 
+    "kind": "UnresolvedLookupExpr", 
+    "name": "parallel_for_static", 
+    "valueCategory": "lvalue", 
+    "usesADL": true, 
+    "orig_file": "null", 
+    "range": {
+        "begin": {
+            "tokLen": 19, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/bench/common/../parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 5, 
+            "offset": 14215
+        }, 
+        "end": {
+            "tokLen": 19, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/bench/common/../parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 5, 
+            "offset": 14215
+        }
+    }, 
+    "type": {
+        "qualType": "<overloaded function type>"
+    }, 
+    "id": "0x3179968"
+}
+{
+    "kind": "FunctionTemplateDecl", 
+    "orig_file": "null", 
+    "id": "0x31744b0", 
+    "name": "parallel_for_static"
+}
+{
+    "lookups": [
+        {
+            "kind": "FunctionTemplateDecl", 
+            "id": "0x31744b0", 
+            "name": "parallel_for_static"
+        }
+    ], 
+    "kind": "UnresolvedLookupExpr", 
+    "name": "parallel_for_static", 
+    "valueCategory": "lvalue", 
+    "usesADL": true, 
+    "orig_file": "null", 
+    "range": {
+        "begin": {
+            "tokLen": 19, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/bench/common/../parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 9, 
+            "offset": 15068
+        }, 
+        "end": {
+            "tokLen": 19, 
+            "includedFrom": {
+                "file": "./delaunayTriangulation/bench/common/../parlay/internal/delayed/../../parallel.h"
+            }, 
+            "col": 9, 
+            "offset": 15068
+        }
+    }, 
+    "type": {
+        "qualType": "<overloaded function type>"
+    }, 
+    "id": "0x317b288"
+}
+{
+    "kind": "FunctionTemplateDecl", 
+    "orig_file": "null", 
+    "id": "0x31744b0", 
+    "name": "parallel_for_static"
+}
+./delaunayTime.ast.json done

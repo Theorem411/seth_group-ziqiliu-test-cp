@@ -1,0 +1,6 @@
+dac_count,sp_name,pfor_name
+1479108,parallel_for<(lambda at ./bench/parlay/sequence.h:570:24)>,_ZN6parlay12parallel_forIZNS_8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPcEEvT_S7_St26random_access_iterator_tagEUlmE_EEvmmS7_lb
+3072,parallel_for<(lambda at ./parlay/internal/delayed/../../utilities.h:384:31)>,_ZN6parlay12parallel_forIZNS_26uninitialized_relocate_n_aIPSt4pairIPcmES5_SaIS4_EEEvT_T0_mRT1_EUlmE_EEvmmS7_lb
+34,parallel_for<(lambda at ./bench/parlay/internal/block_allocator.h:86:39)>,_ZN6parlay12parallel_forIZNKS_8internal15block_allocator15initialize_listEPSt4byteEUlmE_EEvmmT_lb
+2991,parallel_for<(lambda at ./parlay/sequence.h:541:24)>,_ZN6parlay12parallel_forIZNS_8sequenceIbNS_9allocatorIbEELb0EE15initialize_fillEmRKbEUlmE_EEvmmT_lb
+81,parallel_for<(lambda at ./parlay/sequence.h:541:24)>,_ZN6parlay12parallel_forIZNS_8sequenceISt4pairIPcmENS_9allocatorIS4_EELb0EE15initialize_fillEmRKS4_EUlmE_EEvmmT_lb

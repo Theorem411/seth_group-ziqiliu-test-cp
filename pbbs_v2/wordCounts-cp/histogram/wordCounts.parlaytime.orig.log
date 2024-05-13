@@ -1,0 +1,142 @@
+== CILK_WORKERS = 1 ===================================
+0
+0
+Parlay time: 6.7871
+0
+Parlay time: 6.8531
+0
+Parlay time: 6.6765
+0
+Parlay time: 6.8109
+0
+Parlay time: 6.7066
+0
+Parlay time: 6.6725
+0
+Parlay time: 6.6975
+0
+Parlay time: 6.6845
+0
+Parlay time: 6.7127
+0
+Parlay time: 6.6401
+
+== CILK_WORKERS = 2 ===================================
+0
+0
+Parlay time: 3.2457
+0
+Parlay time: 3.3195
+0
+Parlay time: 3.0844
+0
+Parlay time: 3.1430
+0
+Parlay time: 3.0919
+0
+Parlay time: 3.1200
+0
+Parlay time: 3.0431
+0
+Parlay time: 3.1573
+0
+Parlay time: 3.1073
+0
+Parlay time: 3.0897
+
+== CILK_WORKERS = 4 ===================================
+0
+0
+Parlay time: 1.7099
+0
+Parlay time: 1.6781
+0
+Parlay time: 1.6564
+0
+Parlay time: 1.6651
+0
+Parlay time: 1.6509
+0
+Parlay time: 1.6267
+0
+Parlay time: 1.6449
+0
+Parlay time: 1.6416
+0
+Parlay time: 1.6093
+0
+Parlay time: 1.6476
+
+== CILK_WORKERS = 8 ===================================
+0
+0
+Parlay time: 0.9307
+0
+Parlay time: 0.9196
+0
+Parlay time: 0.9154
+0
+Parlay time: 0.9086
+0
+Parlay time: 0.9145
+0
+Parlay time: 0.8991
+0
+Parlay time: 0.8945
+0
+Parlay time: 0.9199
+0
+Parlay time: 0.9268
+0
+Parlay time: 0.9177
+
+== CILK_WORKERS = 16 ===================================
+0
+0
+0
+Parlay time: 0.5096
+0
+Parlay time: 0.4847
+0
+Parlay time: 0.4927
+0
+Parlay time: 0.4555
+0
+Parlay time: 0.4576
+0
+Parlay time: 0.4553
+0
+Parlay time: 0.4604
+0
+Parlay time: 0.4567
+0
+Parlay time: 0.4544
+0
+Parlay time: 0.4568
+
+== CILK_WORKERS = 32 ===================================
+0
+0
+0
+0
+0
+Parlay time: 0.2718
+0
+Parlay time: 0.3359
+0
+Parlay time: 0.2679
+0
+Parlay time: 0.2912
+0
+Parlay time: 0.2699
+0
+Parlay time: 0.2702
+0
+Parlay time: 0.2968
+0
+Parlay time: 0.2682
+0
+Parlay time: 0.2701
+0
+Parlay time: 0.2673
+

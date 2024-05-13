@@ -1,0 +1,23 @@
+clang-14: warning: -ldl: 'linker' input unused [-Wunused-command-line-argument]
+clang-14: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:54:9: warning:  OPENCILKDEFAULT_ENABLED  [-W#pragma-messages]
+#pragma message (" OPENCILKDEFAULT_ENABLED ")
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:84:9: warning:  MAXGRAINSIZE 2048 [-W#pragma-messages]
+#pragma message (" MAXGRAINSIZE " STRING(MAXGRAINSIZE))
+        ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:101:37: warning: '__cilkrts_get_worker_number' is deprecated [-Wdeprecated-declarations]
+ inline size_t worker_id() { return __cilkrts_get_worker_number(); }
+                                    ^
+/afs/ece/project/seth_group/ziqiliu/cheetah/build/include/cilk/cilk_api.h:17:66: note: '__cilkrts_get_worker_number' has been explicitly marked deprecated here
+extern unsigned __cilkrts_get_worker_number(void) __attribute__((deprecated));
+                                                                 ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:25:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+4 warnings generated.
+Source filename: /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C

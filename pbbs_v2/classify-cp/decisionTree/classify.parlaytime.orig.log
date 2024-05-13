@@ -1,0 +1,138 @@
+== CILK_WORKERS = 1 ===================================
+Tree size = 12175
+Parlay time: 9.1426
+Tree size = 12175
+Parlay time: 8.6061
+Tree size = 12175
+Parlay time: 8.7144
+Tree size = 12175
+Parlay time: 8.9044
+Tree size = 12175
+Parlay time: 9.2237
+Tree size = 12175
+Parlay time: 8.7127
+Tree size = 12175
+Parlay time: 9.0682
+Tree size = 12175
+Parlay time: 9.0343
+Tree size = 12175
+Parlay time: 8.9664
+Tree size = 12175
+Parlay time: 12.2322
+
+108167 correct out of 116202, 93.09 percent
+== CILK_WORKERS = 2 ===================================
+Tree size = 12175
+Parlay time: 8.0033
+Tree size = 12175
+Parlay time: 7.4507
+Tree size = 12175
+Parlay time: 8.1535
+Tree size = 12175
+Parlay time: 6.6542
+Tree size = 12175
+Parlay time: 5.2520
+Tree size = 12175
+Parlay time: 4.7577
+Tree size = 12175
+Parlay time: 4.8926
+Tree size = 12175
+Parlay time: 4.7520
+Tree size = 12175
+Parlay time: 4.8136
+Tree size = 12175
+Parlay time: 4.7512
+
+108167 correct out of 116202, 93.09 percent
+== CILK_WORKERS = 4 ===================================
+Tree size = 12175
+Parlay time: 2.4780
+Tree size = 12175
+Parlay time: 2.5468
+Tree size = 12175
+Parlay time: 2.5756
+Tree size = 12175
+Parlay time: 2.4941
+Tree size = 12175
+Parlay time: 2.4207
+Tree size = 12175
+Parlay time: 2.4423
+Tree size = 12175
+Parlay time: 2.5346
+Tree size = 12175
+Parlay time: 2.5514
+Tree size = 12175
+Parlay time: 2.4716
+Tree size = 12175
+Parlay time: 2.4645
+
+108167 correct out of 116202, 93.09 percent
+== CILK_WORKERS = 8 ===================================
+Tree size = 12175
+Parlay time: 1.4152
+Tree size = 12175
+Parlay time: 1.4079
+Tree size = 12175
+Parlay time: 1.3468
+Tree size = 12175
+Parlay time: 1.3896
+Tree size = 12175
+Parlay time: 1.3838
+Tree size = 12175
+Parlay time: 1.3666
+Tree size = 12175
+Parlay time: 1.3615
+Tree size = 12175
+Parlay time: 1.3654
+Tree size = 12175
+Parlay time: 1.3412
+Tree size = 12175
+Parlay time: 1.3510
+
+108167 correct out of 116202, 93.09 percent
+== CILK_WORKERS = 16 ===================================
+Tree size = 12175
+Parlay time: 0.8202
+Tree size = 12175
+Parlay time: 0.8073
+Tree size = 12175
+Parlay time: 0.7919
+Tree size = 12175
+Parlay time: 0.7809
+Tree size = 12175
+Parlay time: 0.7518
+Tree size = 12175
+Parlay time: 0.7534
+Tree size = 12175
+Parlay time: 0.7342
+Tree size = 12175
+Parlay time: 0.7511
+Tree size = 12175
+Parlay time: 0.7451
+Tree size = 12175
+Parlay time: 0.7265
+
+108167 correct out of 116202, 93.09 percent
+== CILK_WORKERS = 32 ===================================
+Tree size = 12175
+Parlay time: 2.4014
+Tree size = 12175
+Parlay time: 0.4890
+Tree size = 12175
+Parlay time: 0.4840
+Tree size = 12175
+Parlay time: 0.4769
+Tree size = 12175
+Parlay time: 0.4678
+Tree size = 12175
+Parlay time: 0.5007
+Tree size = 12175
+Parlay time: 0.4716
+Tree size = 12175
+Parlay time: 0.5011
+Tree size = 12175
+Parlay time: 0.4656
+Tree size = 12175
+Parlay time: 0.4592
+
+108167 correct out of 116202, 93.09 percent

@@ -1,0 +1,450 @@
+
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !25980
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:541:5	subprogram: initialize_fill
+			inlined at: !DILocation: ./parlay/sequence.h:199:68
+			inlined at: !DILocation: delaunay.C:157:20	subprogram: check_delaunay
+cilk_for first instr:untouched
+  detach within %syncreg, label %pfor.body.entry, label %pfor.inc, !dbg !25793
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i.i, label %pfor.body.entry.i.i.i.i197, label %pfor.inc.i.i.i.i229, !dbg !26678
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:202:29)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:202:3	subprogram: reduce<parlay::slice<const point2d<double> *, const point2d<double> *>, parlay::monoid<(lambda at delaunay.C:194:14), point2d<double>, void> >
+			inlined at: !DILocation: ./parlay/primitives.h:95:10	subprogram: reduce<const parlay::sequence<point2d<double>, parlay::allocator<point2d<double> >, false> &, parlay::monoid<(lambda at delaunay.C:194:14), point2d<double>, void>, 0>
+			inlined at: !DILocation: delaunay.C:197:22	subprogram: generate_boundary
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i.i, label %pfor.body.entry.i.i.i.i, label %pfor.inc.i.i.i.i, !dbg !26240
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:202:29)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:202:3	subprogram: reduce<parlay::slice<const point2d<double> *, const point2d<double> *>, parlay::monoid<(lambda at delaunay.C:193:14), point2d<double>, void> >
+			inlined at: !DILocation: ./parlay/primitives.h:95:10	subprogram: reduce<const parlay::sequence<point2d<double>, parlay::allocator<point2d<double> >, false> &, parlay::monoid<(lambda at delaunay.C:193:14), point2d<double>, void>, 0>
+			inlined at: !DILocation: delaunay.C:196:22	subprogram: generate_boundary
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.i.i257.strpm.outer, label %pfor.inc.i.i.i.i.i260.strpm.outer, !dbg !29320
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:192:9
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:202:9
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:170:23
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:586:21
+			inlined at: !DILocation: delaunay.C:297:1	subprogram: incrementally_add_points
+cilk_for first instr:untouched
+  %459 = shl i64 %niter406, 11, !dbg !27490
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:570:5	subprogram: initialize_range<vertex<point2d<double> > **>
+			inlined at: !DILocation: ./parlay/sequence.h:586:5	subprogram: initialize_dispatch<vertex<point2d<double> > **>
+			inlined at: !DILocation: ./parlay/sequence.h:205:5
+			inlined at: !DILocation: ./parlay/sequence.h:754:10	subprogram: to_sequence<parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **> >
+			inlined at: !DILocation: delaunay.C:256:19
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !27821
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: delaunay.C:276:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.i211.strpm.outer, label %pfor.inc.i.i.i.i214.strpm.outer, !dbg !28643
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:343:20	subprogram: pack_out<parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **>, parlay::delayed_sequence<bool, bool, (lambda at delaunay.C:286:51)>, parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **> >
+			inlined at: !DILocation: delaunay.C:288:5
+cilk_for first instr:untouched
+  %636 = shl i64 %__begin.0.i.i.i218, 10, !dbg !28758
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:344:30)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:344:3	subprogram: pack_out<parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **>, parlay::delayed_sequence<bool, bool, (lambda at delaunay.C:286:51)>, parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **> >
+			inlined at: !DILocation: delaunay.C:288:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i31.i, label %pfor.inc.i.i44.i, !dbg !29005
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:348:30)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:348:3	subprogram: pack_out<parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **>, parlay::delayed_sequence<bool, bool, (lambda at delaunay.C:286:51)>, parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **> >
+			inlined at: !DILocation: delaunay.C:288:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.i.strpm.outer, label %pfor.inc.i.i.i.i.strpm.outer, !dbg !26729
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at delaunay.C:235:38)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:30:10	subprogram: tabulate<(lambda at delaunay.C:235:38)>
+			inlined at: !DILocation: delaunay.C:235:13	subprogram: incrementally_add_points
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %iter.check, label %pfor.inc.i.i.i106.strpm.outer, !dbg !26473
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: delaunay.C:234:18	subprogram: incrementally_add_points
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i85.strpm.outer, label %pfor.inc.i.i.i88.strpm.outer, !dbg !26269
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: delaunay.C:233:23	subprogram: incrementally_add_points
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i65.strpm.outer, label %pfor.inc.i.i.i68.strpm.outer, !dbg !26095
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: delaunay.C:231:23	subprogram: incrementally_add_points
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !25972
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: delaunay.C:230:23	subprogram: incrementally_add_points
+cilk_for first instr:untouched
+  detach within %syncreg, label %pfor.body.entry, label %pfor.inc, !dbg !25799
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i.i260.strpm.outer, label %pfor.inc.i.i.i.i263.strpm.outer, !dbg !28318
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:128:9
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:584:55	subprogram: sequence_base
+			inlined at: !DILocation: ./parlay/sequence.h:106:38	subprogram: sequence
+			inlined at: !DILocation: delaunay.C:360:42	subprogram: delaunay
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i.i231.strpm.outer, label %pfor.inc.i.i.i.i234.strpm.outer, !dbg !28136
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:128:9
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:584:55	subprogram: sequence_base
+			inlined at: !DILocation: ./parlay/sequence.h:106:38	subprogram: sequence
+			inlined at: !DILocation: delaunay.C:360:27	subprogram: delaunay
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i.i179.strpm.outer, label %pfor.inc.i.i.i.i186.strpm.outer, !dbg !27857
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at delaunay.C:353:47)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:30:10	subprogram: tabulate<(lambda at delaunay.C:353:47)>
+			inlined at: !DILocation: delaunay.C:353:24	subprogram: delaunay
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i.i158.strpm.outer, label %pfor.inc.i.i.i.i161.strpm.outer, !dbg !27590
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at delaunay.C:347:51)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:30:10	subprogram: tabulate<(lambda at delaunay.C:347:51)>
+			inlined at: !DILocation: delaunay.C:347:27	subprogram: delaunay
+cilk_for first instr:untouched
+  %132 = shl i64 %niter387, 11, !dbg !27210
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:128:9
+			inlined at: !DILocation: ./parlay/internal/sequence_base.h:584:55	subprogram: sequence_base
+			inlined at: !DILocation: ./parlay/sequence.h:106:38	subprogram: sequence
+			inlined at: !DILocation: delaunay.C:341:28	subprogram: delaunay
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i.i.strpm.outer, label %pfor.inc.i.i.i.i.strpm.outer, !dbg !26922
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at delaunay.C:334:24)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:30:10	subprogram: tabulate<(lambda at delaunay.C:334:24)>
+			inlined at: !DILocation: delaunay.C:334:12	subprogram: delaunay
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i67.strpm.outer, label %pfor.inc.i70.strpm.outer, !dbg !26692
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: delaunay.C:325:3	subprogram: delaunay
+cilk_for first instr:defdac
+  detach within %syncreg.i.strpm.detachloop, label %pfor.body.entry.i.strpm.outer, label %pfor.inc.i.strpm.outer, !dbg !26527
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: delaunay.C:321:3	subprogram: delaunay
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i48.strpm.outer, label %pfor.inc.i.i.i51.strpm.outer, !dbg !26452
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: delaunay.C:317:20	subprogram: delaunay
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !26230
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: delaunay.C:312:19	subprogram: delaunay
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !26001
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/random.h:157:5)>
+			inlined at: !DILocation: ./parlay/random.h:156:13	subprogram: random_permutation<unsigned long>
+cilk_for first instr:untouched
+  detach within %syncreg.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26122
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:202:29)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:202:3	subprogram: reduce<parlay::slice<unsigned long *, unsigned long *>, parlay::plus<unsigned long> >
+cilk_for first instr:untouched
+  detach within %syncreg.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26172
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:202:29)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:202:3	subprogram: reduce<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false>, parlay::plus<unsigned long> &>
+cilk_for first instr:defdac
+  detach within %syncreg.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26363
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../../utilities.h:552:3	subprogram: make_unique_array<parlay::internal::block_allocator, (lambda at ./parlay/internal/pool_allocator.h:119:80)>
+			inlined at: !DILocation: ./parlay/internal/pool_allocator.h:119:24
+cilk_for first instr:defdac
+  detach within %syncreg.i.i.i.i, label %pfor.body.entry.i.i.i.i.strpm.outer, label %pfor.inc.i.i.i.i.strpm.outer, !dbg !25898
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/block_allocator.h:86:5	subprogram: initialize_list
+			inlined at: !DILocation: ./parlay/internal/block_allocator.h:126:25	subprogram: operator()
+			inlined at: !DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:46
+			inlined at: !DILocation: ./parlay/internal/block_allocator.h:124:5	subprogram: reserve
+cilk_for first instr:defdac
+  detach within %syncreg.i, label %pfor.body.entry.tf.i, label %pfor.inc.i, !dbg !25840
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/block_allocator.h:124:5	subprogram: reserve
+cilk_for first instr:both
+  detach within %syncreg.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !25801
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../../utilities.h:517:9
+cilk_for first instr:defdac
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !25933
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/block_allocator.h:86:5	subprogram: initialize_list
+			inlined at: !DILocation: ./parlay/internal/block_allocator.h:117:12	subprogram: get_list
+			inlined at: !DILocation: ./parlay/internal/block_allocator.h:206:23
+cilk_for first instr:untouched
+  detach within %syncreg.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26187
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:202:29)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:202:3	subprogram: reduce<parlay::sequence<point2d<double>, parlay::allocator<point2d<double> >, false>, parlay::monoid<(lambda at delaunay.C:193:14), point2d<double>, void> &>
+cilk_for first instr:untouched
+  detach within %syncreg.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26187
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:202:29)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:202:3	subprogram: reduce<parlay::sequence<point2d<double>, parlay::allocator<point2d<double> >, false>, parlay::monoid<(lambda at delaunay.C:194:14), point2d<double>, void> &>
+cilk_for first instr:untouched
+  detach within %syncreg.i.i27, label %pfor.body.entry.i.i48, label %pfor.inc.i.i54, !dbg !26551
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:328:30)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:328:3	subprogram: pack<parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **>, parlay::slice<bool *, bool *> >
+cilk_for first instr:untouched
+  %43 = shl i64 %__begin.0.i.i, 10, !dbg !26292
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:323:30)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:323:3	subprogram: pack<parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **>, parlay::slice<bool *, bool *> >
+cilk_for first instr:untouched
+  detach within %syncreg.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26146
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:248:30)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:248:3	subprogram: scan_<parlay::slice<unsigned long *, unsigned long *>, parlay::slice<unsigned long *, unsigned long *>, parlay::plus<unsigned long> >
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %for.cond13.preheader.i.i.i.us.i.us, label %pfor.inc.us.i.us, !dbg !25925
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %for.cond13.preheader.i.i.i.us.i, label %pfor.inc.us.i, !dbg !25925
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %for.cond.preheader.i.i.i.i.us, label %pfor.inc.i.us, !dbg !25925
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %for.cond.preheader.i.i.i.i, label %pfor.inc.i, !dbg !25925
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:defdac
+  detach within %syncreg.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !25842
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:202:29)>
+cilk_for first instr:defdac
+  detach within %syncreg.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !25842
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:202:29)>
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !26571
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/sample_sort.h:255:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26474
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/sample_sort.h:243:31)>
+			inlined at: !DILocation: ./parlay/internal/sample_sort.h:243:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !26130
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/internal/sample_sort.h:236:55)>
+			inlined at: !DILocation: ./parlay/internal/sample_sort.h:235:19
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !26571
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/sample_sort.h:255:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26474
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/sample_sort.h:243:31)>
+			inlined at: !DILocation: ./parlay/internal/sample_sort.h:243:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !26130
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/internal/sample_sort.h:236:55)>
+			inlined at: !DILocation: ./parlay/internal/sample_sort.h:235:19
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i118, label %pfor.body.entry.i.i.i133.strpm.outer, label %pfor.inc.i.i.i142.strpm.outer, !dbg !26925
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/internal/transpose.h:242:59)>
+			inlined at: !DILocation: ./parlay/internal/transpose.h:242:10	subprogram: transpose_buckets<parlay::uninitialized_relocate_tag, std::pair<unsigned long, vertex<point2d<double> > *> *, std::pair<unsigned long, vertex<point2d<double> > *> *, unsigned int>
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i118, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !26441
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/transpose.h:221:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i118, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !26146
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/internal/transpose.h:202:16) &>
+			inlined at: !DILocation: ./parlay/internal/transpose.h:207:20
+cilk_for first instr:defdac
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i.i.strpm.outer, label %pfor.inc.i.i.i.i.strpm.outer, !dbg !25918
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../../utilities.h:384:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../../utilities.h:451:3	subprogram: uninitialized_relocate_n<std::pair<unsigned long, vertex<point2d<double> > *> *, std::pair<unsigned long, vertex<point2d<double> > *> *>
+			inlined at: !DILocation: ./parlay/internal/bucket_sort.h:121:7
+			inlined at: !DILocation: ./parlay/internal/bucket_sort.h:136:5
+cilk_for first instr:defdac
+  detach within %syncreg.i, label %pfor.body.entry.i.i.i.i76.strpm.outer, label %pfor.inc.i.i.i.i79.strpm.outer, !dbg !26287
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../../utilities.h:384:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../../utilities.h:451:3	subprogram: uninitialized_relocate_n<std::pair<unsigned long, vertex<point2d<double> > *> *, std::pair<unsigned long, vertex<point2d<double> > *> *>
+			inlined at: !DILocation: ./parlay/internal/bucket_sort.h:121:7
+			inlined at: !DILocation: ./parlay/internal/bucket_sort.h:142:7
+cilk_for first instr:defdac
+  detach within %syncreg.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !26431
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/bucket_sort.h:150:7
+cilk_for first instr:defdac
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i81.strpm.outer, label %pfor.inc.i.i.i84.strpm.outer, !dbg !26258
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/internal/bucket_sort.h:93:19)>
+			inlined at: !DILocation: ./parlay/internal/bucket_sort.h:92:17	subprogram: get_buckets<std::pair<unsigned long, vertex<point2d<double> > *> *, (lambda at ./oct_tree.h:252:17)>
+cilk_for first instr:defdac
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !26029
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/internal/bucket_sort.h:86:5)>
+			inlined at: !DILocation: ./parlay/internal/bucket_sort.h:85:21	subprogram: get_buckets<std::pair<unsigned long, vertex<point2d<double> > *> *, (lambda at ./oct_tree.h:252:17)>
+cilk_for first instr:defdac
+  detach within %syncreg.i99, label %pfor.body.entry.i.strpm.outer, label %pfor.inc.i.strpm.outer, !dbg !26012
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/merge.h:68:5
+cilk_for first instr:defdac
+  detach within %syncreg.i99, label %pfor.body.entry.i83.strpm.outer, label %pfor.inc.i86.strpm.outer, !dbg !26080
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/merge.h:73:5
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !26003
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26146
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:248:30)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:248:3	subprogram: scan_<parlay::slice<unsigned int *, unsigned int *>, parlay::slice<unsigned int *, unsigned int *>, parlay::plus<unsigned int> &>
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !25862
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:defdac
+  detach within %syncreg.i79, label %for.body.i.i.preheader.us, label %pfor.inc.i.us, !dbg !25891
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/transpose.h:138:7
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i116, label %pfor.body.entry.i.i.i130.strpm.outer, label %pfor.inc.i.i.i139.strpm.outer, !dbg !26854
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/internal/transpose.h:242:59)>
+			inlined at: !DILocation: ./parlay/internal/transpose.h:242:10	subprogram: transpose_buckets<parlay::uninitialized_relocate_tag, std::pair<unsigned long, vertex<point2d<double> > *> *, std::pair<unsigned long, vertex<point2d<double> > *> *, unsigned long>
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i116, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !26432
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/transpose.h:221:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i.i116, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !26139
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+			inlined at: !DILocation: ./parlay/sequence.h:471:12	subprogram: from_function<(lambda at ./parlay/internal/transpose.h:202:16) &>
+			inlined at: !DILocation: ./parlay/internal/transpose.h:207:20
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %pfor.body.entry.i, label %pfor.inc.i, !dbg !26003
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:515:5
+cilk_for first instr:untouched
+  detach within %syncreg.i.i, label %pfor.body.entry.i.i, label %pfor.inc.i.i, !dbg !26143
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:248:30)>
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:248:3	subprogram: scan_<parlay::slice<unsigned long *, unsigned long *>, parlay::slice<unsigned long *, unsigned long *>, parlay::plus<unsigned long> &>
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %for.cond13.preheader.i.i.i.us.i.us, label %pfor.inc.us.i.us, !dbg !25922
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %for.cond13.preheader.i.i.i.us.i, label %pfor.inc.us.i, !dbg !25922
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %for.cond.preheader.i.i.i.i.us, label %pfor.inc.i.us, !dbg !25922
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:untouched
+  detach within %syncreg.i, label %for.cond.preheader.i.i.i.i, label %pfor.inc.i, !dbg !25922
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/delayed/../sequence_ops.h:173:3	subprogram: sliced_for<(lambda at ./parlay/internal/delayed/../sequence_ops.h:252:30)>
+cilk_for first instr:defdac
+  detach within %syncreg.i79, label %for.body.i.i.preheader.us, label %pfor.inc.i.us, !dbg !25891
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/transpose.h:138:7
+cilk_for first instr:defdac
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !26005
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: ./oct_tree.h:62:11
+cilk_for first instr:untouched
+  %2 = shl i64 %niter, 11, !dbg !25814
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/random.h:98:5
+cilk_for first instr:untouched
+  detach within %syncreg.i69, label %pfor.body.entry.i74, label %pfor.inc.i77, !dbg !26341
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/random.h:133:3	subprogram: random_shuffle_<const unsigned long *, unsigned long *>
+cilk_for first instr:untouched
+  detach within %syncreg.i96, label %for.body.lr.ph.i.i106, label %pfor.inc.i113, !dbg !26607
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/counting_sort.h:181:3	subprogram: count_sort_<parlay::uninitialized_copy_tag, unsigned int, const unsigned long *, unsigned long *, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at ./parlay/random.h:115:19)>::iterator>
+cilk_for first instr:untouched
+  detach within %syncreg.i96, label %for.body.lr.ph.i.i, label %pfor.inc.i, !dbg !26250
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/counting_sort.h:159:3	subprogram: count_sort_<parlay::uninitialized_copy_tag, unsigned int, const unsigned long *, unsigned long *, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at ./parlay/random.h:115:19)>::iterator>
+cilk_for first instr:untouched
+  detach within %syncreg.i96, label %for.body.lr.ph.i.i105, label %pfor.inc.i112, !dbg !26536
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/counting_sort.h:181:3	subprogram: count_sort_<parlay::uninitialized_copy_tag, unsigned long, const unsigned long *, unsigned long *, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at ./parlay/random.h:115:19)>::iterator>
+cilk_for first instr:untouched
+  detach within %syncreg.i96, label %for.body.lr.ph.i.i, label %pfor.inc.i, !dbg !26189
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/internal/counting_sort.h:159:3	subprogram: count_sort_<parlay::uninitialized_copy_tag, unsigned long, const unsigned long *, unsigned long *, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at ./parlay/random.h:115:19)>::iterator>
+cilk_for first instr:untouched
+  detach within %syncreg, label %pfor.body.entry, label %pfor.inc, !dbg !25824
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+cilk_for first instr:untouched
+  detach within %syncreg, label %pfor.body.entry, label %pfor.inc, !dbg !25824
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+cilk_for first instr:defdac
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !25976
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: ./parlay/internal/counting_sort.h:39:23	subprogram: seq_count_<parlay::slice<const unsigned long *, const unsigned long *>, unsigned long *, parlay::slice<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at ./parlay/random.h:115:19)>::iterator, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at ./parlay/random.h:115:19)>::iterator> >
+cilk_for first instr:defdac
+  detach within %syncreg.i.i.i, label %pfor.body.entry.i.i.i.strpm.outer, label %pfor.inc.i.i.i.strpm.outer, !dbg !25979
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+			inlined at: !DILocation: ./parlay/sequence.h:532:5	subprogram: initialize_default
+			inlined at: !DILocation: ./parlay/sequence.h:196:56
+			inlined at: !DILocation: ./parlay/internal/counting_sort.h:39:23	subprogram: seq_count_<parlay::slice<const unsigned long *, const unsigned long *>, unsigned int *, parlay::slice<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at ./parlay/random.h:115:19)>::iterator, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at ./parlay/random.h:115:19)>::iterator> >
+cilk_for first instr:untouched
+  detach within %syncreg, label %pfor.body.entry, label %pfor.inc, !dbg !25824
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5
+cilk_for first instr:untouched
+  detach within %syncreg, label %pfor.body.entry, label %pfor.inc, !dbg !25824
+!DILocation: ./parlay/internal/scheduler_plugins/opencilk.h:517:5

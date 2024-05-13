@@ -1,0 +1,511 @@
+worklist: 
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceISt5arrayIiLm3EENS_9allocatorIS3_EELb0EEC1IZ8delaunayRNS1_I7point2dIdENS4_IS9_EELb0EEEE3$_8EEmOT_NS6_18_from_function_tagEmEUlmE_EEvmmSE_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:347:51)>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:347:51)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:347:51)>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:347:27	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:347:51)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:347:51)>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:347:27	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EEC1IZ8delaunayRNS1_IS4_NS7_IS4_EELb0EEEE3$_7EEmOT_NS9_18_from_function_tagEmEUlmE_EEvmmSF_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:334:24)>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:334:24)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:334:24)>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:334:12	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:334:24)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:334:24)>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:334:12	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EE15initialize_fillEmRKS6_EUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:541:5	caller: initialize_fill
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:199:68	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:239:23	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:199:68	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:239:23	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseI2QsI7point2dIdEENS_9allocatorIS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:192:9	caller: destroy_all
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:202:9	caller: clear
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:297:1	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:202:9	caller: clear
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:297:1	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceI6vertexI7point2dIdEENS_9allocatorIS5_EELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:532:5	caller: initialize_default
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:312:19	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:312:19	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIbNS_9allocatorIbEELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/bench/parlay/sequence.h:532:5	caller: initialize_default
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:234:18	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/bench/parlay/internal/sequence_ops.h:364:18	caller: filter_map<parlay::slice<char *, char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/common/IO.h:132:38), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/common/../parlay/internal/delayed/../sequence_ops.h:381:19) &>
+	delaunayTriangulation-cp/bench/parlay/internal/sequence_ops.h:382:10	caller: filter<parlay::slice<char *, char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/common/IO.h:132:38)>
+	delaunayTriangulation-cp/bench/parlay/primitives.h:259:10	caller: filter<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/common/IO.h:132:38)>
+	delaunayTriangulation-cp/bench/common/IO.h:132:20	caller: seqToString<parlay::slice<const point2d<double> *, const point2d<double> *> >
+	delaunayTriangulation-cp/bench/common/IO.h:145:22	caller: writeSeqToStream<point2d<double> >
+	delaunayTriangulation-cp/bench/common/geometryIO.h:183:5	caller: writeTrianglesToFile<point2d<double> >
+	delaunayTriangulation-cp/bench/delaunayTime.C:51:26	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/bench/parlay/internal/sequence_ops.h:364:18	caller: filter_map<parlay::slice<char *, char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/common/IO.h:132:38), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/common/../parlay/internal/delayed/../sequence_ops.h:381:19) &>
+	delaunayTriangulation-cp/bench/parlay/internal/sequence_ops.h:382:10	caller: filter<parlay::slice<char *, char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/common/IO.h:132:38)>
+	delaunayTriangulation-cp/bench/parlay/primitives.h:259:10	caller: filter<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/common/IO.h:132:38)>
+	delaunayTriangulation-cp/bench/common/IO.h:132:20	caller: seqToString<parlay::slice<const int *, const int *> >
+	delaunayTriangulation-cp/bench/common/IO.h:145:22	caller: writeSeqToStream<int>
+	delaunayTriangulation-cp/bench/common/geometryIO.h:187:5	caller: writeTrianglesToFile<point2d<double> >
+	delaunayTriangulation-cp/bench/delaunayTime.C:51:26	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:234:18	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EE16initialize_rangeIPS6_EEvT_SC_St26random_access_iterator_tagEUlmE_EEvmmSC_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:570:5	caller: initialize_range<vertex<point2d<double> > **>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:586:5	caller: initialize_dispatch<vertex<point2d<double> > **>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:205:5	caller: sequence<vertex<point2d<double> > **>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:754:10	caller: to_sequence<parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **> >
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:256:19	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:586:5	caller: initialize_dispatch<vertex<point2d<double> > **>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:205:5	caller: sequence<vertex<point2d<double> > **>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:754:10	caller: to_sequence<parlay::slice<vertex<point2d<double> > **, vertex<point2d<double> > **> >
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:256:19	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceI7point2dIdENS_9allocatorIS3_EELb0EEC1IZ8delaunayRS6_E3$_9EEmOT_NS6_18_from_function_tagEmEUlmE_EEvmmSA_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:353:47)>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:353:47)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:353:47)>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:353:24	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:353:47)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:353:47)>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:353:24	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZ8delaunayRNS_8sequenceI7point2dIdENS_9allocatorIS3_EELb0EEEE4$_10EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:321:3	caller: delaunay
+
+	---
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_6reduceINS_5sliceIPK7point2dIdES8_EENS_6monoidIZ17generate_boundaryRKNS_8sequenceIS6_NS_9allocatorIS6_EELb0EEEmRNSB_I6vertexIS6_ENSC_ISI_EELb0EEERNSB_I8triangleIS6_ENSC_ISN_EELb0EEEE3$_1S6_vEEEEDaRKT_OT0_jEUlmmmE_EEvmmSV_jEUlmE_EEvmmST_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:173:3	caller: sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/delayed/../sequence_ops.h:202:29)>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:202:3	caller: reduce<parlay::slice<const point2d<double> *, const point2d<double> *>, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:193:14), point2d<double>, void> >
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/primitives.h:95:10	caller: reduce<const parlay::sequence<point2d<double>, parlay::allocator<point2d<double> >, false> &, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:193:14), point2d<double>, void>, 0>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:196:22	caller: generate_boundary
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:331:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:202:3	caller: reduce<parlay::slice<const point2d<double> *, const point2d<double> *>, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:193:14), point2d<double>, void> >
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/primitives.h:95:10	caller: reduce<const parlay::sequence<point2d<double>, parlay::allocator<point2d<double> >, false> &, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:193:14), point2d<double>, void>, 0>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:196:22	caller: generate_boundary
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:331:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseIP6vertexI7point2dIdEENS_9allocatorIS7_EELb0EE12storage_implC1ERKSB_EUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:128:9	caller: storage_impl
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:584:55	caller: sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:106:38	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:28	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:584:55	caller: sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:106:38	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:28	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceI2QsI7point2dIdEENS_9allocatorIS5_EELb0EEC1IZ24incrementally_add_pointsNS1_IP6vertexIS4_ENS6_ISC_EELb0EEESC_E3$_3EEmOT_NS8_18_from_function_tagEmEUlmE_EEvmmSG_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:235:38)>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:235:38)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:235:38)>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:235:13	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:235:38)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:235:38)>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:235:13	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8internal15random_shuffle_IPKmPmEEvNS_5sliceIT_S7_EENS6_IT0_S9_EENS_6randomEEUlmE1_EEvmmS7_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:133:3	caller: random_shuffle_<const unsigned long *, unsigned long *>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:146:3	caller: random_shuffle<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> >
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:158:10	caller: random_permutation<unsigned long>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:320:27	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:146:3	caller: random_shuffle<parlay::sequence<unsigned long, parlay::allocator<unsigned long>, false> >
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:158:10	caller: random_permutation<unsigned long>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:320:27	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceI8triangleI7point2dIdEENS_9allocatorIS5_EELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:532:5	caller: initialize_default
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:317:20	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:317:20	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseI7point2dIdENS_9allocatorIS4_EELb0EE12storage_implC1ERKS8_EUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/bench/parlay/internal/sequence_base.h:128:9	caller: storage_impl
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:584:55	caller: sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:106:38	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:360:27	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:584:55	caller: sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:106:38	caller: sequence
+	delaunayTriangulation-cp/bench/common/geometry.h:255:10	caller: triangles
+	delaunayTriangulation-cp/bench/delaunayTime.C:51:47	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:584:55	caller: sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:106:38	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:360:27	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZ8delaunayRNS_8sequenceI7point2dIdENS_9allocatorIS3_EELb0EEEE4$_11EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:325:3	caller: delaunay
+
+	---
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceImNS_9allocatorImEELb0EEC1IZNS_18random_permutationImEENS1_IT_NS2_IS7_EEXsr3std7is_sameIS7_cEE5valueEEES7_NS_6randomEEUlmE_EEmOS7_NS4_18_from_function_tagEmEUlmE_EEvmmS7_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:157:5)>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:157:5)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:156:13	caller: random_permutation<unsigned long>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:320:27	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:157:5)>
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:156:13	caller: random_permutation<unsigned long>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:320:27	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_6reduceINS_5sliceIPK7point2dIdES8_EENS_6monoidIZ17generate_boundaryRKNS_8sequenceIS6_NS_9allocatorIS6_EELb0EEEmRNSB_I6vertexIS6_ENSC_ISI_EELb0EEERNSB_I8triangleIS6_ENSC_ISN_EELb0EEEE3$_2S6_vEEEEDaRKT_OT0_jEUlmmmE_EEvmmSV_jEUlmE_EEvmmST_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:173:3	caller: sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/delayed/../sequence_ops.h:202:29)>
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:202:3	caller: reduce<parlay::slice<const point2d<double> *, const point2d<double> *>, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:194:14), point2d<double>, void> >
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/primitives.h:95:10	caller: reduce<const parlay::sequence<point2d<double>, parlay::allocator<point2d<double> >, false> &, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:194:14), point2d<double>, void>, 0>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:197:22	caller: generate_boundary
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:331:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_ops.h:202:3	caller: reduce<parlay::slice<const point2d<double> *, const point2d<double> *>, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:194:14), point2d<double>, void> >
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/primitives.h:95:10	caller: reduce<const parlay::sequence<point2d<double>, parlay::allocator<point2d<double> >, false> &, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:194:14), point2d<double>, void>, 0>
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:197:22	caller: generate_boundary
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:331:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseISt5arrayIiLm3EENS_9allocatorIS4_EELb0EE12storage_implC1ERKS8_EUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/bench/parlay/internal/sequence_base.h:128:9	caller: storage_impl
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:584:55	caller: sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:106:38	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:360:42	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:584:55	caller: sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:106:38	caller: sequence
+	delaunayTriangulation-cp/bench/common/geometry.h:255:10	caller: triangles
+	delaunayTriangulation-cp/bench/delaunayTime.C:51:47	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h:584:55	caller: sequence_base
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:106:38	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:360:42	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZ24incrementally_add_pointsNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EEES6_E3$_5EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:268:5	caller: incrementally_add_points
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZ24incrementally_add_pointsNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EEES6_E3$_6EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:276:5	caller: incrementally_add_points
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceI7simplexI7point2dIdEENS_9allocatorIS5_EELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb
+	ef	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:532:5	caller: initialize_default
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:233:23	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main
+
+	---
+	delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h:196:56	caller: sequence
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:233:23	caller: incrementally_add_points
+	delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:341:3	caller: delaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:45:25	caller: operator()
+	delaunayTriangulation-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:44:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:45:13), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/bench/delaunayTime.C:46:13)>
+	delaunayTriangulation-cp/bench/delaunayTime.C:43:5	caller: timeDelaunay
+	delaunayTriangulation-cp/bench/delaunayTime.C:61:3	caller: main

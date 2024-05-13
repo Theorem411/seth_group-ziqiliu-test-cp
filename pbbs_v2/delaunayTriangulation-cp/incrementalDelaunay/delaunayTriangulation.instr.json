@@ -1,0 +1,496 @@
+[
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseISt5arrayIiLm3EENS_9allocatorIS4_EELb0EE12storage_implC1ERKS8_EUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "storage_impl",
+        "col": 9,
+        "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/sequence_base.h",
+        "inlineHistory": "",
+        "ln": 128,
+        "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseISt5arrayIiLm3EENS_9allocatorIS3_EELb0EE12storage_implC2ERKS7_"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceI7point2dIdENS_9allocatorIS3_EELb0EEC1IZ8delaunayRS6_E3$_9EEmOT_NS6_18_from_function_tagEmEUlmE_EEvmmSA_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:353:47)>",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 515,
+        "mangled_name": "_ZN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEC2IZ8delaunayRS5_E3$_9EEmOT_NS5_18_from_function_tagEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8internal15block_allocator7reserveEmEUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "reserve",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/block_allocator.h",
+        "inlineHistory": "",
+        "ln": 124,
+        "mangled_name": "_ZN6parlay8internal15block_allocator7reserveEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 1,
+    "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EE15initialize_fillEmRKS6_EUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "initialize_fill",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 541,
+        "mangled_name": "_ZN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EE15initialize_fillEmRKS5_"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseI2QsI7point2dIdEENS_9allocatorIS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "destroy_all",
+        "col": 9,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h",
+        "inlineHistory": "",
+        "ln": 192,
+        "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseI2QsI7point2dIdEENS_9allocatorIS5_EELb0EE12storage_impl11destroy_allEv"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceI2QsI7point2dIdEENS_9allocatorIS5_EELb0EEC1IZ24incrementally_add_pointsNS1_IP6vertexIS4_ENS6_ISC_EELb0EEESC_E3$_3EEmOT_NS8_18_from_function_tagEmEUlmE_EEvmmSG_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:235:38)>",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 515,
+        "mangled_name": "_ZN6parlay8sequenceI2QsI7point2dIdEENS_9allocatorIS4_EELb0EEC2IZ24incrementally_add_pointsNS0_IP6vertexIS3_ENS5_ISB_EELb0EEESB_E3$_3EEmOT_NS7_18_from_function_tagEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZ24incrementally_add_pointsNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EEES6_E3$_6EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "incrementally_add_points",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/delaunay.C",
+        "inlineHistory": "",
+        "ln": 276,
+        "mangled_name": "_Z24incrementally_add_pointsN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEES5_"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3840,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceI6vertexI7point2dIdEENS_9allocatorIS5_EELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "initialize_default",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 532,
+        "mangled_name": "_ZN6parlay8sequenceI6vertexI7point2dIdEENS_9allocatorIS4_EELb0EE18initialize_defaultEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseI7point2dIdENS_9allocatorIS4_EELb0EE12storage_implC1ERKS8_EUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "storage_impl",
+        "col": 9,
+        "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/sequence_base.h",
+        "inlineHistory": "",
+        "ln": 128,
+        "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseI7point2dIdENS_9allocatorIS3_EELb0EE12storage_implC2ERKS7_"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceI8triangleI7point2dIdEENS_9allocatorIS5_EELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "initialize_default",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 532,
+        "mangled_name": "_ZN6parlay8sequenceI8triangleI7point2dIdEENS_9allocatorIS4_EELb0EE18initialize_defaultEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceImNS_9allocatorImEELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "initialize_default",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/bench/common/../parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 532,
+        "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EE18initialize_defaultEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceImNS_9allocatorImEELb0EEC1IZNS_18random_permutationImEENS1_IT_NS2_IS7_EEXsr3std7is_sameIS7_cEE5valueEEES7_NS_6randomEEUlmE_EEmOS7_NS4_18_from_function_tagEmEUlmE_EEvmmS7_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h:157:5)>",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 515,
+        "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EEC2IZNS_18random_permutationImEENS0_IT_NS1_IS6_EEXsr3std7is_sameIS6_cEE5valueEEES6_NS_6randomEEUlmE_EEmOS6_NS3_18_from_function_tagEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EEC1IZ8delaunayRNS1_IS4_NS7_IS4_EELb0EEEE3$_7EEmOT_NS9_18_from_function_tagEmEUlmE_EEvmmSF_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:334:24)>",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 515,
+        "mangled_name": "_ZN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEC2IZ8delaunayRNS0_IS3_NS6_IS3_EELb0EEEE3$_7EEmOT_NS8_18_from_function_tagEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceISt5arrayIiLm3EENS_9allocatorIS3_EELb0EEC1IZ8delaunayRNS1_I7point2dIdENS4_IS9_EELb0EEEE3$_8EEmOT_NS6_18_from_function_tagEmEUlmE_EEvmmSE_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/delaunay.C:347:51)>",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 515,
+        "mangled_name": "_ZN6parlay8sequenceISt5arrayIiLm3EENS_9allocatorIS2_EELb0EEC2IZ8delaunayRNS0_I7point2dIdENS3_IS8_EELb0EEEE3$_8EEmOT_NS5_18_from_function_tagEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8internal15random_shuffle_IPKmPmEEvNS_5sliceIT_S7_EENS6_IT0_S9_EENS_6randomEEUlmE1_EEvmmS7_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "random_shuffle_<const unsigned long *, unsigned long *>",
+        "col": 3,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/random.h",
+        "inlineHistory": "",
+        "ln": 133,
+        "mangled_name": "_ZN6parlay8internal15random_shuffle_IPKmPmEEvNS_5sliceIT_S6_EENS5_IT0_S8_EENS_6randomE"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZ24incrementally_add_pointsNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EEES6_E3$_5EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "incrementally_add_points",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/delaunay.C",
+        "inlineHistory": "",
+        "ln": 268,
+        "mangled_name": "_Z24incrementally_add_pointsN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEES5_"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3840,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNKS_8internal15block_allocator15initialize_listEPSt4byteEUlmE_EEvmmT_lb",
+    "caller_DAC": [
+      {
+        "caller": "initialize_list",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/block_allocator.h",
+        "inlineHistory": "",
+        "ln": 86,
+        "mangled_name": "_ZNK6parlay8internal15block_allocator15initialize_listEPSt4byte"
+      }
+    ],
+    "caller_EF": null,
+    "col": 5,
+    "dac": 1,
+    "ef": 0,
+    "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZ8delaunayRNS_8sequenceI7point2dIdENS_9allocatorIS3_EELb0EEEE4$_10EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "delaunay",
+        "col": 3,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/delaunay.C",
+        "inlineHistory": "",
+        "ln": 321,
+        "mangled_name": "_Z8delaunayRN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEE"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZ8delaunayRNS_8sequenceI7point2dIdENS_9allocatorIS3_EELb0EEEE4$_11EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "delaunay",
+        "col": 3,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/delaunay.C",
+        "inlineHistory": "",
+        "ln": 325,
+        "mangled_name": "_Z8delaunayRN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEE"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_6reduceINS_5sliceIPK7point2dIdES8_EENS_6monoidIZ17generate_boundaryRKNS_8sequenceIS6_NS_9allocatorIS6_EELb0EEEmRNSB_I6vertexIS6_ENSC_ISI_EELb0EEERNSB_I8triangleIS6_ENSC_ISN_EELb0EEEE3$_1S6_vEEEEDaRKT_OT0_jEUlmmmE_EEvmmSV_jEUlmE_EEvmmST_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/delayed/../sequence_ops.h:202:29)>",
+        "col": 3,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/delayed/../sequence_ops.h",
+        "inlineHistory": "",
+        "ln": 173,
+        "mangled_name": "_ZN6parlay8internal10sliced_forIZNS0_6reduceINS_5sliceIPK7point2dIdES7_EENS_6monoidIZ17generate_boundaryRKNS_8sequenceIS5_NS_9allocatorIS5_EELb0EEEmRNSA_I6vertexIS5_ENSB_ISH_EELb0EEERNSA_I8triangleIS5_ENSB_ISM_EELb0EEEE3$_1S5_vEEEEDaRKT_OT0_jEUlmmmE_EEvmmSU_j"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_6reduceINS_5sliceIPK7point2dIdES8_EENS_6monoidIZ17generate_boundaryRKNS_8sequenceIS6_NS_9allocatorIS6_EELb0EEEmRNSB_I6vertexIS6_ENSC_ISI_EELb0EEERNSB_I8triangleIS6_ENSC_ISN_EELb0EEEE3$_2S6_vEEEEDaRKT_OT0_jEUlmmmE_EEvmmSV_jEUlmE_EEvmmST_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/delayed/../sequence_ops.h:202:29)>",
+        "col": 3,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/delayed/../sequence_ops.h",
+        "inlineHistory": "",
+        "ln": 173,
+        "mangled_name": "_ZN6parlay8internal10sliced_forIZNS0_6reduceINS_5sliceIPK7point2dIdES7_EENS_6monoidIZ17generate_boundaryRKNS_8sequenceIS5_NS_9allocatorIS5_EELb0EEEmRNSA_I6vertexIS5_ENSB_ISH_EELb0EEERNSA_I8triangleIS5_ENSB_ISM_EELb0EEEE3$_2S5_vEEEEDaRKT_OT0_jEUlmmmE_EEvmmSU_j"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIbNS_9allocatorIbEELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "initialize_default",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/bench/common/../parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 532,
+        "mangled_name": "_ZN6parlay8sequenceIbNS_9allocatorIbEELb0EE18initialize_defaultEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/bench/common/../parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseIP6vertexI7point2dIdEENS_9allocatorIS7_EELb0EE12storage_implC1ERKSB_EUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "storage_impl",
+        "col": 9,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/sequence_base.h",
+        "inlineHistory": "",
+        "ln": 128,
+        "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EE12storage_implC2ERKSA_"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EE16initialize_rangeIPS6_EEvT_SC_St26random_access_iterator_tagEUlmE_EEvmmSC_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "initialize_range<vertex<point2d<double> > **>",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 570,
+        "mangled_name": "_ZN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EE16initialize_rangeIPS5_EEvT_SB_St26random_access_iterator_tag"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 6,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIP6vertexI7point2dIdEENS_9allocatorIS6_EELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "initialize_default",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 532,
+        "mangled_name": "_ZN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EE18initialize_defaultEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 255,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  },
+  {
+    "ID": "_ZN6parlay12parallel_forIZNS_8sequenceI7simplexI7point2dIdEENS_9allocatorIS5_EELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb",
+    "caller_DAC": null,
+    "caller_EF": [
+      {
+        "caller": "initialize_default",
+        "col": 5,
+        "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/sequence.h",
+        "inlineHistory": "",
+        "ln": 532,
+        "mangled_name": "_ZN6parlay8sequenceI7simplexI7point2dIdEENS_9allocatorIS4_EELb0EE18initialize_defaultEm"
+      }
+    ],
+    "col": 5,
+    "dac": 0,
+    "ef": 3,
+    "file": "delaunayTriangulation-cp/incrementalDelaunay/parlay/internal/scheduler_plugins/opencilk.h",
+    "ln": 358
+  }
+]
