@@ -1,142 +1,141 @@
 == CILK_WORKERS = 1 ===================================
 0
 0
-Parlay time: 6.7871
+Parlay time: 6.9024
 0
-Parlay time: 6.8531
+Parlay time: 6.8049
 0
-Parlay time: 6.6765
+Parlay time: 6.7373
 0
-Parlay time: 6.8109
+Parlay time: 6.8322
 0
-Parlay time: 6.7066
+Parlay time: 6.7861
 0
-Parlay time: 6.6725
+Parlay time: 6.7452
 0
-Parlay time: 6.6975
+Parlay time: 6.7340
 0
-Parlay time: 6.6845
+Parlay time: 6.8233
 0
-Parlay time: 6.7127
+Parlay time: 6.7760
 0
-Parlay time: 6.6401
+Parlay time: 6.8071
 
 == CILK_WORKERS = 2 ===================================
 0
 0
-Parlay time: 3.2457
+Parlay time: 3.1515
 0
-Parlay time: 3.3195
+Parlay time: 3.1039
 0
-Parlay time: 3.0844
+Parlay time: 3.0387
 0
-Parlay time: 3.1430
+Parlay time: 3.1274
 0
-Parlay time: 3.0919
+Parlay time: 3.0805
 0
-Parlay time: 3.1200
+Parlay time: 3.0730
 0
-Parlay time: 3.0431
+Parlay time: 3.0619
 0
-Parlay time: 3.1573
+Parlay time: 3.0727
 0
-Parlay time: 3.1073
+Parlay time: 3.1531
 0
-Parlay time: 3.0897
+Parlay time: 3.0834
 
 == CILK_WORKERS = 4 ===================================
 0
 0
-Parlay time: 1.7099
+Parlay time: 1.6816
 0
-Parlay time: 1.6781
+Parlay time: 1.6552
 0
-Parlay time: 1.6564
+Parlay time: 1.6251
 0
-Parlay time: 1.6651
+Parlay time: 1.5851
 0
-Parlay time: 1.6509
+Parlay time: 1.6593
 0
-Parlay time: 1.6267
+Parlay time: 1.6125
 0
-Parlay time: 1.6449
+Parlay time: 1.6290
 0
-Parlay time: 1.6416
+Parlay time: 1.6005
 0
-Parlay time: 1.6093
+Parlay time: 1.6001
 0
-Parlay time: 1.6476
+Parlay time: 1.6551
 
 == CILK_WORKERS = 8 ===================================
 0
 0
-Parlay time: 0.9307
+Parlay time: 0.9997
 0
-Parlay time: 0.9196
+Parlay time: 0.9053
 0
-Parlay time: 0.9154
+Parlay time: 0.8873
 0
-Parlay time: 0.9086
+Parlay time: 0.9168
 0
-Parlay time: 0.9145
+Parlay time: 0.9053
 0
-Parlay time: 0.8991
+Parlay time: 0.8845
 0
-Parlay time: 0.8945
+Parlay time: 0.8860
 0
-Parlay time: 0.9199
+Parlay time: 0.8817
 0
-Parlay time: 0.9268
+Parlay time: 0.8681
 0
-Parlay time: 0.9177
+Parlay time: 0.8854
 
-== CILK_WORKERS = 16 ===================================
+== CILK_WORKERS = 14 ===================================
 0
 0
 0
-Parlay time: 0.5096
+Parlay time: 0.5954
 0
-Parlay time: 0.4847
+Parlay time: 0.5453
 0
-Parlay time: 0.4927
+Parlay time: 0.5181
 0
-Parlay time: 0.4555
+Parlay time: 0.5151
 0
-Parlay time: 0.4576
+Parlay time: 0.5387
 0
-Parlay time: 0.4553
+Parlay time: 0.5221
 0
-Parlay time: 0.4604
+Parlay time: 0.5284
 0
-Parlay time: 0.4567
+Parlay time: 0.5173
 0
-Parlay time: 0.4544
+Parlay time: 0.5185
 0
-Parlay time: 0.4568
+Parlay time: 0.5180
 
-== CILK_WORKERS = 32 ===================================
+== CILK_WORKERS = 28 ===================================
 0
 0
 0
 0
+Parlay time: 0.3464
+0
+Parlay time: 0.3181
+0
+Parlay time: 0.3007
+0
+Parlay time: 0.2871
+0
+Parlay time: 0.3026
+0
+Parlay time: 0.2787
+0
+Parlay time: 0.2685
+0
+Parlay time: 0.2706
 0
 Parlay time: 0.2718
 0
-Parlay time: 0.3359
-0
-Parlay time: 0.2679
-0
-Parlay time: 0.2912
-0
-Parlay time: 0.2699
-0
-Parlay time: 0.2702
-0
-Parlay time: 0.2968
-0
-Parlay time: 0.2682
-0
-Parlay time: 0.2701
-0
-Parlay time: 0.2673
+Parlay time: 0.2662
 

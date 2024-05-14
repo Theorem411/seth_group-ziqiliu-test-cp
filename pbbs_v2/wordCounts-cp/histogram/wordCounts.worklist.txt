@@ -246,11 +246,11 @@ worklist:
 		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
 		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
 
-- [ ] ======================================
+- [x] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceISt4pairINS1_IcNS_9allocatorIcEELb1EEEmENS3_IS6_EELb0EE15initialize_fillEmRKS6_EUlmE_EEvmmT_lb
 	dac	wordCounts-cp/histogram/parlay/sequence.h:541:5	caller: initialize_fill
 
-	- [ ] --
+	- [x] --
 		defdac  wordCounts-cp/histogram/parlay/sequence.h:199:68	caller: sequence
 		defdac  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:320:16	caller: operator()
 		defdac  wordCounts-cp/histogram/parlay/sequence.h:517:40	caller: operator()
@@ -267,28 +267,11 @@ worklist:
 		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
 		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
 
-	- [ ] --
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:199:68	caller: sequence
-		defdac  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:320:16	caller: operator()
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:517:40	caller: operator()
-		defef  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/sequence.h:515:24)>
-		defef  wordCounts-cp/histogram/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:317:39)>
-		defef  wordCounts-cp/histogram/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:317:39)>
-		defef  wordCounts-cp/histogram/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:317:39)>
-		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:317:17	caller: collect_reduce_sparse_<parlay::uninitialized_relocate_tag, parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >
-		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:334:12	caller: collect_reduce_sparse<parlay::sequence<char, parlay::allocator<char>, true>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >
-		defef  wordCounts-cp/histogram/parlay/internal/group_by.h:192:10	caller: histogram_by_key<unsigned long, parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> >
-		defef  wordCounts-cp/histogram/wc.C:49:17	caller: wordCounts
-		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()
-		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>
-		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
-		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
-
-- [ ] ======================================
+- [x] ======================================
 	_ZN6parlay12parallel_forIZZNS_8internal22collect_reduce_sparse_INS_26uninitialized_relocate_tagENS_5sliceIPNS_8sequenceIcNS_9allocatorIcEELb1EEES9_EENS_19count_by_key_helperIS8_mNS_4hashIS8_EESt8equal_toIvEEEEEDaT0_RKT1_ENKUlmE0_clEmEUlmE_EEvmmT_lb
 	dac	wordCounts-cp/histogram/parlay/internal/collect_reduce.h:322:9	caller: operator()
 
-	- [ ] --
+	- [x] --
 		defdac  wordCounts-cp/histogram/parlay/sequence.h:517:40	caller: operator()
 		defef  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/sequence.h:515:24)>
 		defef  wordCounts-cp/histogram/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:317:39)>
@@ -303,7 +286,7 @@ worklist:
 		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
 		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
 
-	- [ ] --
+	- [x] --
 		defdac  wordCounts-cp/histogram/parlay/sequence.h:517:40	caller: operator()
 		defef  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/sequence.h:515:24)>
 		defef  wordCounts-cp/histogram/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:317:39)>
@@ -318,25 +301,11 @@ worklist:
 		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
 		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
 
-- [ ] ======================================
+- [x] ======================================
 	_ZN6parlay12parallel_forIZNS_26uninitialized_relocate_n_aIPSt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmES8_SaIS7_EEEvT_T0_mRT1_EUlmE_EEvmmSA_lb
 	dac	wordCounts-cp/histogram/parlay/utilities.h:384:5	caller: uninitialized_relocate_n_a<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long> *, std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long> *, std::allocator<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long> > >
 
-	- [ ] --
-		defdac  wordCounts-cp/histogram/parlay/utilities.h:451:3	caller: uninitialized_relocate_n<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long> *, std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long> *>
-		defdac  wordCounts-cp/histogram/parlay/primitives.h:1002:5	caller: operator()
-		defef  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1001:36)>
-		defef  wordCounts-cp/histogram/parlay/primitives.h:1001:3	caller: flatten<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long> >
-		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:329:10	caller: collect_reduce_sparse_<parlay::uninitialized_relocate_tag, parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >
-		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:334:12	caller: collect_reduce_sparse<parlay::sequence<char, parlay::allocator<char>, true>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >
-		defef  wordCounts-cp/histogram/parlay/internal/group_by.h:192:10	caller: histogram_by_key<unsigned long, parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> >
-		defef  wordCounts-cp/histogram/wc.C:49:17	caller: wordCounts
-		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()
-		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>
-		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
-		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
-
-	- [ ] --
+	- [x] --
 		defdac  wordCounts-cp/histogram/parlay/utilities.h:451:3	caller: uninitialized_relocate_n<std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long> *, std::pair<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long> *>
 		defdac  wordCounts-cp/histogram/parlay/primitives.h:1002:5	caller: operator()
 		defef  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1001:36)>
@@ -458,43 +427,6 @@ worklist:
 		defef  wordCounts-cp/histogram/wc.C:45:16	caller: wordCounts
 		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()
 		defef  wordCounts-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>
-		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
-		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
-
-	- [ ] --
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:586:5	caller: initialize_dispatch<char *>
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:205:5	caller: sequence<char *>
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:765:10	caller: to_short_sequence<parlay::slice<char *, char *> >
-		defdac  wordCounts-cp/histogram/parlay/primitives.h:1125:41	caller: operator()<parlay::slice<char *, char *> >
-		defdac  wordCounts-cp/histogram/parlay/primitives.h:1110:30	caller: operator()<std::tuple<std::pair<long, long>, unsigned long> >
-		defdac  wordCounts-cp/histogram/parlay/internal/delayed/terminal.h:150:7	caller: operator()
-		defef  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/delayed/terminal.h:147:34)>
-		defef  wordCounts-cp/histogram/parlay/internal/delayed/terminal.h:147:3	caller: for_each<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1091:12), std::pair<long, long> > &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:966:44)> > &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1107:33), 0>
-		defef  wordCounts-cp/histogram/parlay/internal/delayed/terminal.h:159:3	caller: apply<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1091:12), std::pair<long, long> > &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:966:44)> > &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1107:33)>
-		defef  wordCounts-cp/histogram/parlay/primitives.h:1107:5	caller: map_tokens<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1125:19) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wc.C:45:36) &>
-		defef  wordCounts-cp/histogram/parlay/primitives.h:1127:15	caller: tokens<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wc.C:45:36)>
-		defef  wordCounts-cp/histogram/wc.C:45:16	caller: wordCounts
-		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()
-		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>
-		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
-		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
-
-	- [ ] --
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:586:5	caller: initialize_dispatch<char *>
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:205:5	caller: sequence<char *>
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:765:10	caller: to_short_sequence<parlay::slice<char *, char *> >
-		defdac  wordCounts-cp/histogram/parlay/primitives.h:1125:41	caller: operator()<parlay::slice<char *, char *> >
-		defdac  wordCounts-cp/histogram/parlay/primitives.h:1055:14	caller: operator()
-		defdac  wordCounts-cp/histogram/parlay/sequence.h:517:40	caller: operator()
-		defef  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/sequence.h:515:24)>
-		defef  wordCounts-cp/histogram/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1054:43)>
-		defef  wordCounts-cp/histogram/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1054:43)>
-		defef  wordCounts-cp/histogram/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1054:43)>
-		defef  wordCounts-cp/histogram/parlay/primitives.h:1054:12	caller: map_tokens_small<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/primitives.h:1125:19) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wc.C:45:36) &>
-		defef  wordCounts-cp/histogram/parlay/primitives.h:1126:38	caller: tokens<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wc.C:45:36)>
-		defef  wordCounts-cp/histogram/wc.C:45:16	caller: wordCounts
-		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()
-		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>
 		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts
 		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main
 

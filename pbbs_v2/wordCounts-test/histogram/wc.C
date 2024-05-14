@@ -35,26 +35,32 @@ parlay::sequence<result_type> wordCounts(charseq const &s, bool verbose=false) {
   if (verbose) cout << "number of characters = " << s.size() << endl;
 
   // blank out all non alpha characters, and convert upper to lowercase
-  auto f_str = [] (char c) -> char {
+//   auto f_str = [] (char c) -> char {
+//     if (c >= 65 && c < 91) return c + 32;   // upper to lower
+//     else if (c >= 97 && c < 123) return c;  // already lower
+//     else return 0;};
+//   auto str = parlay::map</** PRR: */decltype(s), decltype(f_str), 1>(s, std::forward<decltype(f_str)>(f_str));                       // all other
+  auto str = parlay::map_ef(s, [] (char c) -> char {
     if (c >= 65 && c < 91) return c + 32;   // upper to lower
     else if (c >= 97 && c < 123) return c;  // already lower
-    else return 0;};
-  auto str = parlay::map</** PRR: */decltype(s), decltype(f_str), 1>(s, std::forward<decltype(f_str)>(f_str));                       // all other
+    else return 0;});                       // all other
   t.next("copy");
   
   // generate tokens (i.e., contiguous regions of non-zero characters)
-  auto f_tokens = [] (char c) {return c == 0;};
-  auto words = /** PRR: */parlay::tokens<decltype(str), decltype(f_tokens), 1>(std::forward<decltype(str)>(str), std::forward<decltype(f_tokens)>(f_tokens));
+//   auto f_tokens = [] (char c) {return c == 0;};
+//   auto words = /** PRR: */parlay::tokens<decltype(str), decltype(f_tokens), 1>(std::forward<decltype(str)>(str), std::forward<decltype(f_tokens)>(f_tokens));
+  auto words = parlay::tokens_ef(str, [] (char c) {return c == 0;});
   t.next("tokens");
   if (verbose) cout << "number of words = " << words.size() << endl;
 
-  /** PRR: */
-  using sum_type = size_t;
-  using R = decltype(words);
-  using Hash = parlay::hash<parlay::range_value_type_t<R>>;
-  using Equal = std::equal_to<>;
-  ///////////
-  auto result = parlay::histogram_by_key</** PRR: */sum_type, R, Hash, Equal, 1>(std::move(words)); 
+//   /** PRR: */
+//   using sum_type = size_t;
+//   using R = decltype(words);
+//   using Hash = parlay::hash<parlay::range_value_type_t<R>>;
+//   using Equal = std::equal_to<>;
+//   ///////////
+//   auto result = parlay::histogram_by_key</** PRR: */sum_type, R, Hash, Equal, 1>(std::move(words)); 
+  auto result = /** PRR: */parlay::histogram_by_key_prr(std::move(words));
   t.next("count by key");
   cout << words.size() << endl;
 
