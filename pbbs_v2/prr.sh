@@ -87,7 +87,7 @@ compilePerformanceTest() {
     pushd $SRC_ORIG_PATH > /dev/null
     local CONTROL_LOG=$TESTNAME.parlaytime.orig.log
     > $CONTROL_LOG
-    for nwkr in 1 2 4 8 16 32; do 
+    for nwkr in 1 2 4 8 14 28; do 
         echo -e "== CILK_WORKERS = ${nwkr} ===================================" >> $CONTROL_LOG
         CILK_NWORKERS=${nwkr} LD_LIBRARY_PATH=/afs/ece/project/seth_group/ziqiliu/GCC-12.2.0/lib64 \
             ./$EXE -r 10 -i $TESTDATA >> $CONTROL_LOG 2>&1
@@ -105,7 +105,7 @@ compilePerformanceTest() {
     pushd $SRC_TEST_PATH > /dev/null
     local TEST_LOG=$TESTNAME.parlaytime.test.log
     > $TEST_LOG
-    for nwkr in 1 2 4 8 16 32; do 
+    for nwkr in 1 2 4 8 14 28; do 
         echo -e "== CILK_WORKERS = $nwkr ===================================" >> $TEST_LOG
         CILK_NWORKERS=$nwkr LD_LIBRARY_PATH=/afs/ece/project/seth_group/ziqiliu/GCC-12.2.0/lib64 \
             ./$EXE -r 10 -i $TESTDATA >> $TEST_LOG 2>&1

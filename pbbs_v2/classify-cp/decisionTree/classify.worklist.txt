@@ -1,25 +1,367 @@
 worklist: 
 
 - [ ] ======================================
-	_ZN6parlay12parallel_forIZNS_8sequenceIhNS_9allocatorIhEELb0EEC1IZNS_8internal3mapIRKNS1_IS4_NS2_IS4_EELb0EEEZ8classifyRKNS1_I7featureNS2_ISC_EELb0EEESB_bE3$_9EEDaOT_OT0_mEUlmE_EEmSJ_NS4_18_from_function_tagEmEUlmE_EEvmmSI_lb
+	_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_18group_by_small_intINS_16delayed_sequenceIhhZNS1_11delayed_mapIRNS4_ISt4pairIhhES7_Z11delayed_zipINS_8sequenceIhNS_9allocatorIhEELb0EEESC_EDaRKT_RKT0_EUlmE_EEZNS_14group_by_indexIiSK_EEDaOSG_SD_EUlSF_E0_Li0EEEDaOSD_SG_EUlmE_E8iteratorENS4_IhhZNS5_ISL_ZNSM_IiSK_EEDaSN_SD_EUlSF_E_Li0EEEDaSP_SG_EUlmE_E8iteratorEEEDaNS_5sliceISD_SD_EENSX_ISG_SG_EEmEUlmmmE_EEvmmSF_jEUlmE_EEvmmSD_lb
+	dac	classify-cp/decisionTree/parlay/internal/sequence_ops.h:173:3	caller: sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/counting_sort.h:218:31)>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/internal/counting_sort.h:218:5	caller: group_by_small_int<parlay::delayed_sequence<unsigned char, unsigned char, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator, parlay::delayed_sequence<unsigned char, unsigned char, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>
+		defdac  classify-cp/decisionTree/parlay/internal/group_by.h:324:12	caller: group_by_index<int, parlay::delayed_sequence<std::pair<unsigned char, unsigned char>, std::pair<unsigned char, unsigned char>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:76:37)> >
+		defdac  classify-cp/decisionTree/classify.C:199:16	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:198:36)>
+		defdac  classify-cp/decisionTree/classify.C:198:5	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceISt5tupleIJdiiEENS_9allocatorIS3_EELb0EEC1IZ14build_tree_parRNS1_I7featureNS4_IS8_EELb0EEEbE3$_3EEmOT_NS6_18_from_function_tagEmEUlmE_EEvmmSD_lb
+	dac	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/classify.C:164:16	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceI7featureNS_9allocatorIS2_EELb0EEC1IZNS_8internal3mapIRS5_Z10build_treeS9_bE4$_12EEDaOT_OT0_mEUlmE_EEmSC_NS5_18_from_function_tagEmEUlmE_EEvmmSB_lb
 	ef	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 
-	---
-	defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
-	defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
-	defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<const parlay::sequence<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false>, parlay::allocator<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:226:20)>
-	defef  classify-cp/decisionTree/classify.C:226:10	caller: classify
-	defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
-	defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
-	defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
-	defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+	- [ ] --
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<feature, parlay::allocator<feature>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:248:25)>
+		defef  classify-cp/decisionTree/classify.C:248:18	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
 
-	---
-	defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
-	defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
-	defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<const parlay::sequence<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false>, parlay::allocator<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:226:20)>
-	defef  classify-cp/decisionTree/classify.C:226:10	caller: classify
-	defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
-	defef  classify-cp/bench/common/time_loop.h:14:5	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
-	defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
-	defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIdNS_9allocatorIdEELb0EEC1IZ18cond_info_discreteRK7featureS8_E3$_2EEmOT_NS4_18_from_function_tagEmEUlmE_EEvmmSA_lb
+	dac	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:141:33)>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:141:33)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:141:33)>
+		defdac  classify-cp/decisionTree/classify.C:141:17	caller: cond_info_discrete
+		defdac  classify-cp/decisionTree/classify.C:166:20	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defdac  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/classify.C:164:16	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceISt4pairIiiENS_9allocatorIS3_EELb0EE15initialize_fillEmRKS3_EUlmE_EEvmmT_lb
+	dac	classify-cp/decisionTree/parlay/sequence.h:541:5	caller: initialize_fill
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/sequence.h:199:68	caller: sequence
+		defdac  classify-cp/decisionTree/parlay/internal/collect_reduce.h:109:29	caller: get_bucket<parlay::delayed_sequence<int, int, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:103:54)> >
+		defdac  classify-cp/decisionTree/parlay/internal/collect_reduce.h:197:22	caller: collect_reduce<parlay::delayed_sequence<int, int, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:103:54)>, helper>
+		defdac  classify-cp/decisionTree/parlay/internal/group_by.h:264:10	caller: histogram_by_index<int, parlay::delayed_sequence<int, int, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:103:54)> >
+		defdac  classify-cp/decisionTree/classify.C:103:15	caller: cond_info_continuous
+		defdac  classify-cp/decisionTree/classify.C:169:18	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defdac  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/classify.C:164:16	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIhNS_9allocatorIhEELb0EEC1IZNS_8internal3mapIRS4_Z14build_tree_parRNS1_I7featureNS2_IS9_EELb0EEEbE3$_5EEDaOT_OT0_mEUlmE_EEmSF_NS4_18_from_function_tagEmEUlmE_EEvmmSE_lb
+	dac	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:193:39)>
+		defdac  classify-cp/decisionTree/classify.C:193:19	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceINS1_IhNS_9allocatorIhEELb0EEENS2_IS4_EELb0EE16initialize_rangeIPKS4_EEvT_SA_St26random_access_iterator_tagEUlmE_EEvmmSA_lb
+	dac	classify-cp/decisionTree/parlay/sequence.h:570:5	caller: initialize_range<const parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> *>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/sequence.h:214:5	caller: sequence
+		defdac  classify-cp/decisionTree/parlay/internal/counting_sort.h:234:12	caller: group_by_small_int<parlay::delayed_sequence<unsigned char, unsigned char, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator, parlay::delayed_sequence<unsigned char, unsigned char, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>
+		defdac  classify-cp/decisionTree/parlay/internal/group_by.h:324:12	caller: group_by_index<int, parlay::delayed_sequence<std::pair<unsigned char, unsigned char>, std::pair<unsigned char, unsigned char>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:76:37)> >
+		defdac  classify-cp/decisionTree/classify.C:199:16	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:198:36)>
+		defdac  classify-cp/decisionTree/classify.C:198:5	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIP4treeNS_9allocatorIS3_EELb0EEC1IZNS_8internal3mapIRNS1_INS1_I7featureNS4_ISA_EELb0EEENS4_ISC_EELb0EEEZ10build_treeRSC_bE4$_13EEDaOT_OT0_mEUlmE_EEmSJ_NS6_18_from_function_tagEmEUlmE_EEvmmSI_lb
+	ef	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+
+	- [ ] --
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8internal14collect_reduceINS_16delayed_sequenceIiiZ20cond_info_continuousRK7featureS6_E3$_0EEZNS_18histogram_by_indexIiS8_EEDaOT0_T_E6helperEEDaRKSC_RKSA_mEUlmE_EEvmmSC_lb
+	dac	classify-cp/decisionTree/parlay/internal/collect_reduce.h:213:3	caller: collect_reduce<parlay::delayed_sequence<int, int, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:103:54)>, helper>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/internal/group_by.h:264:10	caller: histogram_by_index<int, parlay::delayed_sequence<int, int, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:103:54)> >
+		defdac  classify-cp/decisionTree/classify.C:103:15	caller: cond_info_continuous
+		defdac  classify-cp/decisionTree/classify.C:169:18	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defdac  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>
+		defdac  classify-cp/decisionTree/classify.C:164:16	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceI7featureNS_9allocatorIS2_EELb0EEC1IZNS_8internal3mapIRS5_Z14build_tree_parS9_bE3$_6EEDaOT_OT0_mEUlmE_EEmSC_NS5_18_from_function_tagEmEUlmE_EEvmmSB_lb
+	dac	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<feature, parlay::allocator<feature>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:196:25)>
+		defdac  classify-cp/decisionTree/classify.C:196:18	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIhNS_9allocatorIhEELb0EEC1IZNS_8internal3mapIRKNS1_IS4_NS2_IS4_EELb0EEEZ8classifyRKNS1_I7featureNS2_ISC_EELb0EEESB_bE4$_15EEDaOT_OT0_mEUlmE_EEmSJ_NS4_18_from_function_tagEmEUlmE_EEvmmSI_lb
+	ef	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+
+	- [ ] --
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<const parlay::sequence<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false>, parlay::allocator<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:284:20)>
+		defef  classify-cp/decisionTree/classify.C:284:10	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceISt5tupleIJdiiEENS_9allocatorIS3_EELb0EEC1IZ10build_treeRNS1_I7featureNS4_IS8_EELb0EEEbE3$_9EEmOT_NS6_18_from_function_tagEmEUlmE_EEvmmSD_lb
+	ef	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:216:43)>
+
+	- [ ] --
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:216:43)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:216:43)>
+		defef  classify-cp/decisionTree/classify.C:216:16	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_18group_by_small_intINS_16delayed_sequenceIhhZNS1_11delayed_mapIRNS4_ISt4pairIhhES7_Z11delayed_zipINS_8sequenceIhNS_9allocatorIhEELb0EEESC_EDaRKT_RKT0_EUlmE_EEZNS_14group_by_indexIiSK_EEDaOSG_SD_EUlSF_E0_Li0EEEDaOSD_SG_EUlmE_E8iteratorENS4_IhhZNS5_ISL_ZNSM_IiSK_EEDaSN_SD_EUlSF_E_Li0EEEDaSP_SG_EUlmE_E8iteratorEEEDaNS_5sliceISD_SD_EENSX_ISG_SG_EEmEUlmmmE0_EEvmmSF_jEUlmE_EEvmmSD_lb
+	dac	classify-cp/decisionTree/parlay/internal/sequence_ops.h:173:3	caller: sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/counting_sort.h:225:31)>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/internal/counting_sort.h:225:5	caller: group_by_small_int<parlay::delayed_sequence<unsigned char, unsigned char, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator, parlay::delayed_sequence<unsigned char, unsigned char, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>
+		defdac  classify-cp/decisionTree/parlay/internal/group_by.h:324:12	caller: group_by_index<int, parlay::delayed_sequence<std::pair<unsigned char, unsigned char>, std::pair<unsigned char, unsigned char>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:76:37)> >
+		defdac  classify-cp/decisionTree/classify.C:199:16	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:198:36)>
+		defdac  classify-cp/decisionTree/classify.C:198:5	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZ10build_treeRNS_8sequenceI7featureNS_9allocatorIS2_EELb0EEEbE4$_14EEvmmT_lb
+	ef	classify-cp/decisionTree/classify.C:250:5	caller: build_tree
+
+	- [ ] --
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIP4treeNS_9allocatorIS3_EELb0EEC1IZNS_8internal3mapIRNS1_INS1_I7featureNS4_ISA_EELb0EEENS4_ISC_EELb0EEEZ14build_tree_parRSC_bE3$_7EEDaOT_OT0_mEUlmE_EEmSJ_NS6_18_from_function_tagEmEUlmE_EEvmmSI_lb
+	dac	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:204:28)>
+		defdac  classify-cp/decisionTree/classify.C:204:21	caller: build_tree_par
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZNS_8sequenceIhNS_9allocatorIhEELb0EEC1IZNS_8internal3mapIRS4_Z10build_treeRNS1_I7featureNS2_IS9_EELb0EEEbE4$_11EEDaOT_OT0_mEUlmE_EEmSF_NS4_18_from_function_tagEmEUlmE_EEvmmSE_lb
+	ef	classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+
+	- [ ] --
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:245:39)>
+		defef  classify-cp/decisionTree/classify.C:245:19	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main
+
+- [ ] ======================================
+	_ZN6parlay12parallel_forIZ14build_tree_parRNS_8sequenceI7featureNS_9allocatorIS2_EELb0EEEbE3$_8EEvmmT_lb
+	dac	classify-cp/decisionTree/classify.C:198:5	caller: build_tree_par
+
+	- [ ] --
+		defdac  classify-cp/decisionTree/classify.C:256:54	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:53:45	caller: operator()
+		defdac  classify-cp/decisionTree/parlay/sequence.h:517:40	caller: operator()
+		defef  classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:361:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:515:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/sequence.h:471:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
+		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:256:28)>
+		defef  classify-cp/decisionTree/classify.C:256:21	caller: build_tree
+		defef  classify-cp/decisionTree/classify.C:281:13	caller: classify
+		defef  classify-cp/bench/classifyTime.C:71:23	caller: operator()
+		defef  classify-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:70:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:71:6), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:72:6)>
+		defef  classify-cp/bench/classifyTime.C:69:3	caller: timeClassify
+		defef  classify-cp/bench/classifyTime.C:141:3	caller: main

@@ -148,6 +148,64 @@ double node_cost(int n, int num_features, int num_groups) {
   return log2(float(num_features));
 }
 
+/** DEBUG: since build_tree recursively calls itself inside a parallel_for (passing lambda) 
+ *      while being called at an EF callsite in classify, it becomes a Both and 
+ *      propagate Both dataflow to its SCC. To prevent this we divide the parallel
+ *      recursive call into a separate function to prevent DAC dataflow from reaching
+ *      the build_tree callnode. 
+*/ 
+auto build_tree_par(features &A, bool verbose) {
+  int num_features = A.size();
+  int num_entries = A[0].vals.size();
+  int majority_value = (num_entries == 0) ? -1 : majority(A[0].vals, A[0].num);
+  if (num_entries < 2 || all_equal(A[0].vals))
+    return Leaf(majority_value);
+  double label_info = info(A[0].vals,A[0].num);
+  auto costs = tabulate(num_features - 1, [&] (int i) {
+      if (A[i+1].discrete) {
+	return std::tuple(cond_info_discrete(A[0], A[i+1]), i+1, -1);
+      } else {
+	//auto [info, cut] = cond_info_continuous(A[0], A[i+1]);
+	auto info_cut = cond_info_continuous(A[0], A[i+1]);
+	return std::tuple(info_cut.first, i+1, info_cut.second);
+      }},1);
+
+  auto min1 = [&] (auto a, auto b) {return (std::get<0>(a) < std::get<0>(b)) ? a : b;};
+  auto min_m = make_monoid(min1, std::tuple(infinity, 0, 0));
+  auto [best_info, best_i, cutx] = reduce(costs, min_m);
+  auto cut = cutx;
+  double threshold = log2(float(num_features));
+
+  if (verbose)
+    cout << num_entries << ", " << best_i << ", " << cut << ", " << label_info << ", " 
+	 << best_info << endl;
+
+  if (label_info - best_info < threshold)
+    return Leaf(majority_value);
+  else {
+    int m;
+    row split_on;
+    if (A[best_i].discrete) {
+      m = A[best_i].num;
+      split_on = A[best_i].vals;
+    } else {
+      m = 2;
+      split_on =  map(A[best_i].vals, [&] (value x) -> value {return x >= cut;});
+    }
+
+    features F = map(A, [&] (feature a) {return feature(a.discrete, a.num);});
+    sequence<features> B(m, F);
+    parallel_for (0, num_features, [&] (size_t j) {
+      auto x = group_by_index(delayed_zip(split_on, A[j].vals), m);
+      for (int i=0; i < m; i++) B[i][j].vals = std::move(x[i]);
+    }, 1);
+    //A.clear();
+
+    auto children = map(B, [&] (features &a) {return build_tree_par(a, verbose);}, 1);
+    return Internal(best_i - 1, cut, majority_value, children); //-1 since first is label
+  }
+}
+
 auto build_tree(features &A, bool verbose) {
   int num_features = A.size();
   int num_entries = A[0].vals.size();
@@ -195,7 +253,7 @@ auto build_tree(features &A, bool verbose) {
     }, 1);
     //A.clear();
 
-    auto children = map(B, [&] (features &a) {return build_tree(a, verbose);}, 1);
+    auto children = map(B, [&] (features &a) {return /** DEBUG: */build_tree_par(a, verbose);}, 1);
     return Internal(best_i - 1, cut, majority_value, children); //-1 since first is label
   }
 }

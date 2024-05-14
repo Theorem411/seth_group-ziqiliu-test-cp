@@ -35,8 +35,10 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
                 res.add('\n'.join([ '{}{}'.format('\t'*indent, p) for p in callpath ]))
                 return
             ### DEBUG: ###
-            # if f in visited:
-            #     return
+            if args.debug:
+                if f in visited:
+                    return
+            ##############
 
             visited.add(f)
             js = cg[f]
@@ -235,6 +237,7 @@ if __name__ == "__main__":
     argParser.add_argument("-T", "--test", dest='test', help='')
     argParser.add_argument('-A', '--analysis-and-instrument', dest='analysis', help='', action='store_true')
     argParser.add_argument('-P', '--parlaytime-statistic', dest='parlaytime', help='', action='store_true') 
+    argParser.add_argument('-D', '--debug', dest='debug', help='', action='store_true')
     args = argParser.parse_args()
     #### parse instrumentation result
     # delaunay
