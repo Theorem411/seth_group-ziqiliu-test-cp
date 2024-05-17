@@ -47,7 +47,7 @@ sequence<char> csv_row(Seq const &e) {
   return parlay::flatten(ss);
 };
 
-void report_correct(row_ef result, row labels) {
+void report_correct(row result, row labels) {
   size_t n = result.size();
   if (n != labels.size()) {
     cout << "size mismatch of results and labels" << endl;
@@ -62,7 +62,7 @@ void report_correct(row_ef result, row labels) {
 
 void timeClassify(features const &Train, rows const &Test, row const &labels,
 		  int rounds, bool verbose, char* outFile) {
-  /** PRR: */row_ef result;
+  row result;
   #ifdef BUILTIN
   instrumentTimeLoopOnly = true;
   #endif

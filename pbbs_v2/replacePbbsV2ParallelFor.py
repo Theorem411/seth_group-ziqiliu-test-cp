@@ -1,3 +1,9 @@
+##########################################
+# example run: 
+# source /afs/ece/project/seth_group/ziqiliu/test-cp/venv/bin/activate
+# python replacePbbsV2ParallelFor.py -T=delaunayTriangulation -A (-D)
+# python replacePbbsV2ParallelFor.py -T=delaunayTriangulation -P -id=<id like: 2024-05-15.20:04:10> -ece=014
+##########################################
 from __future__ import print_function
 
 import os 
@@ -5,10 +11,13 @@ import re
 import json
 import argparse
 import zipfile
+import datetime
 import pandas as pd
 from collections import defaultdict
 
-PARALLELFOR_SOURCE_LOC = "opencilk.h:517:5"
+# base directory for handy path specification
+basedir = r'/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2'
+
 ###############################################################################
 # helper function shared by all 
 ###############################################################################
@@ -23,10 +32,16 @@ def normpath(path):
         path = path.replace("delaunayTriangulation/bench/common", "delaunayTriangulation/incrementalDelaunay/common", 1)
     return path
 
+def datetime_utcnow_strftime():
+    return datetime.datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S')
+
 # convert json to hashable string
 def jsonstr(json):
     return json.dumps(json, sort_keys=True)
 
+###############################################################################
+# main functionality 
+###############################################################################
 def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
     def print_call_history(func_name, cg, indent=0):
         res = set()
@@ -181,9 +196,9 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
                     # collect file mentioned
     return
 
-def interpretPerfTestResults(args, test=None, orig_time=None, test_time=None):
+def interpretPerfTestResults(args, test=None, res_dir=None, id=None):
+    # read entire log as chunks split by double newline
     def parse_parlaytime_log(log_text): 
-        # read entire log as chunks split by double newline
         run_texts = log_text.split("\n\n")
             # don't process any empty lines before EOF
         if (not run_texts[-1].strip()):
@@ -192,6 +207,7 @@ def interpretPerfTestResults(args, test=None, orig_time=None, test_time=None):
         df = pd.DataFrame(columns=['cilk_workers', 'avg_parlaytime'])
 
         # split into chunks begining with '== CILK_WORKERS = <d+> ==...'
+        r = None
         run_texts = [ t.split('\n') for t in run_texts ]
         for lines in run_texts: 
             # find line starting with "== CILK_WORKERS = "
@@ -209,39 +225,69 @@ def interpretPerfTestResults(args, test=None, orig_time=None, test_time=None):
             times = [ float(re.findall(r'\d+.\d+', ln)[0]) for ln in lines ]
 
             avg_times = pd.Series(times).mean()
+            std_times = pd.Series(times).std()
 
+            if r: 
+                assert(r == len(times))
+            r = len(times)
             # new row of data
-            new_row = pd.Series({ 'cilk_workers': CILK_WORKERS, 'avg_parlaytime': avg_times })
+            new_row = pd.Series({ 'cilk_workers': CILK_WORKERS, 'avg_parlaytime': avg_times, 'std_parlaytime': std_times })
             df = df.append(new_row, ignore_index=True)
-        return df
+        return df, r
 
-    with open(orig_time, 'r') as f: 
-        df_orig = parse_parlaytime_log(f.read())
-        df_orig.rename(columns={'avg_parlaytime': 'avg_parlaytime_orig'}, inplace=True)
-    with open(test_time, 'r') as f:
-        df_test = parse_parlaytime_log(f.read())
-        df_test.rename(columns={'avg_parlaytime': 'avg_parlaytime_test'}, inplace=True)
+    # parse control group parlaytime result
+    orig_time_path = os.path.join(basedir, r'data/{}/{}.parlaytime.orig.log'.format(test, id))
+    with open(orig_time_path, 'r') as f: 
+        df_orig, r_orig = parse_parlaytime_log(f.read())
+        df_orig.rename(columns={'avg_parlaytime': 'avg_parlaytime_orig', 'std_parlaytime': 'std_parlaytime_orig'}, inplace=True)
+    # parse test group parlaytime result
+    test_time_path = os.path.join(basedir, r'data/{}/{}.parlaytime.test.log'.format(test, id))
+    with open(test_time_path, 'r') as f:
+        df_test, r_test = parse_parlaytime_log(f.read())
+        df_test.rename(columns={'avg_parlaytime': 'avg_parlaytime_test', 'std_parlaytime': 'std_parlaytime_test'}, inplace=True)
+    assert(r_orig == r_test)
 
+    # merge compiled control & test group parlaytime results
     df_merge = df_orig.merge(df_test, on='cilk_workers')
-    print("write performance test results to --> ./{}.perf.csv".format(test))
-    df_merge.to_csv(r'./{}.perf.csv'.format(test), index=False)
+    
+    # output .perf.csv
+    ece_id = int(args.ece)
+    out_path = os.path.join(basedir, r'perf/{}/{}.ece{}.r{}.perf.csv'.format(test, id, ece_id, r_orig))
+    print("write performance test results to --> {}".format(out_path))
+    df_merge.to_csv(out_path, index=False)
 
 if __name__ == "__main__":
-    exclude_dirs = ['venv']
-    # replace_parallel_for(exclude_dirs=exclude_dirs)
+    # take current timestamp
+    dt = datetime_utcnow_strftime()
+
     
     # main runner argument parser
     argParser = argparse.ArgumentParser()
-    argParser.add_argument("--redo-ast", dest="redo", help='regenerate fresh .ast.json using clang ast-dump', action="store_true")
     argParser.add_argument("-v", "--verbose", dest='v', help='', action="store_true")
     argParser.add_argument("-T", "--test", dest='test', help='')
-    argParser.add_argument('-A', '--analysis-and-instrument', dest='analysis', help='', action='store_true')
-    argParser.add_argument('-P', '--parlaytime-statistic', dest='parlaytime', help='', action='store_true') 
+    # prr static analysis result parsing
+    argParser.add_argument('-A', '--analysis-and-instrument', dest='analysis', help='parse prr static analysis result and generate parallel_for substitution worklist', action='store_true')
     argParser.add_argument('-D', '--debug', dest='debug', help='', action='store_true')
+    # parlaytime result parsing
+    argParser.add_argument('-P', '--parlaytime-statistic', dest='parlaytime', help='', action='store_true') 
+    argParser.add_argument('-id', dest='experiment_id', default=None, help='experiment timestamp for result identification')
+    argParser.add_argument('-ece', dest='ece', default=None, help='ece cluster machine number')
     args = argParser.parse_args()
+    # os.walk parameters
+    exclude_dirs = ['venv']
+
     #### parse instrumentation result
-    # delaunay
-    basedir = r'/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2'
+    def parlaytime_result_dir(testname=None):
+        return os.path.join(basedir, 'data/{}'.format(testname))
+
+    if args.parlaytime:
+        if not args.experiment_id: 
+            print("Must supply experiment id (printed at the end of performance experiment)!")
+            exit(1)
+        if not args.ece: 
+            print("Must supply ece cluster machine id!")
+            exit(1)
+
     if (args.test == "delaunayTriangulation"):
         if args.analysis:
             compileAnalysisAndInstrumentResults(
@@ -252,8 +298,8 @@ if __name__ == "__main__":
             interpretPerfTestResults(
                 args,
                 test=args.test,
-                orig_time=os.path.join(basedir, r'delaunayTriangulation-cp/incrementalDelaunay/delaunayTriangulation.parlaytime.orig.log'),
-                test_time=os.path.join(basedir, r'delaunayTriangulation-test/incrementalDelaunay/delaunayTriangulation.parlaytime.test.log'))
+                res_dir=parlaytime_result_dir('delaunayTriangulation'), 
+                id=args.experiment_id)
 
     elif (args.test == "wordCounts"):
         if args.analysis:
@@ -265,8 +311,8 @@ if __name__ == "__main__":
             interpretPerfTestResults(
                 args, 
                 test=args.test,
-                orig_time=os.path.join(basedir, r'wordCounts-cp/histogram/wordCounts.parlaytime.orig.log'),
-                test_time=os.path.join(basedir, r'wordCounts-test/histogram/wordCounts.parlaytime.test.log'))
+                res_dir=parlaytime_result_dir('wordCounts'), 
+                id=args.experiment_id)
 
     elif (args.test == "classify"):
         if args.analysis:
@@ -278,8 +324,8 @@ if __name__ == "__main__":
             interpretPerfTestResults(
                 args, 
                 test=args.test,
-                orig_time=os.path.join(basedir, r'classify-cp/decisionTree/classify.parlaytime.orig.log'),
-                test_time=os.path.join(basedir, r'classify-test/decisionTree/classify.parlaytime.test.log'))
+                res_dir=parlaytime_result_dir('classify'), 
+                id=args.experiment_id)
     else:
         print('Error: wrong test name!')
         exit(1)

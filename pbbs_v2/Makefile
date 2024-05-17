@@ -18,6 +18,10 @@ CXXFLAGS = -gdwarf-2 -DPARLAY_OPENCILK -mllvm -experimental-debug-variable-locat
 CXXFLAGS_INSTR = $(CXXFLAGS) -DBUILTIN -fno-inline -Xclang -fpass-plugin=$(INSTR_DIR)/LazydInstrumentLoopPlugin.so
 CXXFLAGS_LL = $(CXXFLAGS) -fno-inline -Xclang -fpass-plugin=$(PRR_DIR)/libModulePrinter.so
 CXXFLAGS_RUN = $(CXXFLAGS) -DRUNTIME
+ASSERT ?= 0
+ifeq ($(ASSERT), 1)
+  CXXFLAGS_RUN += -DASSERT
+endif 
 
 LDFLAGS = -L$(GCC_TOOLCHAIN)/lib64
 LDFLAGS_INSTR = $(LDFLAGS) -L$(INSTR_DIR) -lLazydInstrumentLoop

@@ -78,38 +78,53 @@ compilePerformanceTest() {
     local TESTDATA=$4
     local TESTNAME=$5
 
+    # R number of experiment runs
+    if [ ! -n "$r" ]; then 
+        echo -e "\nexperiment run parameter \$r not defined! Use default 20..."
+        local R=20
+    else 
+        local R=$r
+    fi 
+
     # original library 
     pushd $BASE_DIR > /dev/null
-    echo -e "make orig $EXE\n"
+    echo -e "\n-- make orig $EXE"
     make $SRC_ORIG_PATH/$EXE
     popd > /dev/null
     
     pushd $SRC_ORIG_PATH > /dev/null
-    local CONTROL_LOG=$TESTNAME.parlaytime.orig.log
+    local CONTROL_LOG="${BASE_DIR}/data/${TESTNAME}/${DATETIME}.parlaytime.orig.log"
     > $CONTROL_LOG
     for nwkr in 1 2 4 8 14 28; do 
         echo -e "== CILK_WORKERS = ${nwkr} ===================================" >> $CONTROL_LOG
         CILK_NWORKERS=${nwkr} LD_LIBRARY_PATH=/afs/ece/project/seth_group/ziqiliu/GCC-12.2.0/lib64 \
-            ./$EXE -r 10 -i $TESTDATA >> $CONTROL_LOG 2>&1
+            ./$EXE -r $R -i $TESTDATA >> $CONTROL_LOG 2>&1
     done
+    echo -e "Created control group parlaytime log: $CONTROL_LOG"
     echo -e "\n/*** done with control group! ***/\n"
     popd > /dev/null
 
-    # test modified library
+    # test with modified library
     ### NOTE: ran with -DRUNTIME to turn on optimized parallel_for code
     pushd $BASE_DIR > /dev/null
-    echo -e "make test $EXE\n"
-    make $SRC_TEST_PATH/$EXE
+    echo -e "\n-- make test $EXE\n"
+    if [ -n "$assert" ] && [ "$assert" -eq 1 ]; then
+        echo -e "-DASSERT turned on!\n"
+        make $SRC_TEST_PATH/$EXE ASSERT=1 
+    else 
+        make $SRC_TEST_PATH/$EXE ASSERT=0 
+    fi
     popd > /dev/null
 
     pushd $SRC_TEST_PATH > /dev/null
-    local TEST_LOG=$TESTNAME.parlaytime.test.log
+    local TEST_LOG="${BASE_DIR}/data/${TESTNAME}/${DATETIME}.parlaytime.test.log"
     > $TEST_LOG
     for nwkr in 1 2 4 8 14 28; do 
         echo -e "== CILK_WORKERS = $nwkr ===================================" >> $TEST_LOG
         CILK_NWORKERS=$nwkr LD_LIBRARY_PATH=/afs/ece/project/seth_group/ziqiliu/GCC-12.2.0/lib64 \
-            ./$EXE -r 10 -i $TESTDATA >> $TEST_LOG 2>&1
+            ./$EXE -r $R -i $TESTDATA >> $TEST_LOG 2>&1
     done
+    echo -e "Created test group parlaytime log: $TEST_LOG"
     echo -e "\n/*** done with substitute test group! ***/\n"
     popd > /dev/null
 }
@@ -217,28 +232,56 @@ classify() {
     fi
 }
 
-# $mode and $test should be provided by env variables
-if [ "$mode" -eq 0 ]; then 
-    echo -e "Test: ${test}\tMode: static prr\tanalysis & instrumentation\n"
-else 
-    echo -e "Test: ${test}\tMode: dynamic\tperformance experiment\n"
-fi
+# main 
+main() {
+    # $mode and $test should be provided by env variables
+    if [ "$mode" -eq 0 ]; then 
+        echo -e "Test: ${test}\tMode: static prr\tanalysis & instrumentation\n"
+    else 
+        echo -e "Test: ${test}\tMode: dynamic\tperformance experiment\n"
+    fi
 
+    # record current utc timestamp for experiment identification
+    DATETIME=$(date -u +"%Y-%m-%d.%H:%M:%S")
 
-# call test
-case "$test" in
-    delaunayTriangulation)
-        delaunayTriangulation "$mode" 
-        ;;
-    wordCounts)
-        wordCounts "$mode"
-        ;;
-    classify)
-        classify "$mode"
-        ;;
-    *)
-        echo -e "Error: unknown test name: $test" 
-        exit 1
-        ;;
+    # call test
+    case "$test" in
+        delaunayTriangulation)
+            delaunayTriangulation "$mode" 
+            ;;
+        wordCounts)
+            wordCounts "$mode"
+            ;;
+        classify)
+            classify "$mode"
+            ;;
+        all)
+            echo -e "Test all!"
+            echo -e "\n==== test=delaunayTriangulation\n"
+            delaunayTriangulation "$mode" 
+            echo -e "\n==== test=wordCounts\n"
+            wordCounts "$mode"
+            echo -e "\n==== test=classify\n"
+            classify "$mode"
+            ;;
+        *)
+            echo -e "unrecognized test name: $test"
+            exit 1
+            ;;
+    esac
 
-esac
+    # print DATETIME as experiment id
+    echo -e "\nCheck experiment with id/datetime: ${DATETIME}"
+    echo -e "summary:\nmode=$mode\ntest=$test\nassert=$assert\nr=$r\n"
+}
+
+main
+
+################################
+# example call: 
+#### individual test perf/analsyis run
+# test=delaunayTriangulation mode=1 (r=10) (assert=1) ./prr.sh
+
+#### ran all pbbs_v2 perf experiments 
+# mode=1 test=all ./prr.sh 
+################################

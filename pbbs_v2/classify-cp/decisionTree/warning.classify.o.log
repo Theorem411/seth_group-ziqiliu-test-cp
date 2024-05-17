@@ -5900,10 +5900,10 @@ In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classi
 /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:506:7: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::sequence_base' requested here
       sequence_base_type() {
       ^
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:158:43)>' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>' requested here
     return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
            ^
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:158:43)>' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>' requested here
     ::from_function(n, std::forward<UnaryOp>(f), granularity);
       ^
 In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
@@ -5917,10 +5917,10 @@ In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classi
 /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
     parallel_for(0, n, [&](size_t i) {
     ^
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:158:43)>' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>' requested here
     return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
            ^
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:158:43)>' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:164:43)>' requested here
     ::from_function(n, std::forward<UnaryOp>(f), granularity);
       ^
 In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
@@ -6037,7 +6037,7 @@ In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classi
 /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:199:45: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false>>, false>::sequence_base' requested here
   sequence(size_t n, const value_type& t) : sequence_base_type() { initialize_fill(n, t); }
                                             ^
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:191:24: note: in instantiation of member function 'parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false>>, false>::sequence' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:197:24: note: in instantiation of member function 'parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false>>, false>::sequence' requested here
     sequence<features> B(m, F);
                        ^
 In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
@@ -6054,7 +6054,7 @@ In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classi
 /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:199:68: note: in instantiation of member function 'parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false>>, false>::initialize_fill' requested here
   sequence(size_t n, const value_type& t) : sequence_base_type() { initialize_fill(n, t); }
                                                                    ^
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:191:24: note: in instantiation of member function 'parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false>>, false>::sequence' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:197:24: note: in instantiation of member function 'parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false>>, false>::sequence' requested here
     sequence<features> B(m, F);
                        ^
 In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
@@ -7571,10 +7571,117 @@ In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classi
 /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
   resumeCtx[19] = (void*)threadId;
                   ^~~~~~~~~~~~~~~
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:192:36)>' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:198:36)>' requested here
             parallel_for_static(start, end, f, granularity, true);
             ^
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:192:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:192:36)>' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:198:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:198:36)>' requested here
+    parallel_for (0, num_features, [&] (size_t j) {
+    ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../../parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<tree *, parlay::allocator<tree *>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<tree *, parlay::allocator<tree *>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../../parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:216:43)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<std::tuple<double, int, int>, parlay::allocator<std::tuple<double, int, int>>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:216:43)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../../parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:173:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+  parallel_for(0, l, body, 1, 0 != (fl & fl_conservative));
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:202:3: note: in instantiation of function template specialization 'parlay::internal::sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:202:29)>' requested here
+  sliced_for(n, block_size, [&](size_t i, size_t s, size_t e) {
+  ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../../parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:173:3: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:168:15)>' requested here
+  parallel_for(0, l, body, 1, 0 != (fl & fl_conservative));
+  ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:202:3: note: in instantiation of function template specialization 'parlay::internal::sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:202:29)>' requested here
+  sliced_for(n, block_size, [&](size_t i, size_t s, size_t e) {
+  ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../../parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../../parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:515:24)>' requested here
+    parallel_for(0, n, [&](size_t i) {
+    ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:471:12: note: in instantiation of function template specialization 'parlay::sequence<feature, parlay::allocator<feature>, false>::sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
+    return sequence_type(n, std::forward<F>(f), _from_function_tag(), granularity);
+           ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<feature, parlay::allocator<feature>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
+    ::from_function(n, std::forward<UnaryOp>(f), granularity);
+      ^
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
+In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../../parallel.h:48:
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:259:19: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+  resumeCtx[19] = (void*)threadId;
+                  ^~~~~~~~~~~~~~~
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:348:13: note: in instantiation of function template specialization 'parlay::parallel_for_static<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:250:36)>' requested here
+            parallel_for_static(start, end, f, granularity, true);
+            ^
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:250:5: note: in instantiation of function template specialization 'parlay::parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:250:36)>' requested here
     parallel_for (0, num_features, [&] (size_t j) {
     ^
 In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
@@ -7611,7 +7718,7 @@ In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classi
 /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/sequence.h:106:38: note: in instantiation of member function 'parlay::sequence_internal::sequence_base<feature, parlay::allocator<feature>, false>::sequence_base' requested here
   sequence(const sequence_type& s) : sequence_base_type(s.storage) {}
                                      ^
-/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:222:16: note: in instantiation of member function 'parlay::sequence<feature, parlay::allocator<feature>, false>::sequence' requested here
+/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:280:16: note: in instantiation of member function 'parlay::sequence<feature, parlay::allocator<feature>, false>::sequence' requested here
   features A = Train;
                ^
 In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:30:
@@ -7631,4 +7738,4 @@ In file included from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classi
 /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:31:7: note: in instantiation of function template specialization 'parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false>::from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>' requested here
     ::from_function(n, std::forward<UnaryOp>(f), granularity);
       ^
-365 warnings generated.
+372 warnings generated.
