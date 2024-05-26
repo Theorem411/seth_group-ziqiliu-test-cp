@@ -49,16 +49,16 @@ void writeHistogramsToFile(parlay::sequence<result_type> const results, char* ou
 void timeWordCounts(parlay::sequence<char> const &s, int rounds, bool verbose, char* outFile) {
   size_t n = s.size();
   parlay::sequence<result_type> R;
-  #ifdef BUILTIN
-  instrumentTimeLoopOnly = true;
-  #endif
+//   #ifdef BUILTIN
+//   instrumentTimeLoopOnly = true;
+//   #endif
   time_loop(rounds, 1.0,
        [&] () {R.clear();},
        [&] () {R = wordCounts(s, verbose);},
        [&] () {});
-  #ifdef BUILTIN
-  instrumentTimeLoopOnly = false;
-  #endif
+//   #ifdef BUILTIN
+//   instrumentTimeLoopOnly = false;
+//   #endif
 
   cout << endl;
   if (outFile != NULL) writeHistogramsToFile(R, outFile);

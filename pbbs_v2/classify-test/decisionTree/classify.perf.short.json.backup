@@ -1,0 +1,210 @@
+[
+  {
+    "inline_callers": [
+      "_Z10build_treeRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 55.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 1, 
+    "entry": 1, 
+    "inline_loc": "classify-test/decisionTree/classify.C:248:36", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z10build_treeRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 464810.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 1, 
+    "entry": 1, 
+    "inline_loc": "classify-test/decisionTree/classify.C:245:36", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z10build_treeRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 55.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 1, 
+    "entry": 1, 
+    "inline_loc": "classify-test/decisionTree/classify.C:250:23", 
+    "granularity_sum": 1.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z10build_treeRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 54.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 1, 
+    "entry": 1, 
+    "inline_loc": "classify-test/decisionTree/classify.C:216:34", 
+    "granularity_sum": 1.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z10build_treeRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 2.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 1, 
+    "entry": 1, 
+    "inline_loc": "classify-test/decisionTree/classify.C:256:39", 
+    "granularity_sum": 1.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z20cond_info_continuousRK7featureS1_"
+    ], 
+    "tripcount_sum": 21600.0, 
+    "depth_sum": 11050.0, 
+    "version": 2, 
+    "dac_entry": 1350, 
+    "ef_entry": 0, 
+    "entry": 1350, 
+    "inline_loc": "classify-test/decisionTree/classify.C:103:34", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8sequenceISt4pairIiiENS_9allocatorIS2_EELb0EE19initialize_fill_dacEmRKS2_"
+    ], 
+    "tripcount_sum": 172800.0, 
+    "depth_sum": 22100.0, 
+    "version": 2, 
+    "dac_entry": 2700, 
+    "ef_entry": 0, 
+    "entry": 2700, 
+    "inline_loc": "classify-test/decisionTree/parlay/sequence.h:665:16", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z14build_tree_parRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 5668807.0, 
+    "depth_sum": 174529.0, 
+    "version": 2, 
+    "dac_entry": 10784, 
+    "ef_entry": 0, 
+    "entry": 10784, 
+    "inline_loc": "classify-test/decisionTree/classify.C:193:37", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z14build_tree_parRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 24338.0, 
+    "depth_sum": 196608.0, 
+    "version": 2, 
+    "dac_entry": 12169, 
+    "ef_entry": 0, 
+    "entry": 12169, 
+    "inline_loc": "classify-test/decisionTree/classify.C:204:40", 
+    "granularity_sum": 12169.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z14build_tree_parRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 669350.0, 
+    "depth_sum": 196617.0, 
+    "version": 2, 
+    "dac_entry": 12170, 
+    "ef_entry": 0, 
+    "entry": 12170, 
+    "inline_loc": "classify-test/decisionTree/classify.C:198:24", 
+    "granularity_sum": 12170.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z14build_tree_parRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 669350.0, 
+    "depth_sum": 196617.0, 
+    "version": 2, 
+    "dac_entry": 12170, 
+    "ef_entry": 0, 
+    "entry": 12170, 
+    "inline_loc": "classify-test/decisionTree/classify.C:196:37", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z14build_tree_parRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb"
+    ], 
+    "tripcount_sum": 925884.0, 
+    "depth_sum": 287161.0, 
+    "version": 2, 
+    "dac_entry": 17146, 
+    "ef_entry": 0, 
+    "entry": 17146, 
+    "inline_loc": "classify-test/decisionTree/classify.C:164:35", 
+    "granularity_sum": 17146.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8internal14sliced_for_dacIZNS0_22group_by_small_int_dacINS_16delayed_sequenceIhhZNS0_11delayed_mapIRNS3_ISt4pairIhhES6_Z11delayed_zipINS_8sequenceIhNS_9allocatorIhEELb0EEESB_EDaRKT_RKT0_EUlmE_EEZNS_18group_by_index_dacIiSJ_EEDaOSF_SC_EUlSE_E0_Li0EEEDaOSC_SF_EUlmE_E8iteratorENS3_IhhZNS4_ISK_ZNSL_IiSJ_EEDaSM_SC_EUlSE_E_Li0EEEDaSO_SF_EUlmE_E8iteratorEEEDaNS_5sliceISC_SC_EENSW_ISF_SF_EEmEUlmmmE_EEvmmSE_j"
+    ], 
+    "tripcount_sum": 709991.0, 
+    "depth_sum": 11483245.0, 
+    "version": 2, 
+    "dac_entry": 669346, 
+    "ef_entry": 0, 
+    "entry": 669346, 
+    "inline_loc": "classify-test/decisionTree/parlay/internal/delayed/../sequence_ops.h:246:14", 
+    "granularity_sum": 669346.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8internal22group_by_small_int_dacINS_16delayed_sequenceIhhZNS0_11delayed_mapIRNS2_ISt4pairIhhES5_Z11delayed_zipINS_8sequenceIhNS_9allocatorIhEELb0EEESA_EDaRKT_RKT0_EUlmE_EEZNS_18group_by_index_dacIiSI_EEDaOSE_SB_EUlSD_E0_Li0EEEDaOSB_SE_EUlmE_E8iteratorENS2_IhhZNS3_ISJ_ZNSK_IiSI_EEDaSL_SB_EUlSD_E_Li0EEEDaSN_SE_EUlmE_E8iteratorEEEDaNS_5sliceISB_SB_EENSV_ISE_SE_EEm"
+    ], 
+    "tripcount_sum": 1338692.0, 
+    "depth_sum": 11483245.0, 
+    "version": 2, 
+    "dac_entry": 669346, 
+    "ef_entry": 0, 
+    "entry": 669346, 
+    "inline_loc": "classify-test/decisionTree/parlay/internal/counting_sort.h:312:27", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay16parallel_for_dacIZNS_8internal14sliced_for_dacIZNS1_22group_by_small_int_dacINS_16delayed_sequenceIhhZNS1_11delayed_mapIRNS4_ISt4pairIhhES7_Z11delayed_zipINS_8sequenceIhNS_9allocatorIhEELb0EEESC_EDaRKT_RKT0_EUlmE_EEZNS_18group_by_index_dacIiSK_EEDaOSG_SD_EUlSF_E0_Li0EEEDaOSD_SG_EUlmE_E8iteratorENS4_IhhZNS5_ISL_ZNSM_IiSK_EEDaSN_SD_EUlSF_E_Li0EEEDaSP_SG_EUlmE_E8iteratorEEEDaNS_5sliceISD_SD_EENSX_ISG_SG_EEmEUlmmmE0_EEvmmSF_jEUlmE_EEvmmSD_lb"
+    ], 
+    "tripcount_sum": 709991.0, 
+    "depth_sum": 11483245.0, 
+    "version": 2, 
+    "dac_entry": 669346, 
+    "ef_entry": 0, 
+    "entry": 669346, 
+    "inline_loc": "classify-test/decisionTree/parlay/internal/scheduler_plugins/opencilk.h:347:5", 
+    "granularity_sum": 669346.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z18cond_info_discreteRK7featureS1_"
+    ], 
+    "tripcount_sum": 1508936.0, 
+    "depth_sum": 13389552.0, 
+    "version": 2, 
+    "dac_entry": 754468, 
+    "ef_entry": 0, 
+    "entry": 754468, 
+    "inline_loc": "classify-test/decisionTree/classify.C:141:36", 
+    "granularity_sum": 0.0
+  }
+]

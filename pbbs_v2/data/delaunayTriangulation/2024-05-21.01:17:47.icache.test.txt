@@ -1,0 +1,78 @@
+== CILK_WORKERS = 1 ===================================
+
+ Performance counter stats for './delaunay -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/geometryData/data/2DinCube_100000':
+
+           913,055      icache.misses:u                                             
+       231,123,807      icache.hit:u                                                
+
+       4.503914797 seconds time elapsed
+
+       4.442699000 seconds user
+       0.060982000 seconds sys
+
+
+== CILK_WORKERS = 2 ===================================
+
+ Performance counter stats for './delaunay -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/geometryData/data/2DinCube_100000':
+
+         5,426,613      icache.misses:u                                             
+       637,496,946      icache.hit:u                                                
+
+       4.764230612 seconds time elapsed
+
+       9.406639000 seconds user
+       0.091006000 seconds sys
+
+
+== CILK_WORKERS = 4 ===================================
+
+ Performance counter stats for './delaunay -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/geometryData/data/2DinCube_100000':
+
+        13,152,715      icache.misses:u                                             
+     1,365,997,693      icache.hit:u                                                
+
+       3.777519417 seconds time elapsed
+
+      14.795502000 seconds user
+       0.173017000 seconds sys
+
+
+== CILK_WORKERS = 8 ===================================
+
+ Performance counter stats for './delaunay -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/geometryData/data/2DinCube_100000':
+
+        17,648,148      icache.misses:u                                             
+     2,744,574,328      icache.hit:u                                                
+
+       3.128678752 seconds time elapsed
+
+      24.264158000 seconds user
+       0.305913000 seconds sys
+
+
+== CILK_WORKERS = 14 ===================================
+
+ Performance counter stats for './delaunay -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/geometryData/data/2DinCube_100000':
+
+        26,311,712      icache.misses:u                                             
+     4,054,141,074      icache.hit:u                                                
+
+       3.042738569 seconds time elapsed
+
+      40.038020000 seconds user
+       0.684034000 seconds sys
+
+
+== CILK_WORKERS = 28 ===================================
+
+ Performance counter stats for './delaunay -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/geometryData/data/2DinCube_100000':
+
+        48,822,017      icache.misses:u                                             
+     8,186,675,028      icache.hit:u                                                
+
+       3.298627938 seconds time elapsed
+
+      85.188199000 seconds user
+       1.524450000 seconds sys
+
+

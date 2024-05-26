@@ -39,9 +39,9 @@ using namespace benchIO;
 void writeHistogramsToFile(parlay::sequence<result_type> const results, char* outFile) {
   auto space = parlay::to_chars(' ');
   auto newline = parlay::to_chars('\n');
-  auto str = parlay::flatten(parlay::map(results, [&] (result_type x) {
+  /** PRR: EF */auto str = parlay::flatten_ef(/** PRR: EF [x]*/parlay::map_ef(results, [&] (result_type x) {
 	sequence<sequence<char>> s = {
-	  x.first, space, parlay::to_chars(x.second), newline};
+	  x.first, space, /** PRR: DAC */parlay::to_chars_dac(x.second), newline};
 	return flatten(s);}));
   parlay::chars_to_file(str, outFile);
 }

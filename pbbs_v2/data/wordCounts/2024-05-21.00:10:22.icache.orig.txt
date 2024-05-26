@@ -1,0 +1,78 @@
+== CILK_WORKERS = 1 ===================================
+
+ Performance counter stats for './wc -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/wikipedia250M.txt':
+
+         3,890,574      icache.misses:u                                             
+       878,081,248      icache.hit:u                                                
+
+     149.594716155 seconds time elapsed
+
+     146.863219000 seconds user
+       2.718800000 seconds sys
+
+
+== CILK_WORKERS = 2 ===================================
+
+ Performance counter stats for './wc -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/wikipedia250M.txt':
+
+         4,441,437      icache.misses:u                                             
+       930,018,081      icache.hit:u                                                
+
+      69.007074528 seconds time elapsed
+
+     134.920127000 seconds user
+       2.839750000 seconds sys
+
+
+== CILK_WORKERS = 4 ===================================
+
+ Performance counter stats for './wc -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/wikipedia250M.txt':
+
+         5,383,458      icache.misses:u                                             
+     1,016,969,219      icache.hit:u                                                
+
+      36.737820150 seconds time elapsed
+
+     142.922819000 seconds user
+       3.136776000 seconds sys
+
+
+== CILK_WORKERS = 8 ===================================
+
+ Performance counter stats for './wc -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/wikipedia250M.txt':
+
+         6,406,531      icache.misses:u                                             
+     1,172,144,099      icache.hit:u                                                
+
+      19.920562831 seconds time elapsed
+
+     153.765713000 seconds user
+       3.459926000 seconds sys
+
+
+== CILK_WORKERS = 14 ===================================
+
+ Performance counter stats for './wc -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/wikipedia250M.txt':
+
+         7,239,327      icache.misses:u                                             
+     1,299,222,878      icache.hit:u                                                
+
+      12.259012216 seconds time elapsed
+
+     162.558284000 seconds user
+       4.846008000 seconds sys
+
+
+== CILK_WORKERS = 28 ===================================
+
+ Performance counter stats for './wc -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/wikipedia250M.txt':
+
+        10,436,499      icache.misses:u                                             
+     1,773,067,984      icache.hit:u                                                
+
+       7.660650570 seconds time elapsed
+
+     196.251737000 seconds user
+       6.375374000 seconds sys
+
+

@@ -1,0 +1,493 @@
+[
+  {
+    "inline_callers": [
+      "_Z8delaunayRN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 8
+    }, 
+    "ef_entry": 8, 
+    "entry": 8, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:351:38", 
+    "tripcount_dist": {
+      "200008": 8
+    }, 
+    "depth_dist": {
+      "0": 8
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z8delaunayRN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 8
+    }, 
+    "ef_entry": 8, 
+    "entry": 8, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:357:35", 
+    "tripcount_dist": {
+      "100010": 8
+    }, 
+    "depth_dist": {
+      "0": 8
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z8delaunayRN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:325:14", 
+    "tripcount_dist": {
+      "100000": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z17generate_boundaryRKN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEEmRNS0_I6vertexIS2_ENS3_IS9_EELb0EEERNS0_I8triangleIS2_ENS3_ISE_EELb0EEE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "1": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:200:33", 
+    "tripcount_dist": {
+      "79": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8internal18random_shuffle_ef_IPKmPmEEvNS_5sliceIT_S6_EENS5_IT0_S8_EENS_6randomE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "1": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/parlay/random.h:178:14", 
+    "tripcount_dist": {
+      "32": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z8delaunayRN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:329:14", 
+    "tripcount_dist": {
+      "100000": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z24incrementally_add_pointsN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEES5_"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "1025": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:243:23", 
+    "tripcount_dist": {
+      "1": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z8delaunayRN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:338:23", 
+    "tripcount_dist": {
+      "100000": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z8delaunayRN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "129": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:321:20", 
+    "tripcount_dist": {
+      "200008": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z24incrementally_add_pointsN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEES5_"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "8193": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:238:18", 
+    "tripcount_dist": {
+      "101": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z24incrementally_add_pointsN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEES5_"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:239:24", 
+    "tripcount_dist": {
+      "101": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z17generate_boundaryRKN6parlay8sequenceI7point2dIdENS_9allocatorIS2_EELb0EEEmRNS0_I6vertexIS2_ENS3_IS9_EELb0EEERNS0_I8triangleIS2_ENS3_ISE_EELb0EEE"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "1": 9
+    }, 
+    "ef_entry": 9, 
+    "entry": 9, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:201:33", 
+    "tripcount_dist": {
+      "79": 9
+    }, 
+    "depth_dist": {
+      "0": 9
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8sequenceI7simplexI7point2dIdEENS_9allocatorIS4_EELb0EEC2Emii", 
+      "_ZN6parlay8sequenceI6vertexI7point2dIdEENS_9allocatorIS4_EELb0EEC2Emii"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 18
+    }, 
+    "ef_entry": 18, 
+    "entry": 18, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/parlay/sequence.h:198:84", 
+    "tripcount_dist": {
+      "100010": 9, 
+      "101": 9
+    }, 
+    "depth_dist": {
+      "0": 18
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEC2IPS5_EET_SB_i"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "1025": 18
+    }, 
+    "ef_entry": 18, 
+    "entry": 18, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/parlay/sequence.h:218:19", 
+    "tripcount_dist": {
+      "1002": 9, 
+      "100": 9
+    }, 
+    "depth_dist": {
+      "0": 18
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z24incrementally_add_pointsN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEES5_"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 11429
+    }, 
+    "ef_entry": 11429, 
+    "entry": 11429, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:272:16", 
+    "tripcount_dist": {
+      "1": 450, 
+      "2": 270, 
+      "3": 180, 
+      "4": 135, 
+      "5": 117, 
+      "6": 81, 
+      "7": 90, 
+      "8": 63, 
+      "9": 63, 
+      "10": 54, 
+      "11": 63, 
+      "12": 45, 
+      "13": 36, 
+      "14": 45, 
+      "15": 36, 
+      "16": 27, 
+      "17": 36, 
+      "18": 36, 
+      "19": 27, 
+      "20": 27, 
+      "21": 27, 
+      "22": 27, 
+      "23": 27, 
+      "24": 18, 
+      "25": 18, 
+      "26": 27, 
+      "27": 18, 
+      "28": 18, 
+      "29": 18, 
+      "30": 18, 
+      "31": 26, 
+      "32": 18, 
+      "33": 18, 
+      "34": 18, 
+      "35": 18, 
+      "36": 18, 
+      "37": 9, 
+      "38": 18, 
+      "39": 18, 
+      "40": 9, 
+      "41": 18, 
+      "42": 9, 
+      "43": 18, 
+      "44": 9, 
+      "45": 18, 
+      "46": 9, 
+      "47": 9, 
+      "48": 18, 
+      "49": 9, 
+      "50": 9, 
+      "51": 18, 
+      "52": 9, 
+      "53": 9, 
+      "54": 9, 
+      "55": 9, 
+      "56": 9, 
+      "57": 18, 
+      "58": 9, 
+      "59": 9, 
+      "60": 9, 
+      "61": 9, 
+      "62": 9, 
+      "63": 9, 
+      "64": 9, 
+      "65": 9, 
+      "66": 9, 
+      "68": 9, 
+      "69": 9, 
+      "70": 9, 
+      "71": 9, 
+      "72": 9, 
+      "73": 9, 
+      "74": 9, 
+      "76": 9, 
+      "77": 9, 
+      "78": 9, 
+      "79": 9, 
+      "80": 9, 
+      "82": 9, 
+      "83": 9, 
+      "84": 9, 
+      "86": 9, 
+      "87": 9, 
+      "89": 9, 
+      "90": 9, 
+      "92": 9, 
+      "93": 9, 
+      "95": 9, 
+      "96": 9, 
+      "97": 9, 
+      "99": 9, 
+      "100": 9, 
+      "101": 8640
+    }, 
+    "depth_dist": {
+      "0": 11429
+    }
+  }, 
+  {
+    "inline_callers": [
+      "_Z24incrementally_add_pointsN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEES5_"
+    ], 
+    "version": 1, 
+    "dac_entry": 0, 
+    "granularity_dist": {
+      "0": 11429
+    }, 
+    "ef_entry": 11429, 
+    "entry": 11429, 
+    "inline_loc": "delaunayTriangulation-test/incrementalDelaunay/delaunay.C:280:16", 
+    "tripcount_dist": {
+      "1": 450, 
+      "2": 270, 
+      "3": 180, 
+      "4": 135, 
+      "5": 117, 
+      "6": 81, 
+      "7": 90, 
+      "8": 63, 
+      "9": 63, 
+      "10": 54, 
+      "11": 63, 
+      "12": 45, 
+      "13": 36, 
+      "14": 45, 
+      "15": 36, 
+      "16": 27, 
+      "17": 36, 
+      "18": 36, 
+      "19": 27, 
+      "20": 27, 
+      "21": 27, 
+      "22": 27, 
+      "23": 27, 
+      "24": 18, 
+      "25": 18, 
+      "26": 27, 
+      "27": 18, 
+      "28": 18, 
+      "29": 18, 
+      "30": 18, 
+      "31": 26, 
+      "32": 18, 
+      "33": 18, 
+      "34": 18, 
+      "35": 18, 
+      "36": 18, 
+      "37": 9, 
+      "38": 18, 
+      "39": 18, 
+      "40": 9, 
+      "41": 18, 
+      "42": 9, 
+      "43": 18, 
+      "44": 9, 
+      "45": 18, 
+      "46": 9, 
+      "47": 9, 
+      "48": 18, 
+      "49": 9, 
+      "50": 9, 
+      "51": 18, 
+      "52": 9, 
+      "53": 9, 
+      "54": 9, 
+      "55": 9, 
+      "56": 9, 
+      "57": 18, 
+      "58": 9, 
+      "59": 9, 
+      "60": 9, 
+      "61": 9, 
+      "62": 9, 
+      "63": 9, 
+      "64": 9, 
+      "65": 9, 
+      "66": 9, 
+      "68": 9, 
+      "69": 9, 
+      "70": 9, 
+      "71": 9, 
+      "72": 9, 
+      "73": 9, 
+      "74": 9, 
+      "76": 9, 
+      "77": 9, 
+      "78": 9, 
+      "79": 9, 
+      "80": 9, 
+      "82": 9, 
+      "83": 9, 
+      "84": 9, 
+      "86": 9, 
+      "87": 9, 
+      "89": 9, 
+      "90": 9, 
+      "92": 9, 
+      "93": 9, 
+      "95": 9, 
+      "96": 9, 
+      "97": 9, 
+      "99": 9, 
+      "100": 9, 
+      "101": 8640
+    }, 
+    "depth_dist": {
+      "0": 11429
+    }
+  }
+]

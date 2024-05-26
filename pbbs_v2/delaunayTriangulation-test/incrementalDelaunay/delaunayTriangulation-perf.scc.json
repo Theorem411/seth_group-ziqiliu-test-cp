@@ -1,0 +1,48 @@
+[
+  {
+    "isBoth": true,
+    "scc": [
+      {
+        "both_caller": {
+          "ext": false,
+          "id": "_ZN8oct_treeI6vertexI7point2dIdEEE4node11delete_treeEPS5_"
+        },
+        "id": "_ZZN8oct_treeI6vertexI7point2dIdEEE4nodeD1EvENKUlvE_clEv",
+        "inargs": false,
+        "prr": "both"
+      },
+      {
+        "both_caller": {
+          "ext": false,
+          "id": "_ZZN8oct_treeI6vertexI7point2dIdEEE4nodeD1EvENKUlvE0_clEv"
+        },
+        "id": "_ZN6parlayL9par_do_ifIZN8oct_treeI6vertexI7point2dIdEEE4nodeD1EvEUlvE_ZNS7_D1EvEUlvE0_EEvbT_T0_b",
+        "inargs": false,
+        "prr": "both"
+      },
+      {
+        "both_caller": {
+          "ext": false,
+          "id": "_ZN8oct_treeI6vertexI7point2dIdEEE4node11delete_treeEPS5_"
+        },
+        "id": "_ZZN8oct_treeI6vertexI7point2dIdEEE4nodeD1EvENKUlvE0_clEv",
+        "inargs": false,
+        "prr": "both"
+      },
+      {
+        "both_caller": {
+          "ext": false,
+          "id": "_ZN8oct_treeI6vertexI7point2dIdEEE4node11delete_treeEPS5_"
+        },
+        "ef_caller": {
+          "ext": true,
+          "id": "_Z24incrementally_add_pointsN6parlay8sequenceIP6vertexI7point2dIdEENS_9allocatorIS5_EELb0EEES5_"
+        },
+        "id": "_ZN8oct_treeI6vertexI7point2dIdEEE4node11delete_treeEPS5_",
+        "inargs": false,
+        "prr": "both"
+      }
+    ],
+    "size": 4
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "inline_callers": [
+      "_ZN6parlay15parallel_for_efIZNS_17sequence_internal13sequence_baseINS_8sequenceISt4pairINS3_IcNS_9allocatorIcEELb1EEEmENS5_IS8_EELb0EEENS5_ISA_EELb0EE12storage_impl14destroy_all_efEvEUlmE_EEvmmT_lb"
+    ], 
+    "tripcount_sum": 2048.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 1, 
+    "entry": 1, 
+    "inline_loc": "wordCounts-test/histogram/parlay/internal/scheduler_plugins/opencilk.h:306:5", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb"
+    ], 
+    "tripcount_sum": 500000000.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 2, 
+    "entry": 2, 
+    "inline_loc": "wordCounts-test/histogram/wc.C:38:32", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay10flatten_efISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmEEEDaONS2_INS2_IT_NS3_IS7_EEXsr3std7is_sameIS7_cEE5valueEEENS3_IS9_EEXsr3std7is_sameIS9_cEE5valueEEE"
+    ], 
+    "tripcount_sum": 4096.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 2, 
+    "entry": 2, 
+    "inline_loc": "wordCounts-test/histogram/parlay/primitives.h:1041:17", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8internal10get_bucketINS_19count_by_key_helperINS_8sequenceIcNS_9allocatorIcEELb1EEEmNS_4hashIS6_EESt8equal_toIvEEEEC2INS_5sliceIPS6_SF_EEEERKT_RKSB_mi"
+    ], 
+    "tripcount_sum": 16384.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 2, 
+    "entry": 2, 
+    "inline_loc": "wordCounts-test/histogram/parlay/internal/collect_reduce.h:153:29", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8internal10get_bucketINS_19count_by_key_helperINS_8sequenceIcNS_9allocatorIcEELb1EEEmNS_4hashIS6_EESt8equal_toIvEEEEC2INS_5sliceIPS6_SF_EEEERKT_RKSB_mi"
+    ], 
+    "tripcount_sum": 16384.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 2, 
+    "entry": 2, 
+    "inline_loc": "wordCounts-test/histogram/parlay/internal/collect_reduce.h:176:18", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8sequenceImNS_9allocatorImEELb0EEC2IZNS_10flatten_efISt4pairINS0_IcNS1_IcEELb1EEEmEEEDaONS0_INS0_IT_NS1_ISA_EEXsr3std7is_sameISA_cEE5valueEEENS1_ISC_EEXsr3std7is_sameISC_cEE5valueEEEEUlmE_EEmOSA_NS3_18_from_function_tagEim", 
+      "_ZN6parlay8sequenceINS0_ISt4pairINS0_IcNS_9allocatorIcEELb1EEEmENS2_IS5_EELb0EEENS2_IS7_EELb0EEC2IZNS_8internal25collect_reduce_sparse_ef_INS_26uninitialized_relocate_tagENS_5sliceIPS4_SF_EENS_19count_by_key_helperIS4_mNS_4hashIS4_EESt8equal_toIvEEEEEDaT0_RKT1_EUlmE0_EEmOT_NS9_18_from_function_tagEim"
+    ], 
+    "tripcount_sum": 8192.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 4, 
+    "entry": 4, 
+    "inline_loc": "wordCounts-test/histogram/parlay/sequence.h:575:5", 
+    "granularity_sum": 2.0
+  }, 
+  {
+    "inline_callers": [
+      "_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb"
+    ], 
+    "tripcount_sum": 500498.0, 
+    "depth_sum": 0.0, 
+    "version": 1, 
+    "dac_entry": 0, 
+    "ef_entry": 8, 
+    "entry": 8, 
+    "inline_loc": "wordCounts-test/histogram/wc.C:45:34", 
+    "granularity_sum": 4.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZZN6parlay8internal25collect_reduce_sparse_ef_INS_26uninitialized_relocate_tagENS_5sliceIPNS_8sequenceIcNS_9allocatorIcEELb1EEES8_EENS_19count_by_key_helperIS7_mNS_4hashIS7_EESt8equal_toIvEEEEEDaT0_RKT1_ENKUlmE0_clEm"
+    ], 
+    "tripcount_sum": 30041166.0, 
+    "depth_sum": 96.0, 
+    "version": 2, 
+    "dac_entry": 96, 
+    "ef_entry": 0, 
+    "entry": 96, 
+    "inline_loc": "wordCounts-test/histogram/parlay/internal/collect_reduce.h:531:25", 
+    "granularity_sum": 96000.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE20initialize_range_dacIPcEEvT_S6_St26random_access_iterator_tag"
+    ], 
+    "tripcount_sum": 214130.0, 
+    "depth_sum": 44388.0, 
+    "version": 2, 
+    "dac_entry": 44388, 
+    "ef_entry": 0, 
+    "entry": 44388, 
+    "inline_loc": "wordCounts-test/bench/parlay/sequence.h:718:16", 
+    "granularity_sum": 363670884.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay16parallel_for_seqIZNS_8internal7delayed11for_each_efIRNS2_19block_delayed_zip_tIJRNS2_20block_delayed_scan_tIRNS_16delayed_sequenceISt4pairIllES8_ZNS_13map_tokens_efIRNS_8sequenceIcNS_9allocatorIcEELb1EEERZNS_9tokens_efISE_Z10wordCountsRKSD_bE3$_1EENSA_ISD_NSB_ISD_EELb0EEEOT_OT0_EUlSM_E_RSI_EEDaSM_SO_OT1_EUlmE1_EELb0EZNS9_ISE_SQ_SR_EEDaSM_SO_ST_EUlS8_S8_E_S8_EENS6_ImmZNS_4iotaImEEDaSL_EUlmE_EEEEEZNS9_ISE_SQ_SR_EEDaSM_SO_ST_EUlSM_E_Li0EEEvSM_SO_EUlmE_EEvmmSL_lb", 
+      "_ZN6parlay16parallel_for_seqIZNS_10flatten_efISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmEEEDaONS3_INS3_IT_NS4_IS8_EEXsr3std7is_sameIS8_cEE5valueEEENS4_ISA_EEXsr3std7is_sameISA_cEE5valueEEEEUlmE0_EEvmmS8_lb"
+    ], 
+    "tripcount_sum": 382559561.0, 
+    "depth_sum": 78756495.0, 
+    "version": 2, 
+    "dac_entry": 78756495, 
+    "ef_entry": 0, 
+    "entry": 78756495, 
+    "inline_loc": "wordCounts-test/histogram/parlay/internal/scheduler_plugins/opencilk.h:169:2", 
+    "granularity_sum": 645219203727.0
+  }
+]

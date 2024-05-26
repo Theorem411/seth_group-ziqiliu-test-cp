@@ -1,0 +1,565 @@
+<< read from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wordCounts.cg.json
+<< read from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wordCounts.cilkfor.json
+61 static cilkfor results
+	31 ef results
+	11 dac results
+	12 both results
+	7 untouched results
+<< read from /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wordCounts.instr.json
+25 instrumentation cilkfor results
+	overconservative-ef: _ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implC1ERKS6_EUlmE_EEvmmT_lb
+		wordCounts-cp/bench/parlay/internal/sequence_base.h:128:9 	caller: storage_impl	mangled: _ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implC2ERKS5_
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:584:55	caller: sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EEC2ERKNS4_12storage_implE
+		both  wordCounts-cp/histogram/parlay/sequence.h:106:38	caller: sequence	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2ERKS3_
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:135:24	caller: get_bucket<parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *> >	_ZN6parlay8internal10get_bucketINS_19count_by_key_helperINS_8sequenceIcNS_9allocatorIcEELb1EEEmNS_4hashIS6_EESt8equal_toIvEEEEC2INS_5sliceIPS6_SF_EEEERKT_RKSB_m
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:301:13	caller: collect_reduce_sparse_<parlay::uninitialized_relocate_tag, parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal22collect_reduce_sparse_INS_26uninitialized_relocate_tagENS_5sliceIPNS_8sequenceIcNS_9allocatorIcEELb1EEES8_EENS_19count_by_key_helperIS7_mNS_4hashIS7_EESt8equal_toIvEEEEEDaT0_RKT1_
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:334:12	caller: collect_reduce_sparse<parlay::sequence<char, parlay::allocator<char>, true>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal21collect_reduce_sparseINS_8sequenceIcNS_9allocatorIcEELb1EEENS_19count_by_key_helperIS5_mNS_4hashIS5_EESt8equal_toIvEEEEEDaONS2_IT_NS3_ISC_EEXsr3std7is_sameISC_cEE5valueEEERKT0_
+		defef  wordCounts-cp/histogram/parlay/internal/group_by.h:192:10	caller: histogram_by_key<unsigned long, parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> >	_ZN6parlay16histogram_by_keyImNS_8sequenceINS1_IcNS_9allocatorIcEELb1EEENS2_IS4_EELb0EEENS_4hashIS4_EESt8equal_toIvEEEDaOT0_OT1_OT2_
+		defef  wordCounts-cp/histogram/wc.C:49:17	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+
+
+	overconservative-ef: _ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS4_IS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb
+		wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9 	caller: destroy_all	mangled: _ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl5clearEv
+		defef  wordCounts-cp/histogram/parlay/sequence.h:344:26	caller: clear	_ZN6parlay8sequenceINS0_IcNS_9allocatorIcEELb1EEENS1_IS3_EELb0EE5clearEv
+		defef  wordCounts-cp/histogram/wc.C:53:9	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EED2Ev
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1113:3	caller: map_tokens<parlay::file_map &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1125:19) &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay10map_tokensIRNS_8file_mapERZNS_6tokensIS2_RN7benchIO3$_0EEENS_8sequenceINS7_IcNS_9allocatorIcEELb1EEENS8_ISA_EELb0EEEOT_OT0_EUlSE_E_S6_EEDaSE_SG_OT1_
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1127:15	caller: tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay6tokensIRNS_8file_mapERN7benchIO3$_0EEENS_8sequenceINS6_IcNS_9allocatorIcEELb1EEENS7_IS9_EELb0EEEOT_OT0_
+		untouched  wordCounts-cp/bench/common/IO.h:212:15	caller: get_tokens	_ZN7benchIO10get_tokensEPKc
+
+
+	overconservative-ef: _ZN6parlay12parallel_forIZNS_17make_unique_arrayINS_8internal15block_allocatorEZNS2_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_EUlmE_EEvmmT_lb
+		wordCounts-cp/bench/parlay/utilities.h:552:3 	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/parlay/internal/pool_allocator.h:119:80)>	mangled: _ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:568:13	caller: initialize_range<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPKcEEvT_S7_St26random_access_iterator_tag
+		defef  wordCounts-cp/bench/parlay/sequence.h:586:5	caller: initialize_dispatch<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE19initialize_dispatchIPKcEEvT_S7_St17integral_constantIbLb0EE
+		defef  wordCounts-cp/bench/parlay/sequence.h:205:5	caller: sequence<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2IPKcEET_S7_
+		defef  wordCounts-cp/bench/parlay/sequence.h:754:10	caller: to_sequence<parlay::file_map>	_ZN6parlay11to_sequenceINS_8file_mapEEENS_8sequenceINS_13type_identityINS3_INSt15iterator_traitsINS3_IDTclsr3stdE5beginclsr3stdE7declvalIRT_EEEEE4typeEE10value_typeEE4typeEE4typeENS_9allocatorISF_EEXsr3std7is_sameISF_cEE5valueEEEOS5_
+		defef  wordCounts-cp/bench/wcTime.C:74:30	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/bench/wcTime.C:77:1	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/histogram/wc.C:58:1	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		both  GCC-12.2.0/include/c++/12.2.0/bits/stl_construct.h:151:19	caller: _Destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZSt8_DestroyIN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEEvPT_
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:278:4	caller: _S_destroy<parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE10_S_destroyIS5_S4_EEvRT_PT0_z
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:378:4	caller: destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE7destroyIS4_EEvRS5_PT_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:508:35	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl7destroyEPS5_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:44	caller: operator()	_ZZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEvENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:28)>	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS4_IS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:9	caller: destroy_all	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EED2Ev
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1113:3	caller: map_tokens<parlay::file_map &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1125:19) &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay10map_tokensIRNS_8file_mapERZNS_6tokensIS2_RN7benchIO3$_0EEENS_8sequenceINS7_IcNS_9allocatorIcEELb1EEENS8_ISA_EELb0EEEOT_OT0_EUlSE_E_S6_EEDaSE_SG_OT1_
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1127:15	caller: tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay6tokensIRNS_8file_mapERN7benchIO3$_0EEENS_8sequenceINS6_IcNS_9allocatorIcEELb1EEENS7_IS9_EELb0EEEOT_OT0_
+		untouched  wordCounts-cp/bench/common/IO.h:212:15	caller: get_tokens	_ZN7benchIO10get_tokensEPKc
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:539:13	caller: initialize_fill	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE15initialize_fillEmRKc
+		defef  wordCounts-cp/bench/parlay/sequence.h:199:68	caller: sequence	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2EmRKc
+		untouched  wordCounts-cp/bench/common/IO.h:194:16	caller: readStringFromFile	_ZN7benchIO18readStringFromFileEPKc
+
+
+	overconservative-dac: _ZN6parlay12parallel_forIZNKS_8internal15block_allocator15initialize_listEPSt4byteEUlmE_EEvmmT_lb
+		wordCounts-cp/bench/parlay/internal/block_allocator.h:86:5	caller: initialize_list	mangled: _ZNK6parlay8internal15block_allocator15initialize_listEPSt4byte
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:126:25	caller: operator()	_ZZN6parlay8internal15block_allocator7reserveEmENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:32)>	_ZN6parlay12parallel_forIZNS_8internal15block_allocator7reserveEmEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:5	caller: reserve	_ZN6parlay8internal15block_allocator7reserveEm
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/histogram/wc.C:58:1	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:126:25	caller: operator()	_ZZN6parlay8internal15block_allocator7reserveEmENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:32)>	_ZN6parlay12parallel_forIZNS_8internal15block_allocator7reserveEmEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:5	caller: reserve	_ZN6parlay8internal15block_allocator7reserveEm
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:539:13	caller: initialize_fill	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE15initialize_fillEmRKc
+		defef  wordCounts-cp/bench/parlay/sequence.h:199:68	caller: sequence	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2EmRKc
+		untouched  wordCounts-cp/bench/common/IO.h:194:16	caller: readStringFromFile	_ZN7benchIO18readStringFromFileEPKc
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:126:25	caller: operator()	_ZZN6parlay8internal15block_allocator7reserveEmENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:32)>	_ZN6parlay12parallel_forIZNS_8internal15block_allocator7reserveEmEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:5	caller: reserve	_ZN6parlay8internal15block_allocator7reserveEm
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		both  GCC-12.2.0/include/c++/12.2.0/bits/stl_construct.h:151:19	caller: _Destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZSt8_DestroyIN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEEvPT_
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:278:4	caller: _S_destroy<parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE10_S_destroyIS5_S4_EEvRT_PT0_z
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:378:4	caller: destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE7destroyIS4_EEvRS5_PT_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:508:35	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl7destroyEPS5_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:44	caller: operator()	_ZZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEvENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:28)>	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS4_IS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:9	caller: destroy_all	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EED2Ev
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1113:3	caller: map_tokens<parlay::file_map &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1125:19) &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay10map_tokensIRNS_8file_mapERZNS_6tokensIS2_RN7benchIO3$_0EEENS_8sequenceINS7_IcNS_9allocatorIcEELb1EEENS8_ISA_EELb0EEEOT_OT0_EUlSE_E_S6_EEDaSE_SG_OT1_
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1127:15	caller: tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay6tokensIRNS_8file_mapERN7benchIO3$_0EEENS_8sequenceINS6_IcNS_9allocatorIcEELb1EEENS7_IS9_EELb0EEEOT_OT0_
+		untouched  wordCounts-cp/bench/common/IO.h:212:15	caller: get_tokens	_ZN7benchIO10get_tokensEPKc
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:126:25	caller: operator()	_ZZN6parlay8internal15block_allocator7reserveEmENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:32)>	_ZN6parlay12parallel_forIZNS_8internal15block_allocator7reserveEmEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:5	caller: reserve	_ZN6parlay8internal15block_allocator7reserveEm
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/bench/wcTime.C:77:1	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:126:25	caller: operator()	_ZZN6parlay8internal15block_allocator7reserveEmENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:32)>	_ZN6parlay12parallel_forIZNS_8internal15block_allocator7reserveEmEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:124:5	caller: reserve	_ZN6parlay8internal15block_allocator7reserveEm
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:568:13	caller: initialize_range<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPKcEEvT_S7_St26random_access_iterator_tag
+		defef  wordCounts-cp/bench/parlay/sequence.h:586:5	caller: initialize_dispatch<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE19initialize_dispatchIPKcEEvT_S7_St17integral_constantIbLb0EE
+		defef  wordCounts-cp/bench/parlay/sequence.h:205:5	caller: sequence<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2IPKcEET_S7_
+		defef  wordCounts-cp/bench/parlay/sequence.h:754:10	caller: to_sequence<parlay::file_map>	_ZN6parlay11to_sequenceINS_8file_mapEEENS_8sequenceINS_13type_identityINS3_INSt15iterator_traitsINS3_IDTclsr3stdE5beginclsr3stdE7declvalIRT_EEEEE4typeEE10value_typeEE4typeEE4typeENS_9allocatorISF_EEXsr3std7is_sameISF_cEE5valueEEEOS5_
+		defef  wordCounts-cp/bench/wcTime.C:74:30	caller: main	main
+
+
+	overconservative-ef: _ZN6parlay12parallel_forIZNS_8internal20unique_array_deleterINS1_15block_allocatorEEclEPS3_EUlmE_EEvmmT_lb
+		wordCounts-cp/bench/parlay/utilities.h:517:9 	caller: operator()	mangled: _ZN6parlay8internal20unique_array_deleterINS0_15block_allocatorEEclEPS2_
+	- [ ] --
+		both  GCC-12.2.0/include/c++/12.2.0/bits/unique_ptr.h:669:4	caller: ~unique_ptr	_ZNSt10unique_ptrIA_N6parlay8internal15block_allocatorENS1_20unique_array_deleterIS2_EEED2Ev
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:5	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		both  GCC-12.2.0/include/c++/12.2.0/bits/stl_construct.h:151:19	caller: _Destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZSt8_DestroyIN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEEvPT_
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:278:4	caller: _S_destroy<parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE10_S_destroyIS5_S4_EEvRT_PT0_z
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:378:4	caller: destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE7destroyIS4_EEvRS5_PT_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:508:35	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl7destroyEPS5_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:44	caller: operator()	_ZZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEvENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:28)>	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS4_IS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:9	caller: destroy_all	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EED2Ev
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1113:3	caller: map_tokens<parlay::file_map &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1125:19) &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay10map_tokensIRNS_8file_mapERZNS_6tokensIS2_RN7benchIO3$_0EEENS_8sequenceINS7_IcNS_9allocatorIcEELb1EEENS8_ISA_EELb0EEEOT_OT0_EUlSE_E_S6_EEDaSE_SG_OT1_
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1127:15	caller: tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay6tokensIRNS_8file_mapERN7benchIO3$_0EEENS_8sequenceINS6_IcNS_9allocatorIcEELb1EEENS7_IS9_EELb0EEEOT_OT0_
+		untouched  wordCounts-cp/bench/common/IO.h:212:15	caller: get_tokens	_ZN7benchIO10get_tokensEPKc
+	- [ ] --
+		both  GCC-12.2.0/include/c++/12.2.0/bits/unique_ptr.h:669:4	caller: ~unique_ptr	_ZNSt10unique_ptrIA_N6parlay8internal15block_allocatorENS1_20unique_array_deleterIS2_EEED2Ev
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:105:3	caller: ~pool_allocator	_ZN6parlay8internal14pool_allocatorD2Ev
+	- [ ] --
+		both  GCC-12.2.0/include/c++/12.2.0/bits/unique_ptr.h:669:4	caller: ~unique_ptr	_ZNSt10unique_ptrIA_N6parlay8internal15block_allocatorENS1_20unique_array_deleterIS2_EEED2Ev
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:5	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:539:13	caller: initialize_fill	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE15initialize_fillEmRKc
+		defef  wordCounts-cp/bench/parlay/sequence.h:199:68	caller: sequence	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2EmRKc
+		untouched  wordCounts-cp/bench/common/IO.h:194:16	caller: readStringFromFile	_ZN7benchIO18readStringFromFileEPKc
+	- [ ] --
+		both  GCC-12.2.0/include/c++/12.2.0/bits/unique_ptr.h:669:4	caller: ~unique_ptr	_ZNSt10unique_ptrIA_N6parlay8internal15block_allocatorENS1_20unique_array_deleterIS2_EEED2Ev
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:5	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:568:13	caller: initialize_range<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPKcEEvT_S7_St26random_access_iterator_tag
+		defef  wordCounts-cp/bench/parlay/sequence.h:586:5	caller: initialize_dispatch<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE19initialize_dispatchIPKcEEvT_S7_St17integral_constantIbLb0EE
+		defef  wordCounts-cp/bench/parlay/sequence.h:205:5	caller: sequence<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2IPKcEET_S7_
+		defef  wordCounts-cp/bench/parlay/sequence.h:754:10	caller: to_sequence<parlay::file_map>	_ZN6parlay11to_sequenceINS_8file_mapEEENS_8sequenceINS_13type_identityINS3_INSt15iterator_traitsINS3_IDTclsr3stdE5beginclsr3stdE7declvalIRT_EEEEE4typeEE10value_typeEE4typeEE4typeENS_9allocatorISF_EEXsr3std7is_sameISF_cEE5valueEEEOS5_
+		defef  wordCounts-cp/bench/wcTime.C:74:30	caller: main	main
+	- [ ] --
+		both  GCC-12.2.0/include/c++/12.2.0/bits/unique_ptr.h:669:4	caller: ~unique_ptr	_ZNSt10unique_ptrIA_N6parlay8internal15block_allocatorENS1_20unique_array_deleterIS2_EEED2Ev
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:5	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/bench/wcTime.C:77:1	caller: main	main
+	- [ ] --
+		both  GCC-12.2.0/include/c++/12.2.0/bits/unique_ptr.h:669:4	caller: ~unique_ptr	_ZNSt10unique_ptrIA_N6parlay8internal15block_allocatorENS1_20unique_array_deleterIS2_EEED2Ev
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:5	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/histogram/wc.C:58:1	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+
+
+	accurate both: _ZN6parlay12parallel_forIZNS_8internal15block_allocator7reserveEmEUlmE_EEvmmT_lb
+		wordCounts-cp/bench/parlay/internal/block_allocator.h:124:5 ef 	caller: reserve	mangled: _ZN6parlay8internal15block_allocator7reserveEm
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:539:13	caller: initialize_fill	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE15initialize_fillEmRKc
+		defef  wordCounts-cp/bench/parlay/sequence.h:199:68	caller: sequence	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2EmRKc
+		untouched  wordCounts-cp/bench/common/IO.h:194:16	caller: readStringFromFile	_ZN7benchIO18readStringFromFileEPKc
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:568:13	caller: initialize_range<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPKcEEvT_S7_St26random_access_iterator_tag
+		defef  wordCounts-cp/bench/parlay/sequence.h:586:5	caller: initialize_dispatch<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE19initialize_dispatchIPKcEEvT_S7_St17integral_constantIbLb0EE
+		defef  wordCounts-cp/bench/parlay/sequence.h:205:5	caller: sequence<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2IPKcEET_S7_
+		defef  wordCounts-cp/bench/parlay/sequence.h:754:10	caller: to_sequence<parlay::file_map>	_ZN6parlay11to_sequenceINS_8file_mapEEENS_8sequenceINS_13type_identityINS3_INSt15iterator_traitsINS3_IDTclsr3stdE5beginclsr3stdE7declvalIRT_EEEEE4typeEE10value_typeEE4typeEE4typeENS_9allocatorISF_EEXsr3std7is_sameISF_cEE5valueEEEOS5_
+		defef  wordCounts-cp/bench/wcTime.C:74:30	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/histogram/wc.C:58:1	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		both  GCC-12.2.0/include/c++/12.2.0/bits/stl_construct.h:151:19	caller: _Destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZSt8_DestroyIN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEEvPT_
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:278:4	caller: _S_destroy<parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE10_S_destroyIS5_S4_EEvRT_PT0_z
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:378:4	caller: destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE7destroyIS4_EEvRS5_PT_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:508:35	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl7destroyEPS5_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:44	caller: operator()	_ZZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEvENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:28)>	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS4_IS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:9	caller: destroy_all	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EED2Ev
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1113:3	caller: map_tokens<parlay::file_map &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1125:19) &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay10map_tokensIRNS_8file_mapERZNS_6tokensIS2_RN7benchIO3$_0EEENS_8sequenceINS7_IcNS_9allocatorIcEELb1EEENS8_ISA_EELb0EEEOT_OT0_EUlSE_E_S6_EEDaSE_SG_OT1_
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1127:15	caller: tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay6tokensIRNS_8file_mapERN7benchIO3$_0EEENS_8sequenceINS6_IcNS_9allocatorIcEELb1EEENS7_IS9_EELb0EEEOT_OT0_
+		untouched  wordCounts-cp/bench/common/IO.h:212:15	caller: get_tokens	_ZN7benchIO10get_tokensEPKc
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/bench/wcTime.C:77:1	caller: main	main
+
+
+		wordCounts-cp/bench/parlay/internal/block_allocator.h:124:5 dac 	caller: reserve	mangled: _ZN6parlay8internal15block_allocator7reserveEm
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:539:13	caller: initialize_fill	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE15initialize_fillEmRKc
+		defef  wordCounts-cp/bench/parlay/sequence.h:199:68	caller: sequence	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2EmRKc
+		untouched  wordCounts-cp/bench/common/IO.h:194:16	caller: readStringFromFile	_ZN7benchIO18readStringFromFileEPKc
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:159:22	caller: allocate	_ZN6parlay9allocatorISt4byteE8allocateEm
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:318:20	caller: allocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE8allocateERS3_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:284:30	caller: create	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header6createEmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:303:75	caller: capacitated_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_bufferC2EmRNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:524:38	caller: initialize_capacity	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl19initialize_capacityEm
+		defef  wordCounts-cp/bench/parlay/sequence.h:568:13	caller: initialize_range<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPKcEEvT_S7_St26random_access_iterator_tag
+		defef  wordCounts-cp/bench/parlay/sequence.h:586:5	caller: initialize_dispatch<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE19initialize_dispatchIPKcEEvT_S7_St17integral_constantIbLb0EE
+		defef  wordCounts-cp/bench/parlay/sequence.h:205:5	caller: sequence<const char *>	_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2IPKcEET_S7_
+		defef  wordCounts-cp/bench/parlay/sequence.h:754:10	caller: to_sequence<parlay::file_map>	_ZN6parlay11to_sequenceINS_8file_mapEEENS_8sequenceINS_13type_identityINS3_INSt15iterator_traitsINS3_IDTclsr3stdE5beginclsr3stdE7declvalIRT_EEEEE4typeEE10value_typeEE4typeEE4typeENS_9allocatorISF_EEXsr3std7is_sameISF_cEE5valueEEEOS5_
+		defef  wordCounts-cp/bench/wcTime.C:74:30	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/histogram/wc.C:58:1	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		both  GCC-12.2.0/include/c++/12.2.0/bits/stl_construct.h:151:19	caller: _Destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZSt8_DestroyIN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEEvPT_
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:278:4	caller: _S_destroy<parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE10_S_destroyIS5_S4_EEvRT_PT0_z
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:378:4	caller: destroy<parlay::sequence<char, parlay::allocator<char>, true> >	_ZNSt16allocator_traitsIN6parlay9allocatorINS0_8sequenceIcNS1_IcEELb1EEEEEE7destroyIS4_EEvRS5_PT_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:508:35	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl7destroyEPS5_
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:44	caller: operator()	_ZZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEvENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/internal/scheduler_plugins/opencilk.h:367:46	caller: parallel_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:28)>	_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS4_IS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:192:9	caller: destroy_all	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EED2Ev
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1113:3	caller: map_tokens<parlay::file_map &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/../parlay/primitives.h:1125:19) &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay10map_tokensIRNS_8file_mapERZNS_6tokensIS2_RN7benchIO3$_0EEENS_8sequenceINS7_IcNS_9allocatorIcEELb1EEENS8_ISA_EELb0EEEOT_OT0_EUlSE_E_S6_EEDaSE_SG_OT1_
+		untouched  wordCounts-cp/bench/parlay/primitives.h:1127:15	caller: tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/common/IO.h:41:19) &>	_ZN6parlay6tokensIRNS_8file_mapERN7benchIO3$_0EEENS_8sequenceINS6_IcNS_9allocatorIcEELb1EEENS7_IS9_EELb0EEEOT_OT0_
+		untouched  wordCounts-cp/bench/common/IO.h:212:15	caller: get_tokens	_ZN7benchIO10get_tokensEPKc
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/block_allocator.h:152:5	caller: block_allocator	_ZN6parlay8internal15block_allocatorC2Emmmmm
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:120:14	caller: operator()	_ZZN6parlay8internal14pool_allocatorC1ERKSt6vectorImSaImEEENKUlmE_clEm
+		both  wordCounts-cp/histogram/parlay/utilities.h:555:31	caller: make_unique_array<parlay::internal::block_allocator, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:80)>	_ZN6parlay17make_unique_arrayINS_8internal15block_allocatorEZNS1_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_
+		both  wordCounts-cp/histogram/parlay/internal/pool_allocator.h:119:24	caller: pool_allocator	_ZN6parlay8internal14pool_allocatorC2ERKSt6vectorImSaImEE
+		both  wordCounts-cp/histogram/parlay/alloc.h:62:25	caller: get_default_allocator	_ZN6parlay8internal21get_default_allocatorEv
+		both  wordCounts-cp/histogram/parlay/alloc.h:170:7	caller: deallocate	_ZN6parlay9allocatorISt4byteE10deallocateEPS1_m
+		both  GCC-12.2.0/include/c++/12.2.0/bits/alloc_traits.h:345:13	caller: deallocate	_ZNSt16allocator_traitsIN6parlay9allocatorISt4byteEEE10deallocateERS3_PS2_m
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:291:11	caller: destroy	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer6header7destroyEPS7_RNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:314:11	caller: free_buffer	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl18capacitated_buffer11free_bufferERNS2_ISt4byteEE
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:204:32	caller: clear	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EED2Ev
+		defef  wordCounts-cp/bench/wcTime.C:77:1	caller: main	main
+
+
+	overconservative-ef: _ZN6parlay12parallel_forIZNS_8sequenceImNS_9allocatorImEELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb
+		wordCounts-cp/histogram/parlay/sequence.h:532:5 	caller: initialize_default	mangled: _ZN6parlay8sequenceImNS_9allocatorImEELb0EE18initialize_defaultEm
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/sequence.h:196:56	caller: sequence	_ZN6parlay8sequenceImNS_9allocatorImEELb0EEC2Em
+		both  wordCounts-cp/histogram/parlay/internal/counting_sort.h:39:23	caller: seq_count_<parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, unsigned long *, parlay::slice<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:305:35)>::iterator, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:305:35)>::iterator> >	_ZN6parlay8internal10seq_count_INS_5sliceIPNS_8sequenceIcNS_9allocatorIcEELb1EEES7_EEPmNS2_INS_16delayed_sequenceImmZNS0_22collect_reduce_sparse_INS_26uninitialized_relocate_tagES8_NS_19count_by_key_helperIS6_mNS_4hashIS6_EESt8equal_toIvEEEEEDaT0_RKT1_EUlmE_E8iteratorESP_EEEEvT_SK_SJ_m
+		defef  wordCounts-cp/histogram/parlay/internal/counting_sort.h:81:3	caller: seq_count_sort_<parlay::uninitialized_relocate_tag, parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, unsigned long *, parlay::slice<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:305:35)>::iterator, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:305:35)>::iterator> >	_ZN6parlay8internal15seq_count_sort_INS_26uninitialized_relocate_tagENS_5sliceIPNS_8sequenceIcNS_9allocatorIcEELb1EEES8_EES9_PmNS3_INS_16delayed_sequenceImmZNS0_22collect_reduce_sparse_IS2_S9_NS_19count_by_key_helperIS7_mNS_4hashIS7_EESt8equal_toIvEEEEEDaT0_RKT1_EUlmE_E8iteratorESP_EEEEvSJ_SK_T3_T2_m
+		defef  wordCounts-cp/histogram/parlay/internal/counting_sort.h:101:3	caller: seq_count_sort<parlay::uninitialized_relocate_tag, parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:305:35)>::iterator>	_ZN6parlay8internal14seq_count_sortINS_26uninitialized_relocate_tagEPNS_8sequenceIcNS_9allocatorIcEELb1EEES7_NS_16delayed_sequenceImmZNS0_22collect_reduce_sparse_IS2_NS_5sliceIS7_S7_EENS_19count_by_key_helperIS6_mNS_4hashIS6_EESt8equal_toIvEEEEEDaT0_RKT1_EUlmE_E8iteratorEEENS3_ImNS4_ImEELb0EEENSA_ISI_SI_EENSA_ISJ_SJ_EENSA_IT2_ST_EEm
+		defef  wordCounts-cp/histogram/parlay/internal/counting_sort.h:139:7	caller: count_sort_<parlay::uninitialized_relocate_tag, unsigned int, parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:305:35)>::iterator>	_ZN6parlay8internal11count_sort_INS_26uninitialized_relocate_tagEjPNS_8sequenceIcNS_9allocatorIcEELb1EEES7_NS_16delayed_sequenceImmZNS0_22collect_reduce_sparse_IS2_NS_5sliceIS7_S7_EENS_19count_by_key_helperIS6_mNS_4hashIS6_EESt8equal_toIvEEEEEDaT0_RKT1_EUlmE_E8iteratorEEESt4pairINS3_ImNS4_ImEELb0EEEbENSA_ISJ_SJ_EENSA_IT2_SU_EENSA_IT3_SW_EEmfb
+		defef  wordCounts-cp/histogram/parlay/internal/counting_sort.h:303:12	caller: count_sort<parlay::uninitialized_relocate_tag, parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/parlay/internal/collect_reduce.h:305:35)>::iterator>	_ZN6parlay8internal10count_sortINS_26uninitialized_relocate_tagEPNS_8sequenceIcNS_9allocatorIcEELb1EEES7_NS_16delayed_sequenceImmZNS0_22collect_reduce_sparse_IS2_NS_5sliceIS7_S7_EENS_19count_by_key_helperIS6_mNS_4hashIS6_EESt8equal_toIvEEEEEDaT0_RKT1_EUlmE_E8iteratorEEEDaNSA_ISI_SI_EENSA_ISJ_SJ_EENSA_IT2_SR_EEmfb
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:307:7	caller: collect_reduce_sparse_<parlay::uninitialized_relocate_tag, parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal22collect_reduce_sparse_INS_26uninitialized_relocate_tagENS_5sliceIPNS_8sequenceIcNS_9allocatorIcEELb1EEES8_EENS_19count_by_key_helperIS7_mNS_4hashIS7_EESt8equal_toIvEEEEEDaT0_RKT1_
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:334:12	caller: collect_reduce_sparse<parlay::sequence<char, parlay::allocator<char>, true>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal21collect_reduce_sparseINS_8sequenceIcNS_9allocatorIcEELb1EEENS_19count_by_key_helperIS5_mNS_4hashIS5_EESt8equal_toIvEEEEEDaONS2_IT_NS3_ISC_EEXsr3std7is_sameISC_cEE5valueEEERKT0_
+		defef  wordCounts-cp/histogram/parlay/internal/group_by.h:192:10	caller: histogram_by_key<unsigned long, parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> >	_ZN6parlay16histogram_by_keyImNS_8sequenceINS1_IcNS_9allocatorIcEELb1EEENS2_IS4_EELb0EEENS_4hashIS4_EESt8equal_toIvEEEDaOT0_OT1_OT2_
+		defef  wordCounts-cp/histogram/wc.C:49:17	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+
+
+	accurate both: _ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS5_IS8_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb
+		wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9 ef 	caller: destroy_all	mangled: _ZN6parlay17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS4_IS7_EELb0EE12storage_impl11destroy_allEv
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS4_IS7_EELb0EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS4_IS7_EELb0EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS4_IS7_EELb0EED2Ev
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:337:1	caller: collect_reduce_sparse<parlay::sequence<char, parlay::allocator<char>, true>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal21collect_reduce_sparseINS_8sequenceIcNS_9allocatorIcEELb1EEENS_19count_by_key_helperIS5_mNS_4hashIS5_EESt8equal_toIvEEEEEDaONS2_IT_NS3_ISC_EEXsr3std7is_sameISC_cEE5valueEEERKT0_
+		defef  wordCounts-cp/histogram/parlay/internal/group_by.h:192:10	caller: histogram_by_key<unsigned long, parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> >	_ZN6parlay16histogram_by_keyImNS_8sequenceINS1_IcNS_9allocatorIcEELb1EEENS2_IS4_EELb0EEENS_4hashIS4_EESt8equal_toIvEEEDaOT0_OT1_OT2_
+		defef  wordCounts-cp/histogram/wc.C:49:17	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+
+
+		wordCounts-cp/bench/parlay/internal/sequence_base.h:192:9 dac 	caller: destroy_all	mangled: _ZN6parlay17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS4_IS7_EELb0EE12storage_impl11destroy_allEv
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:202:9	caller: clear	_ZN6parlay17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS4_IS7_EELb0EE12storage_impl5clearEv
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:170:23	caller: ~storage_impl	_ZN6parlay17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS4_IS7_EELb0EE12storage_implD2Ev
+		both  wordCounts-cp/histogram/parlay/internal/sequence_base.h:586:21	caller: ~sequence_base	_ZN6parlay17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS4_IS7_EELb0EED2Ev
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:337:1	caller: collect_reduce_sparse<parlay::sequence<char, parlay::allocator<char>, true>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal21collect_reduce_sparseINS_8sequenceIcNS_9allocatorIcEELb1EEENS_19count_by_key_helperIS5_mNS_4hashIS5_EESt8equal_toIvEEEEEDaONS2_IT_NS3_ISC_EEXsr3std7is_sameISC_cEE5valueEEERKT0_
+		defef  wordCounts-cp/histogram/parlay/internal/group_by.h:192:10	caller: histogram_by_key<unsigned long, parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> >	_ZN6parlay16histogram_by_keyImNS_8sequenceINS1_IcNS_9allocatorIcEELb1EEENS2_IS4_EELb0EEENS_4hashIS4_EESt8equal_toIvEEEDaOT0_OT1_OT2_
+		defef  wordCounts-cp/histogram/wc.C:49:17	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+
+
+	overconservative-dac: _ZN6parlay12parallel_forIZNS_8sequenceIbNS_9allocatorIbEELb0EE15initialize_fillEmRKbEUlmE_EEvmmT_lb
+		wordCounts-cp/histogram/parlay/sequence.h:541:5	caller: initialize_fill	mangled: _ZN6parlay8sequenceIbNS_9allocatorIbEELb0EE15initialize_fillEmRKb
+	- [ ] --
+		both  wordCounts-cp/histogram/parlay/sequence.h:199:68	caller: sequence	_ZN6parlay8sequenceIbNS_9allocatorIbEELb0EEC2EmRKb
+		both  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:239:18	caller: seq_collect_reduce_sparse<parlay::uninitialized_relocate_tag, parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal25seq_collect_reduce_sparseINS_26uninitialized_relocate_tagENS_5sliceIPNS_8sequenceIcNS_9allocatorIcEELb1EEES8_EENS_19count_by_key_helperIS7_mNS_4hashIS7_EESt8equal_toIvEEEEEDaT0_RKT1_
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:287:25	caller: collect_reduce_sparse_<parlay::uninitialized_relocate_tag, parlay::slice<parlay::sequence<char, parlay::allocator<char>, true> *, parlay::sequence<char, parlay::allocator<char>, true> *>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal22collect_reduce_sparse_INS_26uninitialized_relocate_tagENS_5sliceIPNS_8sequenceIcNS_9allocatorIcEELb1EEES8_EENS_19count_by_key_helperIS7_mNS_4hashIS7_EESt8equal_toIvEEEEEDaT0_RKT1_
+		defef  wordCounts-cp/histogram/parlay/internal/collect_reduce.h:334:12	caller: collect_reduce_sparse<parlay::sequence<char, parlay::allocator<char>, true>, parlay::count_by_key_helper<parlay::sequence<char, parlay::allocator<char>, true>, unsigned long, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> > >	_ZN6parlay8internal21collect_reduce_sparseINS_8sequenceIcNS_9allocatorIcEELb1EEENS_19count_by_key_helperIS5_mNS_4hashIS5_EESt8equal_toIvEEEEEDaONS2_IT_NS3_ISC_EEXsr3std7is_sameISC_cEE5valueEEERKT0_
+		defef  wordCounts-cp/histogram/parlay/internal/group_by.h:192:10	caller: histogram_by_key<unsigned long, parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, parlay::hash<parlay::sequence<char, parlay::allocator<char>, true> >, std::equal_to<void> >	_ZN6parlay16histogram_by_keyImNS_8sequenceINS1_IcNS_9allocatorIcEELb1EEENS2_IS4_EELb0EEENS_4hashIS4_EESt8equal_toIvEEEDaOT0_OT1_OT2_
+		defef  wordCounts-cp/histogram/wc.C:49:17	caller: wordCounts	_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb
+		defef  wordCounts-cp/bench/wcTime.C:57:20	caller: operator()	_ZZ14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPcENK3$_3clEv
+		defef  wordCounts-cp/bench/common/time_loop.h:9:14	caller: time_loop<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:56:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:57:8), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/bench/wcTime.C:58:8)>	_Z9time_loopIZ14timeWordCountsRKN6parlay8sequenceIcNS0_9allocatorIcEELb1EEEibPcE3$_2Z14timeWordCountsS6_ibS7_E3$_3Z14timeWordCountsS6_ibS7_E3$_4EvidT_T0_T1_
+		defef  wordCounts-cp/bench/wcTime.C:55:3	caller: timeWordCounts	_Z14timeWordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEibPc
+		defef  wordCounts-cp/bench/wcTime.C:76:3	caller: main	main
+
+
+	12 ef cilkfors
+	4 dac cilkfors
+	9 both cilkfors
+	0 untouched cilkfors
+>> write to /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wordCounts.instr.cilkfor.json
+>> write to /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/wordCounts-cp/histogram/wordCounts.worklist.txt

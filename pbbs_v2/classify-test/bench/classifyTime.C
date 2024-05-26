@@ -47,7 +47,18 @@ sequence<char> csv_row(Seq const &e) {
   return parlay::flatten(ss);
 };
 
-void report_correct(row_ef result, row labels) {
+/** PRR: EF */
+template <typename Seq>
+sequence<char> csv_row_ef(Seq const &e) {
+  size_t len = e.size()*2;
+  auto ss = /** PRR: EF */parlay::tabulate_ef(len, [&] (size_t i) {
+    if (i == len-1) return newline;
+    if (i%2 == 1) return comma;
+    return /** PRR: DAC */parlay::to_chars_dac(e[i/2]);});
+  return parlay::flatten(ss);
+};
+
+void report_correct(row result, row labels) {
   size_t n = result.size();
   if (n != labels.size()) {
     cout << "size mismatch of results and labels" << endl;
@@ -62,28 +73,28 @@ void report_correct(row_ef result, row labels) {
 
 void timeClassify(features const &Train, rows const &Test, row const &labels,
 		  int rounds, bool verbose, char* outFile) {
-  /** PRR: */row_ef result;
-  #ifdef BUILTIN
-  instrumentTimeLoopOnly = true;
-  #endif
+  row result;
+//   #ifdef BUILTIN
+//   instrumentTimeLoopOnly = true;
+//   #endif
   time_loop(rounds, 0.0, // 2.0,
 	    [&] () {},
 	    [&] () {result = classify(Train, Test, verbose);},
 	    [&] () {});
-  #ifdef BUILTIN
-  instrumentTimeLoopOnly = false;
-  #endif
+//   #ifdef BUILTIN
+//   instrumentTimeLoopOnly = false;
+//   #endif
   cout << endl;
 
   auto x = parlay::filter(result, [] (long i) {return (i > 9) || (i < 0);});
   report_correct(result, labels);
-  if (outFile != NULL) parlay::chars_to_file(csv_row(result), outFile);
+  if (outFile != NULL) parlay::chars_to_file(/** PRR: EF */csv_row_ef(result), outFile);
 }
 
 auto read_row(string filename) {
   auto is_item = [] (char c) -> bool { return c == ',';};
   auto str = parlay::chars_from_file(filename);
-  return parlay::map(parlay::tokens(str, is_item), 
+  return /** PRR: EF */parlay::map_ef(/** PRR: EF */parlay::tokens_ef(str, is_item), 
 		     [] (auto s) -> value {return parlay::chars_to_int(s);});
 }
 
@@ -95,19 +106,19 @@ auto read_data(string filename) {
   size_t j = find_if(str,is_line) - str.begin();
   auto head = parlay::make_slice(str).cut(0,j);
   auto rest = parlay::make_slice(str).cut(j+1, str.end()-str.begin());
-  auto types = parlay::map(parlay::tokens(head, is_item), [] (auto str) {return str[0];});
+  auto types = /** PRR: EF */parlay::map_ef(/** PRR: EF */parlay::tokens_ef(head, is_item), [] (auto str) {return str[0];});
 
   auto process_line = [&] (auto line) {
       auto to_int = [&] (auto x) -> value {
-	  int v = parlay::chars_to_int(parlay::to_sequence(x));
+	  int v = parlay::chars_to_int(/** PRR: DAC ??analysis failed to detect due to poor call history printing?? */parlay::to_sequence_dac(x));
 	  if (v < 0 || v > max_value) {
 	    cout << "entry out range: value = " << v << endl;
 	    return 0;
 	  }
 	  return v;};
-      return parlay::map_tokens(line, to_int, is_item);};
+      return /** PRR: DAC */parlay::map_tokens_dac(line, to_int, is_item);};
   
-  return std::pair(types, parlay::map_tokens(rest, process_line, is_line));
+  return std::pair(types, /** PRR: EF */parlay::map_tokens_ef(rest, process_line, is_line));
 }
 
 auto rows_to_features(sequence<char> types, rows const &A) {
@@ -117,12 +128,13 @@ auto rows_to_features(sequence<char> types, rows const &A) {
   auto get_feature = [&] (size_t io) {
     int i = (io == 0) ? num_features - 1 : io - 1; // put label at front
     bool is_discrete = (types[i] == 'd');
-    auto vals = parlay::tabulate(num_rows, [&] (size_t j) -> value {return A[j][i];});
-    int maxv = parlay::reduce(vals, parlay::maxm<char>());
+    auto vals = /** PRR: DAC */parlay::tabulate_dac(num_rows, [&] (size_t j) -> value {return A[j][i];});
+    
+    int maxv = /** PRR: DAC */parlay::reduce_dac(vals, parlay::maxm<char>());
     return feature(is_discrete, maxv+1, vals);
   };
 
-  return parlay::tabulate(num_features, get_feature);
+  return /** PRR: EF */parlay::tabulate_ef(num_features, get_feature);
 }
 
 int main(int argc, char* argv[]) {

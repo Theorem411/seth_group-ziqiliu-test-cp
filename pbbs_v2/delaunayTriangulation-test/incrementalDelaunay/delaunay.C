@@ -234,13 +234,13 @@ void incrementally_add_points(sequence<vertex_t*> v, vertex_t* start) {
   sequence<vertex_t*> done(n);  // holds all completed vertices
   sequence<vertex_t*> buffer(max_block_size);// initially empty, holds leftofvers from prev round
   sequence<vertex_t*> remain;  // holds remaining from previous round
-  sequence<simplex_t> t(max_block_size, /** PRR: EF*/0);
-  sequence<bool> flags(max_block_size, /** PRR: EF*/0);
+  sequence<simplex_t> t(max_block_size, /** PRR: EF*/0, 0);
+  sequence<bool> flags(max_block_size, /** PRR: EF*/0, 0);
   auto VQ = /** PRR: */tabulate_ef(max_block_size, [&] (size_t i) -> Qs_t {return Qs_t();});
   
   // create a point location structure
   using KNN = k_nearest_neighbors<vertex_t,1>;
-  sequence<vertex_t*> init(1,start, /** PRR: */0);
+  sequence<vertex_t*> init(1,start, /** PRR: */0, 0);
   KNN knn = KNN(init);
 
   size_t num_done = 0;
@@ -257,7 +257,7 @@ void incrementally_add_points(sequence<vertex_t*> v, vertex_t* start) {
     // structure using all points inserted so far
     if (num_done >= num_next_rebuild && num_done <= n/multiplier) {
       // cout << "size = " << num_done << endl;
-      auto vtxs = parlay::to_sequence_ef(done.cut(0,num_done));
+      /** PRR: EF */auto vtxs = parlay::to_sequence_ef(done.cut(0,num_done));
       knn = KNN(vtxs); // should change to pass slice
       num_next_rebuild *= multiplier;
     }
@@ -313,12 +313,12 @@ triangles<point> delaunay(sequence<point> &P) {
 
   // All vertices needed
   size_t num_vertices = n + boundary_size;
-  auto Vertices = sequence<vertex_t>(num_vertices, /** PRR: */ 0);
+  auto Vertices = sequence<vertex_t>(num_vertices, /** PRR: EF */ 0, 0);
 
   // All triangles needed
   size_t boundary_triangles = (boundary_size - 2);
   size_t num_triangles = 2 * n + boundary_triangles;
-  auto Triangles = sequence<triang_t>(num_triangles, /** PRR: */0); 
+  auto Triangles = sequence<triang_t>(num_triangles, /** PRR: EF */0, 0); 
 
   // random permutation to put points in a random order
   sequence<size_t> perm = /** PRR: */random_permutation_ef<size_t>(n);

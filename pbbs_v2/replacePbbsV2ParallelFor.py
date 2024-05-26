@@ -1,14 +1,24 @@
+##########################################
+# example run: 
+# source /afs/ece/project/seth_group/ziqiliu/test-cp/venv/bin/activate
+# python replacePbbsV2ParallelFor.py -T=delaunayTriangulation -A (-D)
+# python replacePbbsV2ParallelFor.py -T=delaunayTriangulation -P -id=<id like: 2024-05-15.20:04:10> -ece=014
+##########################################
 from __future__ import print_function
 
 import os 
 import re
 import json
 import argparse
-import zipfile
+import gzip
+import datetime
 import pandas as pd
-from collections import defaultdict
+from tqdm import tqdm
+from collections import defaultdict, Counter
 
-PARALLELFOR_SOURCE_LOC = "opencilk.h:517:5"
+# base directory for handy path specification
+basedir = r'/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2'
+
 ###############################################################################
 # helper function shared by all 
 ###############################################################################
@@ -23,23 +33,26 @@ def normpath(path):
         path = path.replace("delaunayTriangulation/bench/common", "delaunayTriangulation/incrementalDelaunay/common", 1)
     return path
 
+def datetime_utcnow_strftime():
+    return datetime.datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S')
+
 # convert json to hashable string
 def jsonstr(json):
     return json.dumps(json, sort_keys=True)
 
+###############################################################################
+# main functionality 
+###############################################################################
 def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
-    def print_call_history(func_name, cg, indent=0):
+    def print_call_history(func_name, cg, res_limit=10, indent=0):
         res = set()
         def traversal(f, callpath, res, visited):
             if f not in cg:
                 res.add('\n'.join([ '{}{}'.format('\t'*indent, p) for p in callpath ]))
-                return
-            ### DEBUG: ###
-            if args.debug:
-                if f in visited:
-                    return
-            ##############
-
+                return (len(res) < res_limit)
+            if f in visited:
+                return (len(res) < res_limit)
+            continued = True
             visited.add(f)
             js = cg[f]
             for js_callsite in js['callsites']:
@@ -53,36 +66,43 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
                 if args.v:
                     new_path += '\t{}'.format(js_callsite['caller_mangled_name'])
                 callpath.append(new_path)
-
-                traversal(js_callsite['caller_mangled_name'], callpath, res, visited)
+                continued &= traversal(js_callsite['caller_mangled_name'], callpath, res, visited)
                 callpath.pop()
-        traversal(func_name, [], res, visited=set())
+                if not continued: 
+                    break
+            
+            # shrink current visit set
+            visited.remove(f)
+            return continued
 
-        return res
+        normal_exit = traversal(func_name, [], res, visited=set())
+
+        return res, normal_exit
 
     # print calling history of a callsite
     with open(os.path.join(workdir, r'{}.cg.json'.format(test)), 'r') as f:
         cg_json = json.load(f)
         cg = { js['func'] : js for js in cg_json}
+        if args.v: print('<< read from {}'.format(os.path.join(workdir, r'{}.cg.json'.format(test))))
 
     # static analysis result in json
     with open(os.path.join(workdir, r'{}.cilkfor.json'.format(test)), 'r') as f:
         static_analysis_json = json.load(f) 
         static_analysis = { js['ID'] : js for js in static_analysis_json }
         assert(len(static_analysis_json) == len(static_analysis))
-
+        if args.v: print('<< read from {}'.format(os.path.join(workdir, r'{}.cilkfor.json'.format(test))))
         print("{} static cilkfor results".format(len(static_analysis)))
-        print("\t{} ef results".format(len([ js for js in static_analysis_json if js['prr'] == 'defef'])))
-        print("\t{} dac results".format(len([ js for js in static_analysis_json if js['prr'] == 'defdac'])))
-        print("\t{} both results".format(len([ js for js in static_analysis_json if js['prr'] == 'both'])))
-        print("\t{} untouched results".format(len([ js for js in static_analysis_json if js['prr'] == 'untouched'])))
+        print("\t{} ef results".format(len([ js for js in static_analysis_json if js['prr'] == 'defef' ])))
+        print("\t{} dac results".format(len([ js for js in static_analysis_json if js['prr'] == 'defdac' ])))
+        print("\t{} both results".format(len([ js for js in static_analysis_json if js['prr'] == 'both' ])))
+        print("\t{} untouched results".format(len([ js for js in static_analysis_json if js['prr'] == 'untouched' ])))
 
     # instrumentation result in json 
     with open(os.path.join(workdir, r'{}.instr.json'.format(test)), 'r') as f:
         lazyd_instrument_json = json.load(f)
         lazyd_instrument = { js['ID'] : js for js in lazyd_instrument_json }
         assert(len(lazyd_instrument_json) == len(lazyd_instrument))
-
+        if args.v: print('<< read from {}'.format(os.path.join(workdir, r'{}.instr.json'.format(test))))
         print("{} instrumentation cilkfor results".format(len(lazyd_instrument)))
 
     # check all instrument ID's are in analysis result 
@@ -112,9 +132,11 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
                         print('\t\t{}:{}:{}\tcaller: {}\tmangled: {}'.format(file, ln, col, js_callsite['caller'], js_callsite['mangled_name']))
 
                         # print call history of this callsite
-                        callhistory = print_call_history(caller_link_name, cg, indent=2)
+                        callhistory, normal_exit = print_call_history(caller_link_name, cg, indent=2)
                         for callpath in callhistory:
-                            print("\n- [ ] --\n{}".format(callpath))
+                            print("\t- [ ] --\n{}".format(callpath))
+                        if not normal_exit:
+                            print('\t<!> only show 10 callpaths due to space!')
                         print('\n')
                 elif jsInstr['dac'] == 0 and jsInstr['ef'] > 0:
                     print("\toverconservative-ef: {}".format(id))
@@ -125,12 +147,47 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
                         ln = js_callsite['ln']
                         col = js_callsite['col']
                         caller_link_name = js_callsite['mangled_name']
-                        print('\t\t{}:{}:{}\tcaller: {}\tmangled: {}'.format(file, ln, col, js_callsite['caller'], js_callsite['mangled_name']))
+                        print('\t\t{}:{}:{} \tcaller: {}\tmangled: {}'.format(file, ln, col, js_callsite['caller'], js_callsite['mangled_name']))
                         # print call history of this callsite
-                        callhistory = print_call_history(caller_link_name, cg, indent=2)
+                        callhistory, normal_exit = print_call_history(caller_link_name, cg, indent=2)
                         for callpath in callhistory:
-                            print("\n- [ ] --\n{}".format(callpath))
+                            print("\t- [ ] --\n{}".format(callpath))
+                        if not normal_exit:
+                            print('\t<!> only show 10 callpaths due to space!')
                         print('\n')
+                elif jsInstr['ef'] > 0 and jsInstr['dac'] > 0: 
+                    print("\taccurate both: {}".format(id))
+
+                    # print EF callpaths
+                    for js_callsite in jsInstr['caller_EF']:
+                        file = normpath(js_callsite['file'])
+                        ln = js_callsite['ln']
+                        col = js_callsite['col']
+                        caller_link_name = js_callsite['mangled_name']
+                        print('\t\t{}:{}:{} ef \tcaller: {}\tmangled: {}'.format(file, ln, col, js_callsite['caller'], js_callsite['mangled_name']))
+                        # print call history of this callsite
+                        callhistory, normal_exit = print_call_history(caller_link_name, cg, indent=2)
+                        for callpath in callhistory:
+                            print("\t- [ ] --\n{}".format(callpath))
+                        if not normal_exit:
+                            print('\t<!> only show 10 callpaths due to space!')
+                        print('\n')
+                    # print DAC callpaths
+                    for js_callsite in jsInstr['caller_DAC']:
+                        file = normpath(js_callsite['file'])
+                        ln = js_callsite['ln']
+                        col = js_callsite['col']
+                        caller_link_name = js_callsite['mangled_name']
+                        print('\t\t{}:{}:{} dac \tcaller: {}\tmangled: {}'.format(file, ln, col, js_callsite['caller'], js_callsite['mangled_name']))
+
+                        # print call history of this callsite
+                        callhistory, normal_exit = print_call_history(caller_link_name, cg, indent=2)
+                        for callpath in callhistory:
+                            print("\t- [ ] --\n{}".format(callpath))
+                        if not normal_exit:
+                            print('\t<!> only show 10 callpaths due to space!')
+                        print('\n')
+
     # output combined result
     combined_json_list = []
     for id, jsInstr in lazyd_instrument.items():
@@ -138,8 +195,6 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
         jsInstr['prr'] = jsStatic['prr']
         combined_json_list.append(jsInstr)
 
-    with open(os.path.join(workdir, r'{}.instr.cilkfor.json'.format(test)), 'w') as f:
-        f.write(json.dumps(combined_json_list, indent=4))
 
     print("\t{} ef cilkfors".format(len([ js for js in combined_json_list if js['prr'] == "defef" ])))
     print("\t{} dac cilkfors".format(len([ js for js in combined_json_list if js['prr'] == "defdac" ])))
@@ -147,10 +202,13 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
     print("\t{} untouched cilkfors".format(len([ js for js in combined_json_list if js['prr'] == "untouched" ])))
 
     # print worklist of pfors that need to be changed manually 
+    with open(os.path.join(workdir, r'{}.instr.cilkfor.json'.format(test)), 'w') as f:
+        f.write(json.dumps(combined_json_list, indent=4))
+        print('>> write to {}'.format(os.path.join(workdir, r'{}.instr.cilkfor.json'.format(test))))
     with open(os.path.join(workdir, '{}.worklist.txt'.format(test)), 'w') as f: 
         print("worklist: ", file=f)
         for js in combined_json_list:
-            if js['prr'] == "both":
+            if js['prr'] == "both" or js['prr'] == 'untouched':
                 continue
             print("\n- [ ] ======================================", file=f)
             print("\t{}".format(js['ID']), file=f)
@@ -163,27 +221,33 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
                     print('\tef\t{}:{}:{}\tcaller: {}'.format(file, ln, col, js_callsite['caller']), file=f)
 
                     # print call history of this callsite
-                    callhistory = print_call_history(caller_link_name, cg, indent=2)
+                    callhistory, normal_exit = print_call_history(caller_link_name, cg, indent=2)
                     for callpath in callhistory:
                         print("\n\t- [ ] --\n{}".format(callpath), file=f)
+                    if not normal_exit:
+                        print('\t<!> only show 10 callpaths due to space!')
                     # collect file mentioned
             elif (js['prr'] == 'defdac'):
+                dbg = js['ID'] == '_ZN6parlay12parallel_forIZNS_8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPKcEEvT_S8_St26random_access_iterator_tagEUlmE_EEvmmS8_lb'
                 for js_callsite in js['caller_DAC']:
                     file = normpath(js_callsite['file'])
                     ln = js_callsite['ln']
                     col = js_callsite['col']
                     caller_link_name = js_callsite['mangled_name']
-                    print('\tdac\t{}:{}:{}\tcaller: {}'.format(file, ln, col, js_callsite['caller']), file=f)
+                    print('\tdac\t{}:{}:{}\tcaller: {}\t{}'.format(file, ln, col, js_callsite['caller'], caller_link_name), file=f)
                     # print call history of this callsite
-                    callhistory = print_call_history(caller_link_name, cg, indent=2)
+                    callhistory, normal_exit = print_call_history(caller_link_name, cg, indent=2) ## DEBUG: 
                     for callpath in callhistory:
                         print("\n\t- [ ] --\n{}".format(callpath), file=f)
+                    if not normal_exit:
+                        print('\t<!> only show 10 callpaths due to space!')
                     # collect file mentioned
+        print('>> write to {}'.format(os.path.join(workdir, '{}.worklist.txt'.format(test))))
     return
 
-def interpretPerfTestResults(args, test=None, orig_time=None, test_time=None):
+def interpretPerfTestResults(args, test=None, res_dir=None, id=None):
+    # read entire log as chunks split by double newline
     def parse_parlaytime_log(log_text): 
-        # read entire log as chunks split by double newline
         run_texts = log_text.split("\n\n")
             # don't process any empty lines before EOF
         if (not run_texts[-1].strip()):
@@ -192,6 +256,7 @@ def interpretPerfTestResults(args, test=None, orig_time=None, test_time=None):
         df = pd.DataFrame(columns=['cilk_workers', 'avg_parlaytime'])
 
         # split into chunks begining with '== CILK_WORKERS = <d+> ==...'
+        r = None
         run_texts = [ t.split('\n') for t in run_texts ]
         for lines in run_texts: 
             # find line starting with "== CILK_WORKERS = "
@@ -209,39 +274,270 @@ def interpretPerfTestResults(args, test=None, orig_time=None, test_time=None):
             times = [ float(re.findall(r'\d+.\d+', ln)[0]) for ln in lines ]
 
             avg_times = pd.Series(times).mean()
+            std_times = pd.Series(times).std()
 
+            if r: 
+                assert(r == len(times))
+            r = len(times)
             # new row of data
-            new_row = pd.Series({ 'cilk_workers': CILK_WORKERS, 'avg_parlaytime': avg_times })
+            new_row = pd.Series({ 'cilk_workers': CILK_WORKERS, 'avg_parlaytime': avg_times, 'std_parlaytime': std_times })
+            df = df.append(new_row, ignore_index=True)
+        return df, r
+
+    def parse_icache_txt(icache_text):
+        sections = [sec.strip() for sec in icache_text.split('== ') if sec.strip() ]
+
+        cilk_workers_pattern = re.compile(r'CILK_WORKERS\s*=\s*(\d+)')
+        icache_misses_pattern = re.compile(r'([\d,]+)\s+icache\.misses:u')
+        icache_hits_pattern = re.compile(r'([\d,]+)\s+icache\.hit:u')
+
+        df = pd.DataFrame(columns=['cilk_workers', 'i$_miss', 'i$_hit', 'i$_miss_rate'])
+
+        for section in sections: 
+            cilk_workers = int(cilk_workers_pattern.search(section).group(1))
+            icache_misses = int(icache_misses_pattern.search(section).group(1).replace(',',''))
+            icache_hits = int(icache_hits_pattern.search(section).group(1).replace(',', ''))
+            new_row = pd.Series({
+                'cilk_workers': cilk_workers, 
+                'i$_miss': icache_misses, 
+                'i$_hit': icache_hits, 
+                'i$_miss_rate': icache_misses / float(icache_misses + icache_hits)
+            })
             df = df.append(new_row, ignore_index=True)
         return df
 
-    with open(orig_time, 'r') as f: 
-        df_orig = parse_parlaytime_log(f.read())
-        df_orig.rename(columns={'avg_parlaytime': 'avg_parlaytime_orig'}, inplace=True)
-    with open(test_time, 'r') as f:
-        df_test = parse_parlaytime_log(f.read())
-        df_test.rename(columns={'avg_parlaytime': 'avg_parlaytime_test'}, inplace=True)
+    # parse control group parlaytime & icache result
+    orig_time_path = os.path.join(basedir, r'data/{}/{}.parlaytime.orig.log'.format(test, id))
+    with open(orig_time_path, 'r') as f: 
+        print('<< processed {}'.format(r'data/{}/{}.parlaytime.orig.log'.format(test, id)))
+        df_orig, r_orig = parse_parlaytime_log(f.read())
+        df_orig.rename(columns={'avg_parlaytime': 'avg_parlaytime_orig', 'std_parlaytime': 'std_parlaytime_orig'}, inplace=True)
+    
+    orig_icache_path = os.path.join(basedir, r'data/{}/{}.icache.orig.txt'.format(test, id))
+    with open(orig_icache_path, 'r') as f:
+        print('<< processed {}'.format(r'data/{}/{}.icache.orig.txt'.format(test, id)))
+        icache_orig = parse_icache_txt(f.read())
+        icache_orig.rename(columns={'i$_miss': 'i$_miss_orig', 'i$_hit': 'i$_hit_orig', 'i$_miss_rate': 'i$_miss_rate_orig'}, inplace=True)
+    # parse test group parlaytime & icache result
+    test_time_path = os.path.join(basedir, r'data/{}/{}.parlaytime.test.log'.format(test, id))
+    with open(test_time_path, 'r') as f:
+        print('<< processed {}'.format(r'data/{}/{}.parlaytime.test.log'.format(test, id)))
+        df_test, r_test = parse_parlaytime_log(f.read())
+        df_test.rename(columns={'avg_parlaytime': 'avg_parlaytime_test', 'std_parlaytime': 'std_parlaytime_test'}, inplace=True)
+    
+    test_icache_path = os.path.join(basedir, r'data/{}/{}.icache.test.txt'.format(test, id))
+    with open(test_icache_path, 'r') as f:
+        print('<< processed {}'.format(r'data/{}/{}.icache.test.log'.format(test, id)))
+        icache_test = parse_icache_txt(f.read())
+        icache_test.rename(columns={'i$_miss': 'i$_miss_test', 'i$_hit': 'i$_hit_test', 'i$_miss_rate': 'i$_miss_rate_test'}, inplace=True)
+    
+    assert(r_orig == r_test)
 
+    # merge compiled control & test group parlaytime results
     df_merge = df_orig.merge(df_test, on='cilk_workers')
-    print("write performance test results to --> ./{}.perf.csv".format(test))
-    df_merge.to_csv(r'./{}.perf.csv'.format(test), index=False)
+    icache_merge = icache_orig.merge(icache_test, on='cilk_workers')
+    # output .perf.csv
+    ece_id = int(args.ece)
+    parlaytime_out_path = os.path.join(basedir, r'perf/{}/{}.ece{}.r{}.parlay.csv'.format(test, id, ece_id, r_orig))
+    print("write performance test results to --> {}".format(parlaytime_out_path))
+    df_merge.to_csv(parlaytime_out_path, index=False)
+
+    # output .icache.csv
+    icache_out_path = os.path.join(basedir, r'perf/{}/{}.ece{}.r{}.icache.csv'.format(test, id, ece_id, r_orig))
+    print("write icache results to --> {}".format(icache_out_path))
+    icache_merge.to_csv(icache_out_path, index=False)
+
+def interpretProfilingResults(args, workdir=None, test=None, major_files=None, major_funcs=None):
+    with open(os.path.join(workdir, r'{}-perf.cg.json'.format(test)), 'r') as f:
+        cg_json = json.load(f)
+    cg = { js['func'] : js for js in cg_json}
+
+    # print calling history of a callsite
+    def unfold_call_history(func_name, res_limit=10, indent=0):
+        res = set()
+        def traversal(f, callpath, res, visited, early_stop=False):
+            if f not in cg or early_stop:
+                res.add('\n'.join([ '{}{}'.format('\t'*indent, p) for p in callpath ]))
+                return (len(res) < res_limit)
+            ### DEBUG: ###
+            if f in visited:
+                return (len(res) < res_limit)
+            ##############
+            continued = True
+            visited.add(f)
+            js = cg[f]
+            for js_callsite in js['callsites']:
+                # push new path
+                file = normpath(js_callsite['file'])
+                ln = js_callsite['ln']
+                col = js_callsite['col']
+                prr = js_callsite['prr']
+                caller_name = js_callsite['caller_name']
+                link_name = js_callsite['caller_mangled_name']
+                new_path = "-----> {}:{}:{}\tcaller: {}\t{}".format(file, str(ln), str(col), caller_name, link_name)
+                callpath.append(new_path)
+
+                early_stop = early_stop or ((caller_name in major_funcs) or (os.path.basename(file) in major_files))
+                continued &= traversal(js_callsite['caller_mangled_name'], callpath, res, visited, early_stop=early_stop)
+                # backtrack: pop off all callpath added in this iteration
+                callpath.pop()
+                # if reaches result limit, early break
+                if not continued:
+                    break
+
+            # shrink visited set 
+            visited.remove(f)
+            return continued
+            
+        normal_exit = traversal(func_name, [], res, visited=set())
+
+        res_str = '\n\n'.join(res)
+        if not normal_exit:
+            res_str += '\n\n{}<!> only {} callpaths is shown!'.format('\t'*indent, res_limit)
+        return res_str
+    
+    def parallel_for_version(version):
+        if (version == 0):
+            return "parallel_for"
+        elif version == 1:
+            return "parallel_for_ef"
+        elif version == 2: 
+            return "parallel_for_dac"
+        else:
+            exit(1)
+
+    def parse_perf_log(line, perfLogsDict=None):
+        # break apart log line
+        line = line.split(',')
+
+        version = int(line[0])
+        tripcount = int(line[1])
+        granularity = int(line[2])
+        depth = int(line[3])
+        src_loc = line[4]
+        src_caller = line[5]
+        inline_loc = line[6]
+        inline_caller = line[7]
+        # check version 
+        perfLogsDict_vers = perfLogsDict[version]
+        if src_caller not in perfLogsDict_vers:
+            perfLogsDict_vers[src_caller] = {
+                'src_caller': src_caller,
+                'src_locs': set(),
+                'inline_locs': set(),
+                'inline_callers': set(),
+                'version': version,
+                'entry': 0,
+                'ef_entry': 0,
+                'dac_entry': 0,
+                'tripcount_sum': 0.0,
+                'granularity_sum': 0.0,
+                'depth_sum': 0.0
+            }
+        # add caller (mangled) name
+        perfLogsDict_vers[src_caller]['inline_locs'].add(inline_loc)
+        perfLogsDict_vers[src_caller]['src_locs'].add(src_loc)
+        perfLogsDict_vers[src_caller]['inline_callers'].add(inline_caller)
+        # update runtime argument distribution
+        perfLogsDict_vers[src_caller]['tripcount_sum'] += tripcount
+        perfLogsDict_vers[src_caller]['granularity_sum'] += granularity
+        perfLogsDict_vers[src_caller]['depth_sum'] += depth
+        # incr entry count
+        perfLogsDict_vers[src_caller]['entry'] += 1 
+        if (depth > 0):
+            perfLogsDict_vers[src_caller]['dac_entry'] += 1
+        else: 
+            perfLogsDict_vers[src_caller]['ef_entry'] += 1
+        
+        return 
+
+    try:
+        with open(os.path.join(workdir, '{}.perf.short.json'.format(test)), 'r') as f: #.backup
+            perfLogs_sorted = json.load(f)
+    except:
+        file_size = os.path.getsize(os.path.join(workdir, '{}.perf.log.gz'.format(test)))
+
+        perfLogsDict = {0: {}, 1: {}, 2: {}}
+        with gzip.open(os.path.join(workdir, '{}.perf.log.gz'.format(test)), 'rt') as f:
+            with tqdm(total=file_size, desc='Processing', unit='B', unit_scale=True, unit_divisor=1024) as pbar:
+                for line in f: 
+                    parse_perf_log(line.strip(), perfLogsDict)
+                    pbar.update(len(line.encode('utf-8')))
+
+        perfLogs = []
+        for _, perfLogs_vers in perfLogsDict.items(): 
+            for log in perfLogs_vers.values():
+                log['inline_locs'] = list(log['inline_locs'])
+                log['inline_callers'] = list(log['inline_callers'])
+                log['src_locs'] = list(log['src_locs'])
+                perfLogs.append(log)
+        perfLogs_sorted = sorted(perfLogs, key=lambda js:js['entry'])
+
+        # save temporary file
+        with open(os.path.join(workdir, '{}.perf.short.json'.format(test)), 'w') as f:
+            json.dump(perfLogs_sorted, f, indent=2)
+
+    perfLogs_EF = [ logs for logs in perfLogs_sorted if logs['version'] == 1 ]
+    perfLogs_DAC = [ logs for logs in perfLogs_sorted if logs['version'] == 2 ]
+    perfLogs_orig = [ logs for logs in perfLogs_sorted if logs['version'] == 0 ]
+    def print_perfLogs(perfLogs=None, indent=0):
+        for logs in perfLogs:
+            caller = logs['src_caller']
+            entry = logs['entry']
+            avg_tc = "{:.2f}".format(logs['tripcount_sum'] / entry)
+            avg_gran = "{:.2f}".format(logs['granularity_sum'] / entry)
+            print("{}<{}> entry:{} ef:{} dac:{} avg.tc:{} avg.gran:{}\tcaller: {}".format('\t'*indent, parallel_for_version(logs['version']), logs['entry'], logs['ef_entry'], logs['dac_entry'], avg_tc, avg_gran, caller))
+            for sloc in logs['src_locs']:
+                print('{}\tsource code at: {}'.format('\t'*indent, sloc))
+
+            for iloc in logs['inline_locs']: 
+                print('{}\tinlined at: {}'.format('\t'*indent, iloc))
+                if args.v: 
+                    if (os.path.basename(iloc.split(':')[0]) not in major_files):
+                        print('{}\tinline caller: {}'.format('\t'*indent, caller))
+                        print("{}".format(unfold_call_history(caller, indent=2)))
+                print('\n')
+
+    # print performance profiling results for parallel_for
+    print('-- orig: ')
+    print_perfLogs(perfLogs=perfLogs_orig, indent=1)
+    # print performance profiling results for parallel_for_ef or parallel_for_dac
+    # print('-- ef: ')
+    # print_perfLogs(perfLogs=perfLogs_EF, indent=1)
+    # print('-- dac: ')
+    # print_perfLogs(perfLogs=perfLogs_DAC, indent=1)
 
 if __name__ == "__main__":
-    exclude_dirs = ['venv']
-    # replace_parallel_for(exclude_dirs=exclude_dirs)
-    
+    # take current timestamp
+    dt = datetime_utcnow_strftime()
     # main runner argument parser
     argParser = argparse.ArgumentParser()
-    argParser.add_argument("--redo-ast", dest="redo", help='regenerate fresh .ast.json using clang ast-dump', action="store_true")
     argParser.add_argument("-v", "--verbose", dest='v', help='', action="store_true")
     argParser.add_argument("-T", "--test", dest='test', help='')
-    argParser.add_argument('-A', '--analysis-and-instrument', dest='analysis', help='', action='store_true')
-    argParser.add_argument('-P', '--parlaytime-statistic', dest='parlaytime', help='', action='store_true') 
-    argParser.add_argument('-D', '--debug', dest='debug', help='', action='store_true')
+    # prr static analysis result parsing
+    argParser.add_argument('-A', '--analysis-and-instrument', dest='analysis', help='parse prr static analysis result and generate parallel_for substitution worklist', action='store_true')
+    # parlaytime result parsing
+    argParser.add_argument('-PARLAY', '--parlaytime-statistic', dest='parlaytime', help='', action='store_true') 
+    argParser.add_argument('-id', dest='experiment_id', default=None, help='experiment timestamp for result identification')
+    argParser.add_argument('-ece', dest='ece', default=None, help='ece cluster machine number')
+    # performance profiling result parsing
+    argParser.add_argument('-PROFILE', '--perf-profiling', dest='profile', help='', action='store_true')
     args = argParser.parse_args()
+    # os.walk parameters
+    exclude_dirs = ['venv']
+
     #### parse instrumentation result
-    # delaunay
-    basedir = r'/afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2'
+    def parlaytime_result_dir(testname=None):
+        return os.path.join(basedir, 'data/{}'.format(testname))
+
+    if args.parlaytime:
+        if not args.experiment_id: 
+            print("Must supply experiment id (printed at the end of performance experiment)!")
+            exit(1)
+        if not args.ece: 
+            print("Must supply ece cluster machine id!")
+            exit(1)
+
     if (args.test == "delaunayTriangulation"):
         if args.analysis:
             compileAnalysisAndInstrumentResults(
@@ -252,8 +548,16 @@ if __name__ == "__main__":
             interpretPerfTestResults(
                 args,
                 test=args.test,
-                orig_time=os.path.join(basedir, r'delaunayTriangulation-cp/incrementalDelaunay/delaunayTriangulation.parlaytime.orig.log'),
-                test_time=os.path.join(basedir, r'delaunayTriangulation-test/incrementalDelaunay/delaunayTriangulation.parlaytime.test.log'))
+                res_dir=parlaytime_result_dir('delaunayTriangulation'), 
+                id=args.experiment_id)
+        if args.profile:
+            interpretProfilingResults(
+                args,
+                workdir=os.path.join(basedir, r'delaunayTriangulation-test/incrementalDelaunay'),
+                test=args.test,
+                major_files=['delaunay.C', 'delaunayTime.C'],
+                major_funcs=['delaunay'])
+            
 
     elif (args.test == "wordCounts"):
         if args.analysis:
@@ -265,9 +569,16 @@ if __name__ == "__main__":
             interpretPerfTestResults(
                 args, 
                 test=args.test,
-                orig_time=os.path.join(basedir, r'wordCounts-cp/histogram/wordCounts.parlaytime.orig.log'),
-                test_time=os.path.join(basedir, r'wordCounts-test/histogram/wordCounts.parlaytime.test.log'))
-
+                res_dir=parlaytime_result_dir('wordCounts'), 
+                id=args.experiment_id)
+        if args.profile:
+            interpretProfilingResults(
+                args,
+                workdir=os.path.join(basedir, r'wordCounts-test/histogram'),
+                test=args.test,
+                major_files=['wc.C', 'wcTime.C'],
+                major_funcs=['wordCounts', 'timeWordCounts'])
+ 
     elif (args.test == "classify"):
         if args.analysis:
             compileAnalysisAndInstrumentResults(
@@ -278,236 +589,17 @@ if __name__ == "__main__":
             interpretPerfTestResults(
                 args, 
                 test=args.test,
-                orig_time=os.path.join(basedir, r'classify-cp/decisionTree/classify.parlaytime.orig.log'),
-                test_time=os.path.join(basedir, r'classify-test/decisionTree/classify.parlaytime.test.log'))
+                res_dir=parlaytime_result_dir('classify'), 
+                id=args.experiment_id)
+        if args.profile:
+            interpretProfilingResults(
+                args,
+                workdir=os.path.join(basedir, r'classify-test/decisionTree'),
+                test=args.test,
+                major_files=['classify.C', 'classifyTime.C'],
+                major_funcs=['classify'])
     else:
         print('Error: wrong test name!')
         exit(1)
-
-
-
-
-
-
-
-
-
-
-
-
-# def parse_ast_json_experiment(args):
-#     ############################################################################
-#     # This function parses source code ast generated using "clang -Xclang -ast-dump"
-#     # and performs source code keyword substitution
-#     ############################################################################
-
-#     # targeted kinds
-#     target_kinds = {
-#         'FunctionDecl', 'FunctionTemplateDecl', 'ClassTemplateDecl', 'CXXRecordDecl',
-#         'LambdaExpr', 'CXXMethodDecl'
-#     }
-#     # ast-traversal logic
-#     def ast_traversal_recursive(js, default_file, kinds=set(), files=set(), jsacc=[], file_name=None):
-#         file_name_old = file_name
-#         if isinstance(js, dict):
-#             # use new "file" for subtree if "loc" has "file"
-#             if js.get('loc') and js.get('loc').get('file'):
-#                 file_name = normpath(js.get('loc').get('file'))
-#                 if file_name.startswith('delaunayTriangulation/'): 
-#                     files.add(file_name)
-#             ### DEBUG: 
-#             # if js.get('name') == "parallel_for_static":
-#             #     js.pop('inner', None)
-#             #     js['orig_file'] = file_name if file_name != None else "null"
-#             #     print(json.dumps(js, indent=4))
-#             #########
-            
-#             if js.get('kind'):
-#                 kinds.add(js.get('kind'))
-#                 if js.get('loc') and js.get('range') and js.get('name') \
-#                         and (js.get('kind') in target_kinds):
-#                     js_record = dict()
-#                     js_record['kind'] = js.get('kind')
-#                     # js_record['file'] = file_name
-#                     if not file_name:
-#                         js_record['file'] = default_file
-#                     else: 
-#                         js_record['file'] = file_name
-#                     js_record['range'] = js.get('range')
-#                     js_record['name'] = js.get('name')
-#                     js_record['loc'] = js.get('loc')
-  
-#                     if js.get('mangled_name'):
-#                         js_record['mangled_name'] = js.get('mangled_name')
-                    
-#                     jsacc.append(js_record)
-
-#             for _, jsv in js.items():
-#                 if isinstance(jsv, (dict, list)):
-#                     ast_traversal_recursive(jsv, default_file, kinds=kinds, files=files, jsacc=jsacc, file_name=file_name)
-        
-#         elif isinstance(js, list):
-#             for js_item in js:
-#                 ast_traversal_recursive(js_item, default_file, kinds=kinds, files=files, jsacc=jsacc, file_name=file_name)
-
-#     def ast_traversal(default_file, json_path=None):
-#         with open(json_path, 'r') as f: 
-#             ast_json = json.load(f)
-
-#         kinds, files, jsacc = set(), set(), []
-#         ast_traversal_recursive(ast_json, default_file, kinds=kinds, files=files, jsacc=jsacc)
-
-#         print("{} done".format(json_path))
-#         return kinds, files, jsacc
-
-#     if args.redo:
-#         delaunay_kinds, delaunay_files, delaunay_jsacc = \
-#             ast_traversal(default_file=r'delaunayTriangulation/incrementalDelaunay/delaunay.C', json_path=r'./delaunay.ast.json')
-#         delaunayTime_kinds, delaunayTime_files, delaunayTime_jsacc = \
-#             ast_traversal(default_file=r'delaunayTriangulation/bench/delaunayTime.C',json_path=r'./delaunayTime.ast.json')
-#         # print out the kind's encountered in ast nodes
-#         kinds = [ kd for kd in delaunay_kinds.union(delaunayTime_kinds) if "Decl" in kd ]
-#         # print files encountered during ast traversal, compare with those in results
-    
-#         # collect json objects depending on target types
-#         delaunay_jsacc_str = set([ json.dumps(js, sort_keys=True) for js in delaunay_jsacc ])
-#         delaunayTime_jsacc_str = set([ json.dumps(js, sort_keys=True) for js in delaunayTime_jsacc ])
-
-#         js_of_all_kinds = { kd : [] for kd in target_kinds }
-#         for js_string in delaunay_jsacc_str.union(delaunayTime_jsacc_str): 
-#             js = json.loads(js_string)
-#             js_of_all_kinds[js['kind']].append(js)
-
-#         with open(r'./delaunayTriangulation.short.ast.json', 'w') as f:
-#             f.write(json.dumps(js_of_all_kinds, indent=4))
-   
-#         if args.error:
-#             print('kinds: {}'.format(len(kinds)))
-#             print('\n'.join(kinds))
-#             files_in_ast_traversal = list(delaunayTime_files.union(delaunay_files))
-#             print('files during ast traversal: {}'.format(len(files_in_ast_traversal)))
-#             print('\n'.join(sorted(files_in_ast_traversal)))
-
-#     # open shortened ast result:
-#     with open(r'./delaunayTriangulation.short.ast.json', 'r') as f:
-#         short_ast_json = json.load(f)
-#     # open all mentioned source files as array of lines
-#     allowed_source_files = {}
-#     ### TODO: dict from (file, start_ln, start_col) to js
-#     ast_node_query = defaultdict(lambda:(defaultdict(lambda:[])))
-#     for kd in target_kinds:
-#         for js in short_ast_json[kd]:
-#             file = normpath(js['file'])
-#             if not file.startswith('delaunayTriangulation/'):
-#                 continue
-#             # test if file can be opened
-#             try: 
-#                 with open(file, 'r') as f: 
-#                     allowed_source_files[file] = f.readlines()
-#             except: 
-#                 raise ValueError("{} cannot be opened!".format(file))
-#             # 
-#             begin_ln = js.get('range').get('begin').get('line')
-#             if not begin_ln: 
-#                 begin_ln = js.get('loc').get('line')
-#             end_ln = js.get('range').get('end').get('line')
-#             if not end_ln:
-#                 end_ln = js.get('loc').get('line')
-#             f = js.get('file')
-#             if f and begin_ln and end_ln:
-#                 ast_node_query[f][(begin_ln, end_ln)].append(js)
-#     if args.error:
-#         # print('files in result: {}'.format(len(allowed_source_files)))
-#         # print('\n'.join(sorted(list(allowed_source_files.keys()))))
-#         pass
-    
-#     # open cilkfor encountered in llvm passes
-#     with open(r"./delaunayTime.cilkfor.json", 'r') as f: 
-#         delaunayTime_C_cilkfor_json = json.load(f)
-#     with open(r'./delaunay.cilkfor.json', 'r') as f:
-#         delaunay_C_cilkfor_json = json.load(f)
-    
-#     # error checking: files mentioned in cilkfor.json should all appeared in ast with source code info
-#     # error checking: every location mentioned in cilkfor.json shoudl
-#     if args.error:
-#         files_count = defaultdict(lambda: 0, **{ f : 0 for f in allowed_source_files })
-#         for js in delaunayTime_C_cilkfor_json:
-#             mentioned_files = set()
-#             for inlineJs in js['inlineHistory']:
-#                 mentioned_files.add(normpath(inlineJs['file']))
-#             for file_path in mentioned_files:
-#                 files_count[file_path] += 1
-
-#         for js in delaunay_C_cilkfor_json:
-#             mentioned_files = set()
-#             for inlineJs in js['inlineHistory']:
-#                 mentioned_files.add(normpath(inlineJs['file']))
-#             for file_path in mentioned_files:
-#                 files_count[file_path] += 1
-
-#         # evaluate missing file impact on cilkfor substitution
-#         missing_files = dict()
-#         missing_reference = 0
-#         used_files = dict()
-#         used_reference = 0
-#         unused_files = dict()
-#         unused_reference = 0
-#         for file in files_count: 
-#             if file not in allowed_source_files:
-#                 missing_reference += files_count[file]
-#                 missing_files[file] = files_count[file]
-#             elif files_count[file] > 0: 
-#                 used_reference += files_count[file]
-#                 used_files[file] = files_count[file]
-#             else: 
-#                 unused_reference += files_count[file]
-#                 unused_files[file] = files_count[file]
-        
-#         # print("---- missing files: {} files, {} cilkfor references ----------------".format(len(missing_files), missing_reference))
-#         # print('\n'.join(sorted(list([ "{}:\t{}".format(cnt, f) for f, cnt in missing_files.items()]))))
-#         # print("---- used files:    {} files, {} cilkfor references ----------------".format(len(used_files), used_reference))
-#         # print('\n'.join(sorted(list([ "{}:\t{}".format(cnt, f) for f, cnt in used_files.items()]))))
-#         # print("---- unused files:  {} files, {} cilkfor references ----------------".format(len(unused_files), unused_reference))
-#         # print('\n'.join(sorted(list([ "{}:\t{}".format(cnt, f) for f, cnt in unused_files.items()]))))
-    
-#         # every location mentioned in cilkfor.json should be accessible
-#         js = delaunay_C_cilkfor_json[0]
-
-#         keyword = "parallel_for"
-#         for inlineJs in js.get('inlineHistory'):
-#             ln = inlineJs['inlinedAt'] # 1-index, remember offset
-#             col = inlineJs['col']
-#             filename = normpath(inlineJs['file'])
-#             try: 
-#                 with open(filename, 'r') as f:
-#                     source_file = f.readlines()
-#             except: 
-#                 raise ValueError("cannot open {}".format(filename))
-#             print("file {}\t keyword {}\t found: {}".format(filename, keyword, source_file[ln-1][col-1:col-1+len(keyword)]))
-
-#             #### update keyword
-#             # find tightest enclosing construct
-#             bestKey = None
-#             for key in ast_node_query[filename]:
-#                 if not (key[0] <= ln <= key[1]):
-#                     continue
-#                 if bestKey is None or (key[1]-key[0]) < (bestKey[1] - bestKey[0]):
-#                     bestKey = key
-#             if not bestKey:
-#                 raise ValueError("cannot find tightest enclosing constructs for {}".format(keyword))
-#             js_collection = ast_node_query[filename][bestKey]
-
-#             for js in js_collection:
-#                 # print(json.dumps(js, indent=4))
-#                 ln = js.get('loc').get('line')
-#                 col = js.get('loc').get('col')
-#                 tokLen = js.get('loc').get('tokLen')
-#                 keyword = js.get('name')
-#                 kind = js.get('kind')
-#                 print("--> new keyword: {} with kind = {}".format(keyword, kind))
-#                 print(json.dumps(js, indent=2))
-
-#     # print('\n'.join([ "{}:\n{}".format(k, json.dumps(v, indent=2)) for k, v in ast_node_query.items()]))
-#     return 
 
     

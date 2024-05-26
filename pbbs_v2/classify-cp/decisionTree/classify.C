@@ -64,8 +64,17 @@ tree* Leaf(int best) {
   if (best > max_value) abort();
   return new tree(best);
 }
+/** DEBUG: */
+tree* Leaf_par(int best) {
+  if (best > max_value) abort();
+  return new tree(best);
+}
 
 tree* Internal(int i, int cut, int majority, sequence<tree*> children) {
+  return new tree(i, cut, majority, children);
+}
+/** DEBUG: */
+tree* Internal_par(int i, int cut, int majority, sequence<tree*> children) {
   return new tree(i, cut, majority, children);
 }
 
@@ -80,9 +89,21 @@ template <typename S1>
 auto all_equal(S1 const &a) {
   return (a.size() == 0) || (count(a, a[0]) == a.size());
 }
+/** DEBUG: */
+template <typename S1>
+auto all_equal_par(S1 const &a) {
+  return (a.size() == 0) || (count(a, a[0]) == a.size());
+}
 
 template <typename S1>
 auto majority(S1 const &a, size_t m) {
+  auto x = histogram_by_index(a,m);
+  return max_element(x) - x.begin();
+}
+
+/** DEBUG: */
+template <typename S1>
+auto majority_par(S1 const &a, size_t m) {
   auto x = histogram_by_index(a,m);
   return max_element(x) - x.begin();
 }
@@ -131,6 +152,13 @@ double info(row s, int num_vals) {
   auto x = histogram_by_index(s, num_vals);
   return entropy(x, n);
 }
+/** DEBUG: parallel version */
+double info_par(row s, int num_vals) {
+  size_t n = s.size();
+  if (n == 0) return 0.0;
+  auto x = histogram_by_index(s, num_vals);
+  return entropy(x, n);
+}
 
 // info of a conditioned on b
 double cond_info_discrete(feature const &a, feature const &b) {
@@ -157,10 +185,10 @@ double node_cost(int n, int num_features, int num_groups) {
 auto build_tree_par(features &A, bool verbose) {
   int num_features = A.size();
   int num_entries = A[0].vals.size();
-  int majority_value = (num_entries == 0) ? -1 : majority(A[0].vals, A[0].num);
-  if (num_entries < 2 || all_equal(A[0].vals))
-    return Leaf(majority_value);
-  double label_info = info(A[0].vals,A[0].num);
+  int majority_value = (num_entries == 0) ? -1 : /** DEBUG: */majority_par(A[0].vals, A[0].num);
+  if (num_entries < 2 || all_equal_par(A[0].vals))
+    return /** DEBUG: */Leaf_par(majority_value);
+  double label_info = /** DEBUG: */info_par(A[0].vals,A[0].num);
   auto costs = tabulate(num_features - 1, [&] (int i) {
       if (A[i+1].discrete) {
 	return std::tuple(cond_info_discrete(A[0], A[i+1]), i+1, -1);
@@ -181,7 +209,7 @@ auto build_tree_par(features &A, bool verbose) {
 	 << best_info << endl;
 
   if (label_info - best_info < threshold)
-    return Leaf(majority_value);
+    return /** DEBUG: */Leaf_par(majority_value);
   else {
     int m;
     row split_on;

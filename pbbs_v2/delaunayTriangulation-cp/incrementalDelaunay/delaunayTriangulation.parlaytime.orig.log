@@ -1,390 +1,387 @@
 == CILK_WORKERS = 1 ===================================
-delaunay: initialize: 0.0227
-delaunay: add points: 0.3256
-delaunay: generate output: 0.0045
-delaunay: initialize: 0.0111
-delaunay: add points: 0.3123
+delaunay: initialize: 0.0236
+delaunay: add points: 0.3364
 delaunay: generate output: 0.0047
+delaunay: initialize: 0.0120
+delaunay: add points: 0.2645
+delaunay: generate output: 0.0032
 delaunay: initialize: 0.0080
-delaunay: add points: 0.2153
-delaunay: generate output: 0.0030
-delaunay: initialize: 0.0077
-delaunay: add points: 0.2143
-delaunay: generate output: 0.0030
-delaunay: initialize: 0.0076
-delaunay: add points: 0.1786
-delaunay: generate output: 0.0024
-Parlay time: 0.1893
-delaunay: initialize: 0.0060
-delaunay: add points: 0.1685
-delaunay: generate output: 0.0024
-Parlay time: 0.1776
-delaunay: initialize: 0.0060
-delaunay: add points: 0.1685
+delaunay: add points: 0.2263
 delaunay: generate output: 0.0031
-Parlay time: 0.1782
-delaunay: initialize: 0.0060
-delaunay: add points: 0.1698
-delaunay: generate output: 0.0034
-Parlay time: 0.1807
-delaunay: initialize: 0.0065
-delaunay: add points: 0.1686
+delaunay: initialize: 0.0081
+delaunay: add points: 0.1952
 delaunay: generate output: 0.0024
-Parlay time: 0.1782
 delaunay: initialize: 0.0060
-delaunay: add points: 0.1661
-delaunay: generate output: 0.0021
-Parlay time: 0.1748
-delaunay: initialize: 0.0054
+delaunay: add points: 0.1697
+delaunay: generate output: 0.0025
+Parlay time: 0.1790
+delaunay: initialize: 0.0061
+delaunay: add points: 0.1689
+delaunay: generate output: 0.0024
+Parlay time: 0.1781
+delaunay: initialize: 0.0060
+delaunay: add points: 0.1695
+delaunay: generate output: 0.0024
+Parlay time: 0.1786
+delaunay: initialize: 0.0061
+delaunay: add points: 0.1689
+delaunay: generate output: 0.0024
+Parlay time: 0.1781
+delaunay: initialize: 0.0060
+delaunay: add points: 0.1707
+delaunay: generate output: 0.0035
+Parlay time: 0.1825
+delaunay: initialize: 0.0062
+delaunay: add points: 0.1480
+delaunay: generate output: 0.0020
+Parlay time: 0.1568
+delaunay: initialize: 0.0053
 delaunay: add points: 0.1471
 delaunay: generate output: 0.0020
-Parlay time: 0.1551
-delaunay: initialize: 0.0053
+Parlay time: 0.1550
+delaunay: initialize: 0.0054
 delaunay: add points: 0.1472
 delaunay: generate output: 0.0020
-Parlay time: 0.1551
+Parlay time: 0.1552
 delaunay: initialize: 0.0053
-delaunay: add points: 0.1471
-delaunay: generate output: 0.0027
-Parlay time: 0.1595
-delaunay: initialize: 0.0049
-delaunay: add points: 0.1371
-delaunay: generate output: 0.0022
-Parlay time: 0.1449
+delaunay: add points: 0.1384
+delaunay: generate output: 0.0019
+Parlay time: 0.1462
+delaunay: initialize: 0.0048
+delaunay: add points: 0.1354
+delaunay: generate output: 0.0019
+Parlay time: 0.1427
 
 == CILK_WORKERS = 2 ===================================
-delaunay: initialize: 0.0106
-delaunay: add points: 0.2714
+delaunay: initialize: 0.0105
+delaunay: add points: 0.2525
 delaunay: generate output: 0.0030
-delaunay: initialize: 0.0065
-delaunay: add points: 0.2471
+delaunay: initialize: 0.0069
+delaunay: add points: 0.2539
 delaunay: generate output: 0.0029
-delaunay: initialize: 0.0068
-delaunay: add points: 0.2447
-delaunay: generate output: 0.0026
-delaunay: initialize: 0.0056
-delaunay: add points: 0.2150
-delaunay: generate output: 0.0039
-delaunay: initialize: 0.0059
-delaunay: add points: 0.2113
-delaunay: generate output: 0.0023
-Parlay time: 0.2199
-delaunay: initialize: 0.0054
-delaunay: add points: 0.1810
+delaunay: initialize: 0.0069
+delaunay: add points: 0.2359
+delaunay: generate output: 0.0024
+delaunay: initialize: 0.0055
+delaunay: add points: 0.2168
+delaunay: generate output: 0.0038
+delaunay: initialize: 0.0058
+delaunay: add points: 0.2043
 delaunay: generate output: 0.0020
-Parlay time: 0.1888
-delaunay: initialize: 0.0047
-delaunay: add points: 0.1767
-delaunay: generate output: 0.0020
-Parlay time: 0.1838
-delaunay: initialize: 0.0047
-delaunay: add points: 0.1765
-delaunay: generate output: 0.0020
-Parlay time: 0.1836
+Parlay time: 0.2125
 delaunay: initialize: 0.0048
-delaunay: add points: 0.1755
+delaunay: add points: 0.1738
 delaunay: generate output: 0.0020
-Parlay time: 0.1826
+Parlay time: 0.1810
 delaunay: initialize: 0.0047
-delaunay: add points: 0.1754
+delaunay: add points: 0.1761
 delaunay: generate output: 0.0020
-Parlay time: 0.1825
+Parlay time: 0.1832
 delaunay: initialize: 0.0047
-delaunay: add points: 0.1690
+delaunay: add points: 0.1749
+delaunay: generate output: 0.0021
+Parlay time: 0.1820
+delaunay: initialize: 0.0047
+delaunay: add points: 0.1759
+delaunay: generate output: 0.0020
+Parlay time: 0.1830
+delaunay: initialize: 0.0053
+delaunay: add points: 0.1768
+delaunay: generate output: 0.0020
+Parlay time: 0.1845
+delaunay: initialize: 0.0047
+delaunay: add points: 0.1631
 delaunay: generate output: 0.0019
-Parlay time: 0.1759
+Parlay time: 0.1700
 delaunay: initialize: 0.0044
-delaunay: add points: 0.1602
+delaunay: add points: 0.1592
 delaunay: generate output: 0.0019
-Parlay time: 0.1668
+Parlay time: 0.1658
 delaunay: initialize: 0.0044
-delaunay: add points: 0.1594
+delaunay: add points: 0.1571
 delaunay: generate output: 0.0019
-Parlay time: 0.1659
+Parlay time: 0.1637
 delaunay: initialize: 0.0045
-delaunay: add points: 0.1568
+delaunay: add points: 0.1584
 delaunay: generate output: 0.0019
-Parlay time: 0.1635
+Parlay time: 0.1651
 
 == CILK_WORKERS = 4 ===================================
-delaunay: initialize: 0.0051
-delaunay: add points: 0.1546
+delaunay: initialize: 0.0058
+delaunay: add points: 0.1522
+delaunay: generate output: 0.0013
+delaunay: initialize: 0.0034
+delaunay: add points: 0.1511
 delaunay: generate output: 0.0012
-delaunay: initialize: 0.0036
-delaunay: add points: 0.1521
+delaunay: initialize: 0.0033
+delaunay: add points: 0.1459
 delaunay: generate output: 0.0012
-delaunay: initialize: 0.0035
-delaunay: add points: 0.1419
-delaunay: generate output: 0.0011
-delaunay: initialize: 0.0032
-delaunay: add points: 0.1374
+delaunay: initialize: 0.0034
+delaunay: add points: 0.1471
 delaunay: generate output: 0.0012
-delaunay: initialize: 0.0030
-delaunay: add points: 0.1382
-delaunay: generate output: 0.0011
-delaunay: initialize: 0.0030
-delaunay: add points: 0.1355
+delaunay: initialize: 0.0033
+delaunay: add points: 0.1477
+delaunay: generate output: 0.0012
+delaunay: initialize: 0.0034
+delaunay: add points: 0.1296
 delaunay: generate output: 0.0010
-delaunay: initialize: 0.0027
-delaunay: add points: 0.1274
-delaunay: generate output: 0.0020
-delaunay: initialize: 0.0037
-delaunay: add points: 0.1233
+delaunay: initialize: 0.0028
+delaunay: add points: 0.1311
+delaunay: generate output: 0.0019
+delaunay: initialize: 0.0040
+delaunay: add points: 0.1261
 delaunay: generate output: 0.0010
-Parlay time: 0.1282
-delaunay: initialize: 0.0027
-delaunay: add points: 0.1228
+Parlay time: 0.1315
+delaunay: initialize: 0.0028
+delaunay: add points: 0.1253
 delaunay: generate output: 0.0010
-Parlay time: 0.1268
-delaunay: initialize: 0.0027
-delaunay: add points: 0.1225
+Parlay time: 0.1293
+delaunay: initialize: 0.0026
+delaunay: add points: 0.1164
 delaunay: generate output: 0.0010
-Parlay time: 0.1265
+Parlay time: 0.1202
+delaunay: initialize: 0.0026
+delaunay: add points: 0.1170
+delaunay: generate output: 0.0010
+Parlay time: 0.1208
 delaunay: initialize: 0.0025
-delaunay: add points: 0.1191
+delaunay: add points: 0.1166
 delaunay: generate output: 0.0010
-Parlay time: 0.1228
-delaunay: initialize: 0.0026
-delaunay: add points: 0.1195
+Parlay time: 0.1204
+delaunay: initialize: 0.0025
+delaunay: add points: 0.1165
 delaunay: generate output: 0.0010
-Parlay time: 0.1234
-delaunay: initialize: 0.0026
-delaunay: add points: 0.1195
+Parlay time: 0.1202
+delaunay: initialize: 0.0033
+delaunay: add points: 0.1173
 delaunay: generate output: 0.0010
-Parlay time: 0.1234
-delaunay: initialize: 0.0026
-delaunay: add points: 0.1205
-delaunay: generate output: 0.0010
-Parlay time: 0.1324
+Parlay time: 0.1217
 delaunay: initialize: 0.0027
-delaunay: add points: 0.1204
+delaunay: add points: 0.1172
 delaunay: generate output: 0.0010
-Parlay time: 0.1243
+Parlay time: 0.1211
 delaunay: initialize: 0.0026
-delaunay: add points: 0.1198
+delaunay: add points: 0.1167
 delaunay: generate output: 0.0010
-Parlay time: 0.1236
-delaunay: initialize: 0.0026
-delaunay: add points: 0.1198
+Parlay time: 0.1205
+delaunay: initialize: 0.0025
+delaunay: add points: 0.1170
 delaunay: generate output: 0.0010
-Parlay time: 0.1236
+Parlay time: 0.1207
 
 == CILK_WORKERS = 8 ===================================
-delaunay: initialize: 0.0040
-delaunay: add points: 0.1123
+delaunay: initialize: 0.0034
+delaunay: add points: 0.1129
 delaunay: generate output: 0.0007
 delaunay: initialize: 0.0021
 delaunay: add points: 0.1114
 delaunay: generate output: 0.0007
 delaunay: initialize: 0.0021
-delaunay: add points: 0.1115
+delaunay: add points: 0.1121
 delaunay: generate output: 0.0007
 delaunay: initialize: 0.0021
-delaunay: add points: 0.1118
-delaunay: generate output: 0.0007
-delaunay: initialize: 0.0021
-delaunay: add points: 0.0996
-delaunay: generate output: 0.0006
-delaunay: initialize: 0.0018
-delaunay: add points: 0.0963
-delaunay: generate output: 0.0006
-delaunay: initialize: 0.0018
-delaunay: add points: 0.0969
+delaunay: add points: 0.1088
 delaunay: generate output: 0.0006
 delaunay: initialize: 0.0017
-delaunay: add points: 0.0953
-delaunay: generate output: 0.0006
-delaunay: initialize: 0.0018
-delaunay: add points: 0.0965
-delaunay: generate output: 0.0006
-delaunay: initialize: 0.0018
-delaunay: add points: 0.0904
+delaunay: add points: 0.0958
 delaunay: generate output: 0.0006
 delaunay: initialize: 0.0017
+delaunay: add points: 0.0971
+delaunay: generate output: 0.0006
+delaunay: initialize: 0.0018
+delaunay: add points: 0.0958
+delaunay: generate output: 0.0006
+delaunay: initialize: 0.0017
+delaunay: add points: 0.0959
+delaunay: generate output: 0.0006
+delaunay: initialize: 0.0017
+delaunay: add points: 0.0952
+delaunay: generate output: 0.0006
+delaunay: initialize: 0.0016
+delaunay: add points: 0.0888
+delaunay: generate output: 0.0006
+delaunay: initialize: 0.0016
 delaunay: add points: 0.0879
 delaunay: generate output: 0.0006
-Parlay time: 0.0903
+Parlay time: 0.0902
 delaunay: initialize: 0.0016
 delaunay: add points: 0.0893
 delaunay: generate output: 0.0006
-Parlay time: 0.0917
-delaunay: initialize: 0.0017
+Parlay time: 0.0916
+delaunay: initialize: 0.0016
+delaunay: add points: 0.0885
+delaunay: generate output: 0.0006
+Parlay time: 0.0908
+delaunay: initialize: 0.0016
+delaunay: add points: 0.0876
+delaunay: generate output: 0.0006
+Parlay time: 0.0899
+delaunay: initialize: 0.0016
+delaunay: add points: 0.0910
+delaunay: generate output: 0.0017
+Parlay time: 0.0956
+delaunay: initialize: 0.0016
+delaunay: add points: 0.0884
+delaunay: generate output: 0.0006
+Parlay time: 0.0907
+delaunay: initialize: 0.0015
+delaunay: add points: 0.0897
+delaunay: generate output: 0.0006
+Parlay time: 0.0919
+delaunay: initialize: 0.0015
+delaunay: add points: 0.0882
+delaunay: generate output: 0.0006
+Parlay time: 0.0904
+delaunay: initialize: 0.0016
 delaunay: add points: 0.0884
 delaunay: generate output: 0.0006
 Parlay time: 0.0907
 delaunay: initialize: 0.0016
-delaunay: add points: 0.0870
+delaunay: add points: 0.0907
 delaunay: generate output: 0.0006
-Parlay time: 0.0894
-delaunay: initialize: 0.0016
-delaunay: add points: 0.0896
-delaunay: generate output: 0.0012
 Parlay time: 0.0931
-delaunay: initialize: 0.0016
-delaunay: add points: 0.0875
-delaunay: generate output: 0.0006
-Parlay time: 0.0899
-delaunay: initialize: 0.0016
-delaunay: add points: 0.0888
-delaunay: generate output: 0.0006
-Parlay time: 0.0911
-delaunay: initialize: 0.0016
-delaunay: add points: 0.0873
-delaunay: generate output: 0.0006
-Parlay time: 0.0896
-delaunay: initialize: 0.0017
-delaunay: add points: 0.0883
-delaunay: generate output: 0.0006
-Parlay time: 0.0907
-delaunay: initialize: 0.0016
-delaunay: add points: 0.0875
-delaunay: generate output: 0.0006
-Parlay time: 0.0899
 
 == CILK_WORKERS = 14 ===================================
-delaunay: initialize: 0.0031
-delaunay: add points: 0.1005
+delaunay: initialize: 0.0032
+delaunay: add points: 0.1024
+delaunay: generate output: 0.0006
+delaunay: initialize: 0.0016
+delaunay: add points: 0.1017
 delaunay: generate output: 0.0005
 delaunay: initialize: 0.0015
-delaunay: add points: 0.0989
+delaunay: add points: 0.1023
 delaunay: generate output: 0.0005
 delaunay: initialize: 0.0015
-delaunay: add points: 0.1009
+delaunay: add points: 0.0967
 delaunay: generate output: 0.0005
-delaunay: initialize: 0.0015
-delaunay: add points: 0.1000
-delaunay: generate output: 0.0005
-delaunay: initialize: 0.0015
-delaunay: add points: 0.0847
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0842
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0851
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0845
-delaunay: generate output: 0.0004
 delaunay: initialize: 0.0013
-delaunay: add points: 0.0845
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0842
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0761
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0784
-delaunay: generate output: 0.0004
-Parlay time: 0.0802
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0770
-delaunay: generate output: 0.0004
-Parlay time: 0.0787
-delaunay: initialize: 0.0011
-delaunay: add points: 0.0772
-delaunay: generate output: 0.0004
-Parlay time: 0.0788
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0765
-delaunay: generate output: 0.0004
-Parlay time: 0.0782
-delaunay: initialize: 0.0011
-delaunay: add points: 0.0777
-delaunay: generate output: 0.0004
-Parlay time: 0.0794
-delaunay: initialize: 0.0011
-delaunay: add points: 0.0792
-delaunay: generate output: 0.0004
-Parlay time: 0.0809
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0764
-delaunay: generate output: 0.0004
-Parlay time: 0.0781
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0776
-delaunay: generate output: 0.0004
-Parlay time: 0.0793
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0765
-delaunay: generate output: 0.0004
-Parlay time: 0.0782
-delaunay: initialize: 0.0012
-delaunay: add points: 0.0777
-delaunay: generate output: 0.0004
-Parlay time: 0.0793
-
-== CILK_WORKERS = 28 ===================================
-delaunay: initialize: 0.0035
-delaunay: add points: 0.1221
+delaunay: add points: 0.0916
+delaunay: generate output: 0.0005
+delaunay: initialize: 0.0013
+delaunay: add points: 0.0909
 delaunay: generate output: 0.0004
 delaunay: initialize: 0.0014
-delaunay: add points: 0.1195
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0013
-delaunay: add points: 0.1219
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0013
-delaunay: add points: 0.1088
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0011
-delaunay: add points: 0.1005
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0011
-delaunay: add points: 0.1017
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0011
-delaunay: add points: 0.0987
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0011
-delaunay: add points: 0.1018
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0011
 delaunay: add points: 0.0931
 delaunay: generate output: 0.0004
-delaunay: initialize: 0.0010
-delaunay: add points: 0.0915
-delaunay: generate output: 0.0004
-delaunay: initialize: 0.0010
+delaunay: initialize: 0.0014
 delaunay: add points: 0.0907
 delaunay: generate output: 0.0004
-Parlay time: 0.0922
-delaunay: initialize: 0.0010
-delaunay: add points: 0.0893
-delaunay: generate output: 0.0003
-Parlay time: 0.0907
-delaunay: initialize: 0.0010
-delaunay: add points: 0.0903
+delaunay: initialize: 0.0013
+delaunay: add points: 0.0898
 delaunay: generate output: 0.0004
-Parlay time: 0.0917
-delaunay: initialize: 0.0010
-delaunay: add points: 0.0933
+delaunay: initialize: 0.0012
+delaunay: add points: 0.0815
 delaunay: generate output: 0.0004
-Parlay time: 0.0948
-delaunay: initialize: 0.0010
-delaunay: add points: 0.0891
+delaunay: initialize: 0.0012
+delaunay: add points: 0.0810
+delaunay: generate output: 0.0004
+delaunay: initialize: 0.0012
+delaunay: add points: 0.0822
+delaunay: generate output: 0.0004
+Parlay time: 0.0839
+delaunay: initialize: 0.0012
+delaunay: add points: 0.0813
+delaunay: generate output: 0.0004
+Parlay time: 0.0831
+delaunay: initialize: 0.0012
+delaunay: add points: 0.0803
+delaunay: generate output: 0.0004
+Parlay time: 0.0821
+delaunay: initialize: 0.0012
+delaunay: add points: 0.0810
+delaunay: generate output: 0.0004
+Parlay time: 0.0827
+delaunay: initialize: 0.0011
+delaunay: add points: 0.0794
+delaunay: generate output: 0.0005
+Parlay time: 0.0811
+delaunay: initialize: 0.0011
+delaunay: add points: 0.0789
+delaunay: generate output: 0.0004
+Parlay time: 0.0806
+delaunay: initialize: 0.0012
+delaunay: add points: 0.0780
+delaunay: generate output: 0.0004
+Parlay time: 0.0797
+delaunay: initialize: 0.0011
+delaunay: add points: 0.0779
+delaunay: generate output: 0.0004
+Parlay time: 0.0796
+delaunay: initialize: 0.0011
+delaunay: add points: 0.0785
+delaunay: generate output: 0.0004
+Parlay time: 0.0801
+delaunay: initialize: 0.0011
+delaunay: add points: 0.0787
+delaunay: generate output: 0.0004
+Parlay time: 0.0804
+
+== CILK_WORKERS = 28 ===================================
+delaunay: initialize: 0.0032
+delaunay: add points: 0.1208
+delaunay: generate output: 0.0004
+delaunay: initialize: 0.0013
+delaunay: add points: 0.1197
+delaunay: generate output: 0.0004
+delaunay: initialize: 0.0013
+delaunay: add points: 0.1158
+delaunay: generate output: 0.0004
+delaunay: initialize: 0.0012
+delaunay: add points: 0.1112
+delaunay: generate output: 0.0004
+delaunay: initialize: 0.0013
+delaunay: add points: 0.1113
+delaunay: generate output: 0.0004
+delaunay: initialize: 0.0012
+delaunay: add points: 0.1108
+delaunay: generate output: 0.0004
+delaunay: initialize: 0.0012
+delaunay: add points: 0.1102
 delaunay: generate output: 0.0003
-Parlay time: 0.0906
 delaunay: initialize: 0.0010
-delaunay: add points: 0.0897
+delaunay: add points: 0.0962
+delaunay: generate output: 0.0004
+delaunay: initialize: 0.0010
+delaunay: add points: 0.0951
+delaunay: generate output: 0.0003
+delaunay: initialize: 0.0011
+delaunay: add points: 0.0958
+delaunay: generate output: 0.0003
+Parlay time: 0.0974
+delaunay: initialize: 0.0010
+delaunay: add points: 0.0964
+delaunay: generate output: 0.0004
+Parlay time: 0.0979
+delaunay: initialize: 0.0011
+delaunay: add points: 0.0953
+delaunay: generate output: 0.0003
+Parlay time: 0.0968
+delaunay: initialize: 0.0010
+delaunay: add points: 0.0896
 delaunay: generate output: 0.0003
 Parlay time: 0.0911
-delaunay: initialize: 0.0010
-delaunay: add points: 0.0914
-delaunay: generate output: 0.0004
-Parlay time: 0.0930
-delaunay: initialize: 0.0010
-delaunay: add points: 0.0908
+delaunay: initialize: 0.0009
+delaunay: add points: 0.0892
 delaunay: generate output: 0.0003
-Parlay time: 0.0923
+Parlay time: 0.1001
 delaunay: initialize: 0.0010
-delaunay: add points: 0.0894
+delaunay: add points: 0.0895
 delaunay: generate output: 0.0003
-Parlay time: 0.0908
+Parlay time: 0.0910
+delaunay: initialize: 0.0009
+delaunay: add points: 0.0889
+delaunay: generate output: 0.0003
+Parlay time: 0.0903
 delaunay: initialize: 0.0010
-delaunay: add points: 0.0913
+delaunay: add points: 0.0890
 delaunay: generate output: 0.0004
-Parlay time: 0.0927
+Parlay time: 0.0904
+delaunay: initialize: 0.0010
+delaunay: add points: 0.0895
+delaunay: generate output: 0.0003
+Parlay time: 0.0909
+delaunay: initialize: 0.0010
+delaunay: add points: 0.0980
+delaunay: generate output: 0.0004
+Parlay time: 0.0995
 

@@ -1,0 +1,64 @@
+[
+  {
+    "inline_callers": [
+      "_Z10wordCountsRKN6parlay8sequenceIcNS_9allocatorIcEELb1EEEb"
+    ], 
+    "tripcount_sum": 0.0, 
+    "depth_sum": 0.0, 
+    "version": 0, 
+    "dac_entry": 0, 
+    "ef_entry": 2, 
+    "entry": 2, 
+    "inline_loc": "wordCounts-test/histogram/wc.C:45:30", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay16parallel_for_seqIZNS_8sequenceINS1_ISt4pairINS1_IcNS_9allocatorIcEELb1EEEmENS3_IS6_EELb0EEENS3_IS8_EELb0EEC1IZNS_8internal25collect_reduce_sparse_ef_INS_26uninitialized_relocate_tagENS_5sliceIPS5_SG_EENS_19count_by_key_helperIS5_mNS_4hashIS5_EESt8equal_toIvEEEEEDaT0_RKT1_EUlmE0_EEmOT_NSA_18_from_function_tagEimEUlmE_EEvmmST_lb"
+    ], 
+    "tripcount_sum": 0.0, 
+    "depth_sum": 4096.0, 
+    "version": 0, 
+    "dac_entry": 4096, 
+    "ef_entry": 0, 
+    "entry": 4096, 
+    "inline_loc": "wordCounts-test/histogram/parlay/internal/scheduler_plugins/opencilk.h:169:2", 
+    "granularity_sum": 0.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay12parallel_forIZNS_8sequenceIbNS_9allocatorIbEELb0EE15initialize_fillEmRKbEUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNS_8sequenceISt4pairINS1_IcNS_9allocatorIcEELb1EEEmENS3_IS6_EELb0EE15initialize_fillEmRKS6_EUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEiENS5_IS8_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNS_8sequenceImNS_9allocatorImEELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceISt4pairINS3_IcNS_9allocatorIcEELb1EEEmENS5_IS8_EELb0EEENS5_ISA_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb"
+    ], 
+    "tripcount_sum": 73161336.0, 
+    "depth_sum": 4096.0, 
+    "version": 0, 
+    "dac_entry": 4096, 
+    "ef_entry": 8, 
+    "entry": 4104, 
+    "inline_loc": "wordCounts-test/histogram/parlay/internal/scheduler_plugins/opencilk.h:397:5", 
+    "granularity_sum": 32774050.0
+  }, 
+  {
+    "inline_callers": [
+      "_ZN6parlay12parallel_forIZNS_17make_unique_arrayINS_8internal15block_allocatorEZNS2_14pool_allocatorC1ERKSt6vectorImSaImEEEUlmE_EEDamT0_EUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseISt4pairINS_8sequenceIcNS_9allocatorIcEELb1EEEmENS5_IS8_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseIcNS_9allocatorIcEELb1EE12storage_implC1ERKS6_EUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS4_IS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNKS_8internal15block_allocator15initialize_listEPSt4byteEUlmE_EEvmmT_lb", 
+      "_ZN6parlay12parallel_forIZNS_8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPKcEEvT_S8_St26random_access_iterator_tagEUlmE_EEvmmS8_lb", 
+      "_ZN6parlay12parallel_forIZNS_8internal15block_allocator7reserveEmEUlmE_EEvmmT_lb"
+    ], 
+    "tripcount_sum": 250544128.0, 
+    "depth_sum": 7785.0, 
+    "version": 0, 
+    "dac_entry": 7785, 
+    "ef_entry": 13, 
+    "entry": 7798, 
+    "inline_loc": "wordCounts-test/bench/parlay/internal/scheduler_plugins/opencilk.h:397:5", 
+    "granularity_sum": 24593.0
+  }
+]
