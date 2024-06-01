@@ -117,6 +117,14 @@ double entropy(Seq a, int total) {
   return ecost + reduce(delayed_map(a, [=] (int l) {
       return (l > 0) ? -(l * log2(float(l)/total)) : 0.0;}));
 }
+/** DEBUG: simluate copy constructor, separate ef callpath from dac ones */
+template <typename Seq>
+double entropy_ref(Seq &&a, int total) {
+  double ecost = encode_node_factor * log2(float(1 + total)); // to prevent overfitting
+  return ecost + reduce(delayed_map(a, [=] (int l) {
+      return (l > 0) ? -(l * log2(float(l)/total)) : 0.0;}));
+}
+
 
 auto cond_info_continuous(feature const &a, feature const &b) {
   int num_buckets = a.num * b.num;
@@ -146,18 +154,30 @@ auto cond_info_continuous(feature const &a, feature const &b) {
 }
 
 // information content of s (i.e. entropy * size)
-double info(row s, int num_vals) {
+/// DEBUG: disable dflt copy ctor to enable our substituted ones 
+double info(/** DEBUG: originally 'row s' */row &s, int num_vals) {
   size_t n = s.size();
   if (n == 0) return 0.0;
   auto x = histogram_by_index(s, num_vals);
-  return entropy(x, n);
+  /** ORIGINAL: */
+  // return entropy(x, n);
+  /** DEBUG: simulate copy constructor; goal is to separate ef callpath from dac ones */
+  sequence<int> x_cp;
+  x_cp.copy_from(x);
+  return entropy_ref(x_cp, n);
 }
 /** DEBUG: parallel version */
-double info_par(row s, int num_vals) {
+// double info_par(row s, int num_vals) {
+double info_par(/** DEBUG: originally 'row s' */row &s, int num_vals) {
   size_t n = s.size();
   if (n == 0) return 0.0;
   auto x = histogram_by_index(s, num_vals);
-  return entropy(x, n);
+  /** ORIGINAL: */
+  // return entropy(x, n);
+  /** DEBUG: simulate copy constructor; goal is to separate ef callpath from dac ones */
+  sequence<int> x_cp;
+  x_cp.copy_from(x);
+  return entropy_ref(x_cp, n);
 }
 
 // info of a conditioned on b
@@ -186,9 +206,15 @@ auto build_tree_par(features &A, bool verbose) {
   int num_features = A.size();
   int num_entries = A[0].vals.size();
   int majority_value = (num_entries == 0) ? -1 : /** DEBUG: */majority_par(A[0].vals, A[0].num);
-  if (num_entries < 2 || all_equal_par(A[0].vals))
+  if (num_entries < 2 || /** DEBUG: */all_equal_par(A[0].vals))
     return /** DEBUG: */Leaf_par(majority_value);
-  double label_info = /** DEBUG: */info_par(A[0].vals,A[0].num);
+  /** ORIGINAL: */
+  // double label_info = /** DEBUG: */info_par(A[0].vals,A[0].num);
+  /** DEBUG: bypass default copy ctor to diverge DAC call path from EF ones */
+  sequence<unsigned char> vals_cp;
+  vals_cp.copy_from(A[0].vals);
+  double label_info = /** DEBUG: */info_par(vals_cp,A[0].num);
+
   auto costs = tabulate(num_features - 1, [&] (int i) {
       if (A[i+1].discrete) {
 	return std::tuple(cond_info_discrete(A[0], A[i+1]), i+1, -1);
@@ -215,7 +241,10 @@ auto build_tree_par(features &A, bool verbose) {
     row split_on;
     if (A[best_i].discrete) {
       m = A[best_i].num;
-      split_on = A[best_i].vals;
+      /** ORIGINAL: */
+      // split_on = A[best_i].vals; /** TODO: bypass default copy ctor */
+      /** DEBUG: bypass default copy ctor */
+      split_on.copy_from(A[best_i].vals);
     } else {
       m = 2;
       split_on =  map(A[best_i].vals, [&] (value x) -> value {return x >= cut;});
@@ -230,7 +259,7 @@ auto build_tree_par(features &A, bool verbose) {
     //A.clear();
 
     auto children = map(B, [&] (features &a) {return build_tree_par(a, verbose);}, 1);
-    return Internal(best_i - 1, cut, majority_value, children); //-1 since first is label
+    return /** DEBUG: */Internal_par(best_i - 1, cut, majority_value, children); //-1 since first is label
   }
 }
 
@@ -240,7 +269,13 @@ auto build_tree(features &A, bool verbose) {
   int majority_value = (num_entries == 0) ? -1 : majority(A[0].vals, A[0].num);
   if (num_entries < 2 || all_equal(A[0].vals))
     return Leaf(majority_value);
-  double label_info = info(A[0].vals,A[0].num);
+  /** ORIGINAL: */
+  // double label_info = info(A[0].vals,A[0].num);
+  /** DEBUG: mimic copy simulator to diverge ef call paths from dac ones */
+  sequence<unsigned char> vals_cp;
+  vals_cp.copy_from(A[0].vals);
+  double label_info = info(vals_cp, A[0].num);
+
   auto costs = tabulate(num_features - 1, [&] (int i) {
       if (A[i+1].discrete) {
 	return std::tuple(cond_info_discrete(A[0], A[i+1]), i+1, -1);
@@ -267,7 +302,10 @@ auto build_tree(features &A, bool verbose) {
     row split_on;
     if (A[best_i].discrete) {
       m = A[best_i].num;
-      split_on = A[best_i].vals;
+      /** ORIGINAL: mimic copy ctor to separate EF callpath from DAC ones */
+      // split_on = A[best_i].vals;
+      /** DEBUG: */
+      split_on.copy_from(A[best_i].vals);
     } else {
       m = 2;
       split_on =  map(A[best_i].vals, [&] (value x) -> value {return x >= cut;});

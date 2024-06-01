@@ -6,7 +6,7 @@
 ##########################################
 from __future__ import print_function
 
-import os 
+import os, sys
 import re
 import json
 import argparse
@@ -41,13 +41,14 @@ def jsonstr(json):
     return json.dumps(json, sort_keys=True)
 
 ###############################################################################
-# main functionality 
+# compileAnalysisAndInstrumentResults: test=<test> mode=0 ./prr.sh
+#   compile static prr analysis and instrumentation results
 ###############################################################################
-def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
+def compileAnalysisAndInstrumentResults(args, workdir=None, test=None, major_files=None, major_funcs=None):
     def print_call_history(func_name, cg, res_limit=10, indent=0):
         res = set()
-        def traversal(f, callpath, res, visited):
-            if f not in cg:
+        def traversal(f, callpath, res, visited, early_stop=False):
+            if f not in cg or early_stop:
                 res.add('\n'.join([ '{}{}'.format('\t'*indent, p) for p in callpath ]))
                 return (len(res) < res_limit)
             if f in visited:
@@ -66,7 +67,10 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
                 if args.v:
                     new_path += '\t{}'.format(js_callsite['caller_mangled_name'])
                 callpath.append(new_path)
-                continued &= traversal(js_callsite['caller_mangled_name'], callpath, res, visited)
+                ### DEBUG: ##
+                early_stop = early_stop or ((caller_name in major_funcs) or (os.path.basename(file) in major_files))
+                #############
+                continued &= traversal(js_callsite['caller_mangled_name'], callpath, res, visited, early_stop=early_stop)
                 callpath.pop()
                 if not continued: 
                     break
@@ -245,6 +249,10 @@ def compileAnalysisAndInstrumentResults(args, workdir=None, test=None):
         print('>> write to {}'.format(os.path.join(workdir, '{}.worklist.txt'.format(test))))
     return
 
+######################################################################
+# interpretPerfTestResults: test=<test> mode=1 ./prr.sh
+#   interpret performance test parlaytime and icache results
+######################################################################
 def interpretPerfTestResults(args, test=None, res_dir=None, id=None):
     # read entire log as chunks split by double newline
     def parse_parlaytime_log(log_text): 
@@ -347,16 +355,198 @@ def interpretPerfTestResults(args, test=None, res_dir=None, id=None):
     print("write icache results to --> {}".format(icache_out_path))
     icache_merge.to_csv(icache_out_path, index=False)
 
-def interpretProfilingResults(args, workdir=None, test=None, major_files=None, major_funcs=None):
-    with open(os.path.join(workdir, r'{}-perf.cg.json'.format(test)), 'r') as f:
-        cg_json = json.load(f)
-    cg = { js['func'] : js for js in cg_json}
 
-    # print calling history of a callsite
-    def unfold_call_history(func_name, res_limit=10, indent=0):
+######################################################################
+# interpretProfilingResults: test=<test> mode=2 ./prr.sh
+#   interpret performance profiling results
+######################################################################
+class PerfLog:
+    def __init__(self, args, workdir, test, major_files=None, major_funcs=None):
+        self.args = args
+        self.major_files = major_files
+        self.major_funcs = major_funcs
+        # primary key: host function linkage name
+        # secondary key: version 
+        # value: accumulative statistics of this intrinsic callsite
+        perf_short_json_path = os.path.join(workdir, '{}.perf.short.json'.format(test))
+        if not os.path.exists(perf_short_json_path):
+            ###### preprocessing self.perfLogDict schema:
+                # {
+                #     'host': {
+                #         0: { <iloc>: { 'entry': i, 'ef_entry': i, 'dac_entry': i, 'tripcount_sum': i, 'granularity_sum': i, 'depth_sum': i } }
+                #         1: { ... }
+                #         2: { ... }
+                #         'origloc': { s }
+                #         'ef_callers': {
+                #             <ef_caller_name>: [ s ]
+                #         }
+                #         'dac_callers': {
+                #             <dac_caller_name>: [ s ]
+                #         }
+                #     }
+                # }
+            def perfLogDict_prep_init():
+                version_dict = { # secondary key is version
+                    vs: defaultdict( # tertiary key is inline location
+                        lambda: {  
+                            'entry': 0,
+                            'ef_entry': 0,
+                            'dac_entry': 0,
+                            'tripcount_sum': 0.0,
+                            'granularity_sum': 0.0,
+                            'depth_sum': 0.0
+                        }
+                    )
+                    for vs in range(3)
+                }
+                result_dict = { # primary key is host linkname
+                    'origloc': set(),
+                    'ef_callers': defaultdict(lambda: set()), # key: caller linkname, val: inline location
+                    'dac_callers': defaultdict(lambda: set()) # key: caller linkname, val: inline location
+                }
+                result_dict.update(version_dict)
+                return result_dict
+            self.perfLogDict_prep = defaultdict(perfLogDict_prep_init)
+            
+            # read large file .perf.log.gz
+            with gzip.open(os.path.join(workdir, '{}.perf.log.gz'.format(test)), 'rt') as f:
+                file_size = os.path.getsize(os.path.join(workdir, '{}.perf.log.gz'.format(test)))
+                with tqdm(total=file_size, desc='Processing', unit='B', unit_scale=True, unit_divisor=1024) as pbar:
+                    for line in f: 
+                        self.parseLogLine(line.strip()) # update self.perfLogDict_prep
+                        pbar.update(len(line.encode('utf-8')))
+                    print("<< done processing {}".format(os.path.join(workdir, '{}.perf.log.gz'.format(test))))
+
+            ##### prepare for serialization
+                # self.perfLogDict schema: 
+                # {
+                #     'host': {
+                #         0: [ 
+                #             { 
+                #                 'iloc': s, 
+                #                 (sort_key) 'entry': i, 
+                #                 'ef_entry': i, 
+                #                 'dac_entry': i, 
+                #                 'tripcount_sum': i, 
+                #                 'granularity_sum': i, 
+                #                 'depth_sum': i 
+                #             } 
+                #         ]
+                #         1: [ ... ]
+                #         2: [ ... ]
+                #         'origloc': [ s ]
+                #         'ef_callers': {
+                #             <ef_caller_name>: [ s ]
+                #         }
+                #         'dac_callers': {
+                #             <dac_caller_name>: [ s ]
+                #         }
+                #     }
+                # }
+            def perfLogDict_init():
+                version_dict = {  # primary key is host linkname
+                    # secondary key is version # inline location is expanded into list
+                    vs: [] for vs in range(3)
+                }
+                result_dict = {
+                    'origloc': list(),
+                    'ef_callers': defaultdict(lambda: list()), # key: caller linkname, val: inline location
+                    'dac_callers': defaultdict(lambda: list()) # key: caller linkname, val: inline location
+                }
+                result_dict.update(version_dict)
+                return result_dict
+
+            self.perfLogDict = defaultdict(perfLogDict_init)
+            for host, perfLogDict_prep_host in self.perfLogDict_prep.items(): 
+                # serialize version 0 - 3
+                for v in range(3): 
+                    perfLogDict_prep_v = perfLogDict_prep_host[v]
+                    for iloc, perfLogDict_prep_iloc in perfLogDict_prep_v.items():
+                        perfLogDict_prep_iloc['inline_loc'] = iloc
+                        self.perfLogDict[host][v].append(perfLogDict_prep_iloc)
+                    self.perfLogDict[host][v].sort(key=lambda js: js['entry'])
+                
+                # serialize: 'origloc'
+                self.perfLogDict[host]['origloc'] = list(perfLogDict_prep_host['origloc'])
+                # serialize ef_callers: turn any set() into list()
+                for caller, callsites_set in perfLogDict_prep_host['ef_callers'].items():
+                    self.perfLogDict[host]['ef_callers'][caller] = list(callsites_set)
+                for caller, callsites_set in perfLogDict_prep_host['dac_callers'].items():
+                    self.perfLogDict[host]['dac_callers'][caller] = list(callsites_set)
+            # save temporary file
+            with open(perf_short_json_path, 'w') as f:
+                json.dump(self.perfLogDict, f, indent=2)
+                print(">> saved shortened perf.log file to {}".format(os.path.join(workdir, '{}.perf.short.json'.format(test))))
+
+        with open(perf_short_json_path, 'r') as f: #.backup
+            self.perfLogDict = json.load(f)
+        # cg 
+        with open(os.path.join(workdir, r'{}-perf.cg.json'.format(test)), 'r') as f:
+            cg_json = json.load(f)
+        self.cg = { js['func'] : js for js in cg_json}
+
+
+    def parseLogLine(self, logtxt=None):
+        # break apart log line
+        line = logtxt.split(',')
+
+        tag = line[0]
+        if (tag == "calledat"):
+            host = line[1]
+            callsite = normpath(line[2])
+            callername = line[3]
+            depth = int(line[4])
+            # update ef/dac caller information
+            perfLogDict_host = self.perfLogDict_prep[host]
+            if (depth == 0):
+                perfLogDict_host['ef_callers'][callername].add(callsite)
+            else:
+                perfLogDict_host['dac_callers'][callername].add(callsite)
+
+        elif (tag == "builtin"):
+            version = int(line[1])
+            tripcount = int(line[2])
+            granularity = int(line[3])
+            depth = int(line[4])
+            host = line[5]
+            orig_loc = line[6]
+            inline_loc = line[7]
+            # update perfLogDict -> host -> version -> { accumulative stats }
+            perfLogDict_iloc = self.perfLogDict_prep[host][version][inline_loc]
+            perfLogDict_iloc['tripcount_sum'] += tripcount
+            perfLogDict_iloc['granularity_sum'] += granularity
+            perfLogDict_iloc['depth_sum'] += depth
+            perfLogDict_iloc['entry'] += 1
+            if (depth == 0):
+                perfLogDict_iloc['ef_entry'] += 1
+            else:
+                perfLogDict_iloc['dac_entry'] += 1
+            # update perfLogDict -> host -> orig location
+            self.perfLogDict_prep[host]['origloc'].add(orig_loc)
+
+        else: 
+            print("unknown tag \"{}\" seen in log line!".format(tag))
+            exit(1)
+
+    @staticmethod
+    def pp_vers(version):
+        if (version == '0'):
+            return "parallel_for"
+        elif version == '1':
+            return "parallel_for_ef"
+        elif version == '2': 
+            return "parallel_for_dac"
+        else:
+            print('unknown version, cannot call pp_vers')
+            exit(1)
+
+    def unfold_call_history(self, func_name, res_limit=10, indent=0, target_caller=None):
+        # print calling history of a callsite
         res = set()
-        def traversal(f, callpath, res, visited, early_stop=False):
-            if f not in cg or early_stop:
+        INDENT = '\t'*indent
+        def traversal(f, callpath, res, visited, early_stop=False, found_tgt_func=False):
+            if f not in self.cg or early_stop:
+                # if found_tgt_func:
                 res.add('\n'.join([ '{}{}'.format('\t'*indent, p) for p in callpath ]))
                 return (len(res) < res_limit)
             ### DEBUG: ###
@@ -365,7 +555,7 @@ def interpretProfilingResults(args, workdir=None, test=None, major_files=None, m
             ##############
             continued = True
             visited.add(f)
-            js = cg[f]
+            js = self.cg[f]
             for js_callsite in js['callsites']:
                 # push new path
                 file = normpath(js_callsite['file'])
@@ -377,8 +567,8 @@ def interpretProfilingResults(args, workdir=None, test=None, major_files=None, m
                 new_path = "-----> {}:{}:{}\tcaller: {}\t{}".format(file, str(ln), str(col), caller_name, link_name)
                 callpath.append(new_path)
 
-                early_stop = early_stop or ((caller_name in major_funcs) or (os.path.basename(file) in major_files))
-                continued &= traversal(js_callsite['caller_mangled_name'], callpath, res, visited, early_stop=early_stop)
+                early_stop = early_stop or ((caller_name in self.major_funcs) or (os.path.basename(file) in self.major_files))
+                continued &= traversal(js_callsite['caller_mangled_name'], callpath, res, visited, early_stop=early_stop, found_tgt_func=(link_name==target_caller))
                 # backtrack: pop off all callpath added in this iteration
                 callpath.pop()
                 # if reaches result limit, early break
@@ -393,119 +583,99 @@ def interpretProfilingResults(args, workdir=None, test=None, major_files=None, m
 
         res_str = '\n\n'.join(res)
         if not normal_exit:
-            res_str += '\n\n{}<!> only {} callpaths is shown!'.format('\t'*indent, res_limit)
+            res_str += '\n\n{}<!> only {} callpaths is shown!'.format(INDENT, res_limit)
         return res_str
     
-    def parallel_for_version(version):
-        if (version == 0):
-            return "parallel_for"
-        elif version == 1:
-            return "parallel_for_ef"
-        elif version == 2: 
-            return "parallel_for_dac"
-        else:
-            exit(1)
+    def emit(self, indent=0, file=None):
+        ##### printer
+        # self.perfLogDict schema: 
+        # {
+        #     'host': {
+        #         0: [ 
+        #             { 
+        #                 'iloc': s, 
+        #                 (sort_key) 'entry': i, 
+        #                 'ef_entry': i, 
+        #                 'dac_entry': i, 
+        #                 'tripcount_sum': i, 
+        #                 'granularity_sum': i, 
+        #                 'depth_sum': i 
+        #             } 
+        #         ]
+        #         1: [ ... ]
+        #         2: [ ... ]
+        #         'origloc': [ s ]
+        #         'ef_callers': {
+        #             <ef_caller_name>: [ s ]
+        #         }
+        #         'dac_callers': {
+        #             <dac_caller_name>: [ s ]
+        #         }
+        #     }
+        # }
+        if file is None: 
+            file = sys.stdout
+        INDENT = '\t' * indent
+        # print self.perfLogDict as
+        #   primary key: host func link name
+        #       secondary key: version
+        #           originally defined at: <orig locs>
+        #           inlined at: <inline locs>
+        #           < <host> : <vers_t> <entry> <ef entry> <dac entry> <avg.tc> <avg.gran> >
+        #           if verbose: 
+        #               <unfolded ef call path>
+        #               <unfolded dac call path>
 
-    def parse_perf_log(line, perfLogsDict=None):
-        # break apart log line
-        line = line.split(',')
+        for host, perfLog_host in self.perfLogDict.items():
+            print('\n{}intrinsic found in: {}'.format(INDENT, host), file=file)
+            for orig_loc in perfLog_host['origloc']:
+                print('{}\torig defined at: {}'.format(INDENT, orig_loc), file=file)
+            # print versioned intrinsics collective stats found in host func
+            for v in range(3):
+                ### DEBUG:
+                # if v != 0: 
+                #     continue
+                ##########
+                v = str(v)
+                perfLog_v = perfLog_host[v]
+                if (len(perfLog_v) > 0):
+                    print('\n{}\t-- v:{}'.format(INDENT, v), file=file)
+                for perfLog_iloc in perfLog_v:
+                    iloc = perfLog_iloc['inline_loc']
+                    entry = perfLog_iloc['entry']
+                    ef_entry = perfLog_iloc['ef_entry']
+                    dac_entry = perfLog_iloc['dac_entry']
+                    avg_tc = perfLog_iloc['tripcount_sum'] / entry
+                    avg_gr = perfLog_iloc['granularity_sum'] / entry
 
-        version = int(line[0])
-        tripcount = int(line[1])
-        granularity = int(line[2])
-        depth = int(line[3])
-        src_loc = line[4]
-        src_caller = line[5]
-        inline_loc = line[6]
-        inline_caller = line[7]
-        # check version 
-        perfLogsDict_vers = perfLogsDict[version]
-        if src_caller not in perfLogsDict_vers:
-            perfLogsDict_vers[src_caller] = {
-                'src_caller': src_caller,
-                'src_locs': set(),
-                'inline_locs': set(),
-                'inline_callers': set(),
-                'version': version,
-                'entry': 0,
-                'ef_entry': 0,
-                'dac_entry': 0,
-                'tripcount_sum': 0.0,
-                'granularity_sum': 0.0,
-                'depth_sum': 0.0
-            }
-        # add caller (mangled) name
-        perfLogsDict_vers[src_caller]['inline_locs'].add(inline_loc)
-        perfLogsDict_vers[src_caller]['src_locs'].add(src_loc)
-        perfLogsDict_vers[src_caller]['inline_callers'].add(inline_caller)
-        # update runtime argument distribution
-        perfLogsDict_vers[src_caller]['tripcount_sum'] += tripcount
-        perfLogsDict_vers[src_caller]['granularity_sum'] += granularity
-        perfLogsDict_vers[src_caller]['depth_sum'] += depth
-        # incr entry count
-        perfLogsDict_vers[src_caller]['entry'] += 1 
-        if (depth > 0):
-            perfLogsDict_vers[src_caller]['dac_entry'] += 1
-        else: 
-            perfLogsDict_vers[src_caller]['ef_entry'] += 1
-        
-        return 
+                    print('{}\t<{}> entry:{} ef:{} dac:{} avg.tc:{:.2f} avg.gr:{:.2f} inlined at: {}'.format(INDENT, PerfLog.pp_vers(v), entry, ef_entry, dac_entry, avg_tc, avg_gr, iloc), file=file)
+            # verbose mode: print unfolded static call history
+            if len(perfLog_host['ef_callers']):
+                print('\n{}\tEF call paths:'.format(INDENT), file=file)
+            for ef_caller, ef_callsites in perfLog_host['ef_callers'].items():
+                print('{}\t\tef caller: {}'.format(INDENT, ef_caller), file=file)
+                for ef_callsite in ef_callsites:
+                    print('{}\t\t\tat: {}'.format(INDENT, ef_callsite), file=file)
+                if self.args.v:
+                    print('{}\t\tunfold caller\'s static callpaths:'.format(INDENT), file=file)
+                    print(self.unfold_call_history(host, indent=indent+2, target_caller=ef_caller), file=file)
+            if len(perfLog_host['dac_callers']):
+                print('\n{}\tDAC call paths:'.format(INDENT), file=file)
+            for dac_caller, dac_callsites in perfLog_host['dac_callers'].items():
+                print('{}\t\tdac aller: {}'.format(INDENT, dac_caller), file=file)
+                for dac_callsite in dac_callsites:
+                    print('{}\t\t\tat: {}'.format(INDENT, dac_callsite), file=file)
+                if self.args.v:
+                    print('{}\t\tunfold caller\'s static callpaths:'.format(INDENT), file=file)
+                    print(self.unfold_call_history(host, indent=indent+2, target_caller=dac_caller), file=file)
 
-    try:
-        with open(os.path.join(workdir, '{}.perf.short.json'.format(test)), 'r') as f: #.backup
-            perfLogs_sorted = json.load(f)
-    except:
-        file_size = os.path.getsize(os.path.join(workdir, '{}.perf.log.gz'.format(test)))
-
-        perfLogsDict = {0: {}, 1: {}, 2: {}}
-        with gzip.open(os.path.join(workdir, '{}.perf.log.gz'.format(test)), 'rt') as f:
-            with tqdm(total=file_size, desc='Processing', unit='B', unit_scale=True, unit_divisor=1024) as pbar:
-                for line in f: 
-                    parse_perf_log(line.strip(), perfLogsDict)
-                    pbar.update(len(line.encode('utf-8')))
-
-        perfLogs = []
-        for _, perfLogs_vers in perfLogsDict.items(): 
-            for log in perfLogs_vers.values():
-                log['inline_locs'] = list(log['inline_locs'])
-                log['inline_callers'] = list(log['inline_callers'])
-                log['src_locs'] = list(log['src_locs'])
-                perfLogs.append(log)
-        perfLogs_sorted = sorted(perfLogs, key=lambda js:js['entry'])
-
-        # save temporary file
-        with open(os.path.join(workdir, '{}.perf.short.json'.format(test)), 'w') as f:
-            json.dump(perfLogs_sorted, f, indent=2)
-
-    perfLogs_EF = [ logs for logs in perfLogs_sorted if logs['version'] == 1 ]
-    perfLogs_DAC = [ logs for logs in perfLogs_sorted if logs['version'] == 2 ]
-    perfLogs_orig = [ logs for logs in perfLogs_sorted if logs['version'] == 0 ]
-    def print_perfLogs(perfLogs=None, indent=0):
-        for logs in perfLogs:
-            caller = logs['src_caller']
-            entry = logs['entry']
-            avg_tc = "{:.2f}".format(logs['tripcount_sum'] / entry)
-            avg_gran = "{:.2f}".format(logs['granularity_sum'] / entry)
-            print("{}<{}> entry:{} ef:{} dac:{} avg.tc:{} avg.gran:{}\tcaller: {}".format('\t'*indent, parallel_for_version(logs['version']), logs['entry'], logs['ef_entry'], logs['dac_entry'], avg_tc, avg_gran, caller))
-            for sloc in logs['src_locs']:
-                print('{}\tsource code at: {}'.format('\t'*indent, sloc))
-
-            for iloc in logs['inline_locs']: 
-                print('{}\tinlined at: {}'.format('\t'*indent, iloc))
-                if args.v: 
-                    if (os.path.basename(iloc.split(':')[0]) not in major_files):
-                        print('{}\tinline caller: {}'.format('\t'*indent, caller))
-                        print("{}".format(unfold_call_history(caller, indent=2)))
-                print('\n')
-
-    # print performance profiling results for parallel_for
-    print('-- orig: ')
-    print_perfLogs(perfLogs=perfLogs_orig, indent=1)
-    # print performance profiling results for parallel_for_ef or parallel_for_dac
-    # print('-- ef: ')
-    # print_perfLogs(perfLogs=perfLogs_EF, indent=1)
-    # print('-- dac: ')
-    # print_perfLogs(perfLogs=perfLogs_DAC, indent=1)
+def interpretProfilingResults(args, workdir=None, test=None, major_files=None, major_funcs=None):
+    perfLog = PerfLog(args, workdir, test, major_files=major_files, major_funcs=major_funcs)
+    if args.v:
+        with open(r'./{}.runtime.txt'.format(test), 'w') as f:
+            perfLog.emit(file=f)
+    else:
+        perfLog.emit()
 
 if __name__ == "__main__":
     # take current timestamp
@@ -584,7 +754,9 @@ if __name__ == "__main__":
             compileAnalysisAndInstrumentResults(
                 args,
                 workdir=os.path.join(basedir, r'classify-cp/decisionTree'),
-                test=args.test)
+                test=args.test,
+                major_files=['classify.C', 'classifyTime.C'],
+                major_funcs=['classify'])
         if args.parlaytime: 
             interpretPerfTestResults(
                 args, 

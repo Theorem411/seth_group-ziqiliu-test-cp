@@ -117,7 +117,15 @@ double entropy(Seq a, int total) {
   return ecost + reduce(delayed_map(a, [=] (int l) {
       return (l > 0) ? -(l * log2(float(l)/total)) : 0.0;}));
 }
+/** PRR: EF derive 1st argument without calling default copy constructor */
+template <typename Seq>
+double entropy_ref(Seq &&a, int total) {
+  double ecost = encode_node_factor * log2(float(1 + total)); // to prevent overfitting
+  return ecost + reduce(delayed_map(a, [=] (int l) {
+      return (l > 0) ? -(l * log2(float(l)/total)) : 0.0;}));
+}
 
+/* PRR: this function is only called in DAC environment (i.e. inside a parallel_for body) */
 auto cond_info_continuous(feature const &a, feature const &b) {
   int num_buckets = a.num * b.num;
   size_t n = a.vals.size();
@@ -136,7 +144,15 @@ auto cond_info_continuous(feature const &a, feature const &b) {
       high_counts[j] -= sums[a.num*i + j];
       m += sums[a.num*i + j];
     }
-    double e = entropy(low_counts, m) + entropy(high_counts, n - m);
+    /** PRR: DAC call mimic copy constructor */
+    /** ORIGINAL: */ 
+    // double e = entropy(low_counts, m) + entropy(high_counts, n - m);
+    /** PRR: */
+    sequence<int> low_counts_cp;
+    low_counts_cp.copy_from_dac(low_counts);
+    sequence<int> high_counts_cp;
+    high_counts_cp.copy_from_dac(high_counts);
+    double e = entropy_ref(low_counts_cp, m) + entropy_ref(high_counts_cp, n - m);
     if (e < cur_e) {
       cur_e = e;
       cur_i = i+1;
@@ -146,18 +162,31 @@ auto cond_info_continuous(feature const &a, feature const &b) {
 }
 
 // information content of s (i.e. entropy * size)
-double info(row s, int num_vals) {
+/// DEBUG: disable dflt copy ctor to enable our substituted ones 
+double info(/** DEBUG: originally 'row s' */row &s, int num_vals) {
   size_t n = s.size();
   if (n == 0) return 0.0;
-  auto x = /** PRR: EF */histogram_by_index_ef(s, num_vals);
-  return entropy(x, n);
+  /** ORIGINAL: */
+  // auto x = histogram_by_index_ef(s, num_vals); 
+  // return entropy(x, n);
+  auto x = /** PRR: EF */histogram_by_index_ef(s, num_vals); 
+  /** DEBUG: simulate copy constructor */
+  sequence<int> x_cp;
+  /** PRR: EF */x_cp.copy_from_ef(x);
+  return entropy_ref(/** PRR: EF*/x_cp, n);
 }
 /** DEBUG: parallel version */
-double info_par(row s, int num_vals) {
+// double info_par(row s, int num_vals) {
+double info_par(/** DEBUG: originally 'row s' */row &s, int num_vals) {
   size_t n = s.size();
   if (n == 0) return 0.0;
-  auto x = /** PRR: DAC */histogram_by_index_dac(s, num_vals);
-  return entropy(x, n);
+  auto x = histogram_by_index(s, num_vals);
+  /** ORIGINAL: */
+  // return entropy(x, n);
+  /** DEBUG: simulate copy constructor; goal is to separate ef callpath from dac ones */
+  sequence<int> x_cp;
+  /** PRR: DAC */x_cp.copy_from_dac(x);
+  return entropy_ref(x_cp, n);
 }
 
 // info of a conditioned on b
@@ -188,7 +217,13 @@ auto build_tree_par(features &A, bool verbose) {
   int majority_value = (num_entries == 0) ? -1 : /** DEBUG: */majority_par(A[0].vals, A[0].num);
   if (num_entries < 2 || /** DEBUG: */all_equal_par(A[0].vals))
     return /** DEBUG: */Leaf_par(majority_value);
-  double label_info = /** DEBUG: */info_par(A[0].vals,A[0].num);
+  /** ORIGINAL: */
+  // double label_info = /** DEBUG: */info_par(A[0].vals,A[0].num);
+  /** DEBUG: bypass default copy ctor to diverge DAC call path from EF ones */
+  sequence<unsigned char> vals_cp;
+  /** PRR: DAC */vals_cp.copy_from_dac(A[0].vals);
+  double label_info = /** DEBUG: */info_par(vals_cp,A[0].num);
+
   auto costs = /** PRR: DAC: entry:17146 ef:0 dac:17146 avg.tc:54.0 avg.gran:1.0 */tabulate_dac(num_features - 1, [&] (int i) {
       if (A[i+1].discrete) {
 	return std::tuple(cond_info_discrete(A[0], A[i+1]), i+1, -1);
@@ -215,7 +250,10 @@ auto build_tree_par(features &A, bool verbose) {
     row split_on;
     if (A[best_i].discrete) {
       m = A[best_i].num;
-      split_on = A[best_i].vals;
+      /** ORIGINAL: */
+      // split_on = A[best_i].vals; /** TODO: bypass default copy ctor */
+      /** DEBUG: bypass default copy ctor */
+      /** PRR: DAC */split_on.copy_from_dac(A[best_i].vals);
     } else {
       m = 2;
       /** PRR: DAC: entry:10784 ef:0 dac:10784 avg.tc:525.668304896 avg.gran:0.0 */split_on = map_dac(A[best_i].vals, [&] (value x) -> value {return x >= cut;});
@@ -240,7 +278,13 @@ auto build_tree(features &A, bool verbose) {
   int majority_value = (num_entries == 0) ? -1 : majority(A[0].vals, A[0].num);
   if (num_entries < 2 || all_equal(A[0].vals))
     return Leaf(majority_value);
-  double label_info = info(A[0].vals,A[0].num);
+  /** ORIGINAL: */
+  // double label_info = info(A[0].vals,A[0].num);
+  /** DEBUG: mimic copy simulator to diverge ef call paths from dac ones */
+  sequence<unsigned char> vals_cp;
+  /** PRR: EF */vals_cp.copy_from_ef(A[0].vals);
+  double label_info = info(vals_cp, A[0].num);
+
   auto costs = /** PRR: EF: entry:1 ef:1 dac:0 avg.tc:54.0 avg.gran:1.0 */tabulate_ef(num_features - 1, [&] (int i) {
       if (A[i+1].discrete) {
 	return std::tuple(cond_info_discrete(A[0], A[i+1]), i+1, -1);
@@ -267,7 +311,10 @@ auto build_tree(features &A, bool verbose) {
     row split_on;
     if (A[best_i].discrete) {
       m = A[best_i].num;
-      split_on = A[best_i].vals;
+      /** ORIGINAL: mimic copy ctor to separate EF callpath from DAC ones */
+      // split_on = A[best_i].vals;
+      /** DEBUG: mimic EF copy ctor */
+      /** PRR: EF */split_on.copy_from_ef(A[best_i].vals);
     } else {
       m = 2;
       split_on = /** PRR: EF: entry:1 ef:1 dac:0 avg.tc:464810.0 avg.gran:0.0 */map_ef(A[best_i].vals, [&] (value x) -> value {return x >= cut;});

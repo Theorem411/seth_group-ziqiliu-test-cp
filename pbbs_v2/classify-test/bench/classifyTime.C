@@ -58,13 +58,15 @@ sequence<char> csv_row_ef(Seq const &e) {
   return parlay::flatten(ss);
 };
 
-void report_correct(row result, row labels) {
+/** DEBUG: argument type changed to reference to bypass default copy ctor
+ * ORIGINAL: void report_correct(row result, row labels) { */
+void report_correct(row& result, row& labels) {
   size_t n = result.size();
   if (n != labels.size()) {
     cout << "size mismatch of results and labels" << endl;
     return;
   }
-  size_t num_correct = parlay::reduce(parlay::tabulate(n, [&] (size_t i) {
+  size_t num_correct = parlay::reduce(/** PRR: EF */parlay::tabulate_ef(n, [&] (size_t i) {
          return (result[i] == labels[i]) ? 1 : 0;}));
   float percent_correct = (100.0 * num_correct)/n;
   cout << num_correct << " correct out of " << n
@@ -86,8 +88,16 @@ void timeClassify(features const &Train, rows const &Test, row const &labels,
 //   #endif
   cout << endl;
 
-  auto x = parlay::filter(result, [] (long i) {return (i > 9) || (i < 0);});
-  report_correct(result, labels);
+  auto x = /** PRR: EF */parlay::filter_ef(result, [] (long i) {return (i > 9) || (i < 0);});
+  /** ORIGINAL: */
+  // report_correct(result, labels);
+  /** DEBUG: bypass default copy ctor to diverge EF callpath from DAC ones */
+  row result_cp;
+  /** PRR: EF */result_cp.copy_from_ef(result);
+  row labels_cp;
+  /** PRR: EF */labels_cp.copy_from_ef(labels);
+  report_correct(result_cp, labels_cp);
+
   if (outFile != NULL) parlay::chars_to_file(/** PRR: EF */csv_row_ef(result), outFile);
 }
 
@@ -131,7 +141,12 @@ auto rows_to_features(sequence<char> types, rows const &A) {
     auto vals = /** PRR: DAC */parlay::tabulate_dac(num_rows, [&] (size_t j) -> value {return A[j][i];});
     
     int maxv = /** PRR: DAC */parlay::reduce_dac(vals, parlay::maxm<char>());
-    return feature(is_discrete, maxv+1, vals);
+    /** ORIGINAL: */
+    // return feature(is_discrete, maxv+1, vals); /** TODO: vals bypass default copy ctor */
+    /** DEBUG: bypass default copy ctor */
+    row vals_cp;
+    /** PRR: DAC */vals_cp.copy_from_dac(vals);
+    return feature(is_discrete, maxv+1, vals_cp, /** PRR: DAC */true);
   };
 
   return /** PRR: EF */parlay::tabulate_ef(num_features, get_feature);

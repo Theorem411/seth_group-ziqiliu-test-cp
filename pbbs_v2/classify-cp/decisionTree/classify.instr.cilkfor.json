@@ -23,6 +23,35 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
+                "ln": 145, 
+                "caller": "copy_from", 
+                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseIhNS_9allocatorIhEELb0EE12storage_impl9copy_fromERKS5_", 
+                "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
+                "col": 17
+            }
+        ], 
+        "dac": 18646, 
+        "caller_EF": [
+            {
+                "inlineHistory": "", 
+                "ln": 145, 
+                "caller": "copy_from", 
+                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseIhNS_9allocatorIhEELb0EE12storage_impl9copy_fromERKS5_", 
+                "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
+                "col": 17
+            }
+        ], 
+        "ef": 3, 
+        "col": 5, 
+        "ln": 364, 
+        "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
+        "prr": "both", 
+        "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseIhNS_9allocatorIhEELb0EE12storage_impl9copy_fromERKS6_EUlmE_EEvmmT_lb"
+    }, 
+    {
+        "caller_DAC": [
+            {
+                "inlineHistory": "", 
                 "ln": 147, 
                 "caller": "for_each<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long> > &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:966:44)> > &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1107:33), 0>", 
                 "mangled_name": "_ZN6parlay8internal7delayed8for_eachIRNS1_19block_delayed_zip_tIJRNS1_20block_delayed_scan_tIRNS_16delayed_sequenceISt4pairIllES7_ZNS_10map_tokensIRNS_5sliceIPKcSB_EERZZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENK4$_10clISC_EEDaT_EUlSM_E_RZ9read_dataSJ_E4$_11EEDaOSM_OT0_OT1_EUlmE1_EELb0EZNS8_ISD_SO_SQ_EEDaSR_ST_SV_EUlS7_S7_E_S7_EENS5_ImmZNS_4iotaImEEDaSM_EUlmE_EEEEEZNS8_ISD_SO_SQ_EEDaSR_ST_SV_EUlSR_E_Li0EEEvSR_ST_", 
@@ -65,7 +94,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEC2IZNS_8internal3mapIRS4_Z10build_treeS8_bE4$_12EEDaOT_OT0_mEUlmE_EEmSB_NS4_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -85,7 +114,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1054:43)>", 
                 "mangled_name": "_ZN6parlay8sequenceINS0_IcNS_9allocatorIcEELb1EEENS1_IS3_EELb0EEC2IZNS_8internal16map_tokens_smallIRNS_5sliceIPKcSB_EERZNS_6tokensISD_RZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_11EES5_OT_OT0_EUlSO_E_SM_EEDaSO_SQ_OT1_EUlmE0_EEmSO_NS5_18_from_function_tagEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -125,7 +154,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 192, 
+                "ln": 209, 
                 "caller": "destroy_all", 
                 "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIcNS_9allocatorIcEELb1EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv", 
                 "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
@@ -143,7 +172,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>", 
                 "mangled_name": "_ZN6parlay8sequenceISt4pairIllENS_9allocatorIS2_EELb0EEC2IZNS_8internal7delayed20block_delayed_scan_tIRNS_16delayed_sequenceIS2_S2_ZNS_10map_tokensIRNS_5sliceIPKcSE_EERZZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENK4$_10clISF_EEDaT_EUlSP_E_RZ9read_dataSM_E4$_11EEDaOSP_OT0_OT1_EUlmE1_EELb0EZNSB_ISG_SR_ST_EEDaSU_SW_SY_EUlS2_S2_E_S2_EC1IS11_EESU_S12_S2_EUlmE_EEmSU_NS5_18_from_function_tagEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -165,7 +194,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 570, 
+                "ln": 582, 
                 "caller": "initialize_range<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>", 
                 "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EE16initialize_rangeINS_16delayed_sequenceImmZNS_8internal11delayed_mapIRNS0_IS3_NS1_IS3_EELb0EEEZNS6_7delayed23block_delayed_flatten_tIS9_E20initialize_iteratorsEvEUlOT_E_Li0EEEDaSF_T0_EUlmE_E8iteratorEEEvSE_SE_St26random_access_iterator_tag", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -183,7 +212,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 541, 
+                "ln": 553, 
                 "caller": "initialize_fill", 
                 "mangled_name": "_ZN6parlay8sequenceISt4pairIiiENS_9allocatorIS2_EELb0EE15initialize_fillEmRKS2_", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -203,7 +232,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 570, 
+                "ln": 582, 
                 "caller": "initialize_range<const char *>", 
                 "mangled_name": "_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPKcEEvT_S7_St26random_access_iterator_tag", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -245,7 +274,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EEC2IZNS_8internal3mapINS0_IS3_NS1_IS3_EELb0EEEZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3$_9EEDaOT_OT0_mEUlmE_EEmSH_NS3_18_from_function_tagEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -264,7 +293,7 @@
             {
                 "inlineHistory": "", 
                 "ln": 213, 
-                "caller": "collect_reduce<parlay::delayed_sequence<int, int, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:124:54)>, helper>", 
+                "caller": "collect_reduce<parlay::delayed_sequence<int, int, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:132:54)>, helper>", 
                 "mangled_name": "_ZN6parlay8internal14collect_reduceINS_16delayed_sequenceIiiZ20cond_info_continuousRK7featureS5_E3$_0EEZNS_18histogram_by_indexIiS7_EEDaOT0_T_E6helperEEDaRKSB_RKS9_m", 
                 "file": "classify-cp/decisionTree/parlay/internal/collect_reduce.h", 
                 "col": 3
@@ -283,7 +312,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceIhNS_9allocatorIhEELb0EEC2IZNS_8internal3mapIRS3_Z14build_tree_parRNS0_I7featureNS1_IS8_EELb0EEEbE3$_5EEDaOT_OT0_mEUlmE_EEmSE_NS3_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -300,12 +329,41 @@
         "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIhNS_9allocatorIhEELb0EEC1IZNS_8internal3mapIRS4_Z14build_tree_parRNS1_I7featureNS2_IS9_EELb0EEEbE3$_5EEDaOT_OT0_mEUlmE_EEmSF_NS4_18_from_function_tagEmEUlmE_EEvmmSE_lb"
     }, 
     {
+        "caller_DAC": [
+            {
+                "inlineHistory": "", 
+                "ln": 209, 
+                "caller": "destroy_all", 
+                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceI7featureNS_9allocatorIS3_EELb0EEENS4_IS6_EELb0EE12storage_impl11destroy_allEv", 
+                "file": "classify-cp/decisionTree/parlay/internal/sequence_base.h", 
+                "col": 9
+            }
+        ], 
+        "dac": 12173, 
+        "caller_EF": [
+            {
+                "inlineHistory": "", 
+                "ln": 209, 
+                "caller": "destroy_all", 
+                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceI7featureNS_9allocatorIS3_EELb0EEENS4_IS6_EELb0EE12storage_impl11destroy_allEv", 
+                "file": "classify-cp/decisionTree/parlay/internal/sequence_base.h", 
+                "col": 9
+            }
+        ], 
+        "ef": 1, 
+        "col": 5, 
+        "ln": 364, 
+        "file": "classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h", 
+        "prr": "both", 
+        "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceI7featureNS_9allocatorIS4_EELb0EEENS5_IS7_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb"
+    }, 
+    {
         "caller_DAC": null, 
         "dac": 0, 
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceIhNS_9allocatorIhEELb0EEC2IZNS_8internal3mapINS0_INS0_IcNS1_IcEELb1EEENS1_IS8_EELb0EEEZ8read_rowNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3$_6EEDaOT_OT0_mEUlmE_EEmSJ_NS3_18_from_function_tagEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -414,7 +472,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 532, 
+                "ln": 544, 
                 "caller": "initialize_default", 
                 "mangled_name": "_ZN6parlay8sequenceIbNS_9allocatorIbEELb0EE18initialize_defaultEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -432,7 +490,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 192, 
+                "ln": 209, 
                 "caller": "destroy_all", 
                 "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseI7featureNS_9allocatorIS2_EELb0EE12storage_impl11destroy_allEv", 
                 "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
@@ -443,7 +501,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 192, 
+                "ln": 209, 
                 "caller": "destroy_all", 
                 "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseI7featureNS_9allocatorIS2_EELb0EE12storage_impl11destroy_allEv", 
                 "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
@@ -461,7 +519,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 541, 
+                "ln": 553, 
                 "caller": "initialize_fill", 
                 "mangled_name": "_ZN6parlay8sequenceINS0_I7featureNS_9allocatorIS1_EELb0EEENS2_IS4_EELb0EE15initialize_fillEmRKS4_", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -472,7 +530,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 541, 
+                "ln": 553, 
                 "caller": "initialize_fill", 
                 "mangled_name": "_ZN6parlay8sequenceINS0_I7featureNS_9allocatorIS1_EELb0EEENS2_IS4_EELb0EE15initialize_fillEmRKS4_", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -490,7 +548,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 570, 
+                "ln": 582, 
                 "caller": "initialize_range<const parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> *>", 
                 "mangled_name": "_ZN6parlay8sequenceINS0_IhNS_9allocatorIhEELb0EEENS1_IS3_EELb0EE16initialize_rangeIPKS3_EEvT_S9_St26random_access_iterator_tag", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -512,7 +570,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceIP4treeNS_9allocatorIS2_EELb0EEC2IZNS_8internal3mapIRNS0_INS0_I7featureNS3_IS9_EELb0EEENS3_ISB_EELb0EEEZ10build_treeRSB_bE4$_13EEDaOT_OT0_mEUlmE_EEmSI_NS5_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -527,33 +585,24 @@
         "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIP4treeNS_9allocatorIS3_EELb0EEC1IZNS_8internal3mapIRNS1_INS1_I7featureNS4_ISA_EELb0EEENS4_ISC_EELb0EEEZ10build_treeRSC_bE4$_13EEDaOT_OT0_mEUlmE_EEmSJ_NS6_18_from_function_tagEmEUlmE_EEvmmSI_lb"
     }, 
     {
-        "caller_DAC": [
-            {
-                "inlineHistory": "", 
-                "ln": 192, 
-                "caller": "destroy_all", 
-                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceI7featureNS_9allocatorIS3_EELb0EEENS4_IS6_EELb0EE12storage_impl11destroy_allEv", 
-                "file": "classify-cp/decisionTree/parlay/internal/sequence_base.h", 
-                "col": 9
-            }
-        ], 
-        "dac": 12173, 
+        "caller_DAC": null, 
+        "dac": 0, 
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 192, 
-                "caller": "destroy_all", 
-                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceI7featureNS_9allocatorIS3_EELb0EEENS4_IS6_EELb0EE12storage_impl11destroy_allEv", 
-                "file": "classify-cp/decisionTree/parlay/internal/sequence_base.h", 
-                "col": 9
+                "ln": 527, 
+                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:58:59)>", 
+                "mangled_name": "_ZN6parlay8sequenceIiNS_9allocatorIiEELb0EEC2IZ14report_correctRNS0_IhNS1_IhEELb0EEES7_E3$_1EEmOT_NS3_18_from_function_tagEm", 
+                "file": "classify-cp/bench/parlay/sequence.h", 
+                "col": 5
             }
         ], 
         "ef": 1, 
         "col": 5, 
         "ln": 364, 
-        "file": "classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h", 
-        "prr": "both", 
-        "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceI7featureNS_9allocatorIS4_EELb0EEENS5_IS7_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb"
+        "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
+        "prr": "defef", 
+        "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIiNS_9allocatorIiEELb0EEC1IZ14report_correctRNS1_IhNS2_IhEELb0EEES8_E3$_1EEmOT_NS4_18_from_function_tagEmEUlmE_EEvmmSA_lb"
     }, 
     {
         "caller_DAC": [
@@ -566,7 +615,7 @@
                 "col": 5
             }
         ], 
-        "dac": 399, 
+        "dac": 401, 
         "caller_EF": null, 
         "ef": 0, 
         "col": 5, 
@@ -576,31 +625,11 @@
         "ID": "_ZN6parlay12parallel_forIZNKS_8internal15block_allocator15initialize_listEPSt4byteEUlmE_EEvmmT_lb"
     }, 
     {
-        "caller_DAC": null, 
-        "dac": 0, 
-        "caller_EF": [
-            {
-                "inlineHistory": "", 
-                "ln": 173, 
-                "caller": "sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:365:30)>", 
-                "mangled_name": "_ZN6parlay8internal10sliced_forIZNS0_10filter_mapINS_5sliceIPhS4_EEZ12timeClassifyRKNS_8sequenceI7featureNS_9allocatorIS7_EELb0EEERKNS6_INS6_IhNS8_IhEELb0EEENS8_ISE_EELb0EEERKSE_ibPcE3$_2RZNS0_6filterIS5_SM_EENS6_INT_10value_typeENS8_ISP_EEXsr3std7is_sameISP_cEE5valueEEERKSO_OT0_EUlOSO_E_EEDaST_SV_OT1_EUlmmmE_EEvmmST_j", 
-                "file": "classify-cp/bench/parlay/internal/delayed/../sequence_ops.h", 
-                "col": 3
-            }
-        ], 
-        "ef": 1, 
-        "col": 5, 
-        "ln": 364, 
-        "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
-        "prr": "defef", 
-        "ID": "_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_10filter_mapINS_5sliceIPhS5_EEZ12timeClassifyRKNS_8sequenceI7featureNS_9allocatorIS8_EELb0EEERKNS7_INS7_IhNS9_IhEELb0EEENS9_ISF_EELb0EEERKSF_ibPcE3$_2RZNS1_6filterIS6_SN_EENS7_INT_10value_typeENS9_ISQ_EEXsr3std7is_sameISQ_cEE5valueEEERKSP_OT0_EUlOSP_E_EEDaSU_SW_OT1_EUlmmmE_EEvmmSU_jEUlmE_EEvmmSP_lb"
-    }, 
-    {
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
-                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:120:44)>", 
+                "ln": 527, 
+                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:130:44)>", 
                 "mangled_name": "_ZN6parlay8sequenceIhNS_9allocatorIhEELb0EEC2IZZ16rows_to_featuresNS0_IcNS1_IcEELb1EEERKNS0_IS3_NS1_IS3_EELb0EEEENK4$_12clEmEUlmE_EEmOT_NS3_18_from_function_tagEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
                 "col": 5
@@ -619,7 +648,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 541, 
+                "ln": 553, 
                 "caller": "initialize_fill", 
                 "mangled_name": "_ZN6parlay8sequenceIiNS_9allocatorIiEELb0EE15initialize_fillEmRKi", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -630,7 +659,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 541, 
+                "ln": 553, 
                 "caller": "initialize_fill", 
                 "mangled_name": "_ZN6parlay8sequenceIiNS_9allocatorIiEELb0EE15initialize_fillEmRKi", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -650,7 +679,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/filter_op.h:69:54)>", 
                 "mangled_name": "_ZN6parlay8sequenceINS0_ImNS_9allocatorImEELb0EEENS1_IS3_EELb0EEC2IZNS_8internal7delayed25block_delayed_filter_op_tINS_16delayed_sequenceImmZNS_4iotaImEEDaT_EUlmE_EEZNS7_16map_tokens_smallIRNS_5sliceIPKcSI_EERZNS_6tokensISK_RZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_11EENS0_INS0_IcNS1_IcEELb1EEENS1_ISV_EELb0EEEOSC_OT0_EUlSY_E_ST_EEDaSY_S10_OT1_EUlmE_E13filter_blocksIRSE_S15_EEDaSY_S10_EUlmE_EEmSY_NS5_18_from_function_tagEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -699,7 +728,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>", 
                 "mangled_name": "_ZN6parlay8sequenceISt4pairIllENS_9allocatorIS2_EELb0EEC2IZNS_8internal7delayed20block_delayed_scan_tIRNS_16delayed_sequenceIS2_S2_ZNS_10map_tokensIRNS0_IcNS3_IcEELb1EEERZNS_6tokensISE_RZ8read_rowNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3$_7EENS0_ISD_NS3_ISD_EELb0EEEOT_OT0_EUlSR_E_SN_EEDaSR_ST_OT1_EUlmE1_EELb0EZNSB_ISE_SV_SN_EEDaSR_ST_SX_EUlS2_S2_E_S2_EC1IS10_EESR_S11_S2_EUlmE_EEmSR_NS5_18_from_function_tagEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -717,7 +746,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 226, 
+                "ln": 255, 
                 "caller": "build_tree_par", 
                 "mangled_name": "_Z14build_tree_parRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb", 
                 "file": "classify-cp/decisionTree/classify.C", 
@@ -766,7 +795,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 532, 
+                "ln": 544, 
                 "caller": "initialize_default", 
                 "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EE18initialize_defaultEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -777,7 +806,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 532, 
+                "ln": 544, 
                 "caller": "initialize_default", 
                 "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EE18initialize_defaultEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -797,8 +826,8 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
-                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:117:22) &>", 
+                "ln": 527, 
+                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:127:22) &>", 
                 "mangled_name": "_ZN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEC2IRZ16rows_to_featuresNS0_IcNS2_IcEELb1EEERKNS0_INS0_IhNS2_IhEELb0EEENS2_IS9_EELb0EEEE4$_12EEmOT_NS4_18_from_function_tagEm", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
                 "col": 5
@@ -815,7 +844,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEC2IZNS_8internal3mapIRS4_Z14build_tree_parS8_bE3$_6EEDaOT_OT0_mEUlmE_EEmSB_NS4_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -837,7 +866,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceIhNS_9allocatorIhEELb0EEC2IZNS_8internal3mapIRKNS0_IS3_NS1_IS3_EELb0EEEZ8classifyRKNS0_I7featureNS1_ISB_EELb0EEESA_bE4$_15EEDaOT_OT0_mEUlmE_EEmSI_NS3_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -862,30 +891,21 @@
                 "col": 9
             }
         ], 
-        "dac": 21627410, 
-        "caller_EF": [
-            {
-                "inlineHistory": "", 
-                "ln": 128, 
-                "caller": "storage_impl", 
-                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseIiNS_9allocatorIiEELb0EE12storage_implC2ERKS5_", 
-                "file": "classify-cp/decisionTree/parlay/internal/sequence_base.h", 
-                "col": 9
-            }
-        ], 
-        "ef": 1, 
+        "dac": 21610260, 
+        "caller_EF": null, 
+        "ef": 0, 
         "col": 5, 
         "ln": 364, 
         "file": "classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h", 
-        "prr": "both", 
+        "prr": "defdac", 
         "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseIiNS_9allocatorIiEELb0EE12storage_implC1ERKS6_EUlmE_EEvmmT_lb"
     }, 
     {
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
-                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:169:33)>", 
+                "ln": 527, 
+                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:189:33)>", 
                 "mangled_name": "_ZN6parlay8sequenceIdNS_9allocatorIdEELb0EEC2IZ18cond_info_discreteRK7featureS7_E3$_2EEmOT_NS3_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
                 "col": 5
@@ -906,8 +926,8 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
-                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:244:43)>", 
+                "ln": 527, 
+                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:279:43)>", 
                 "mangled_name": "_ZN6parlay8sequenceISt5tupleIJdiiEENS_9allocatorIS2_EELb0EEC2IZ10build_treeRNS0_I7featureNS3_IS7_EELb0EEEbE3$_9EEmOT_NS5_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
                 "col": 5
@@ -924,8 +944,8 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
-                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:192:43)>", 
+                "ln": 527, 
+                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:218:43)>", 
                 "mangled_name": "_ZN6parlay8sequenceISt5tupleIJdiiEENS_9allocatorIS2_EELb0EEC2IZ14build_tree_parRNS0_I7featureNS3_IS7_EELb0EEEbE3$_3EEmOT_NS5_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
                 "col": 5
@@ -946,7 +966,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 192, 
+                "ln": 209, 
                 "caller": "destroy_all", 
                 "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceImNS_9allocatorImEELb0EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv", 
                 "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
@@ -959,6 +979,35 @@
         "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
         "prr": "both", 
         "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseINS_8sequenceImNS_9allocatorImEELb0EEENS4_IS6_EELb0EE12storage_impl11destroy_allEvEUlmE_EEvmmT_lb"
+    }, 
+    {
+        "caller_DAC": [
+            {
+                "inlineHistory": "", 
+                "ln": 145, 
+                "caller": "copy_from", 
+                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseIiNS_9allocatorIiEELb0EE12storage_impl9copy_fromERKS5_", 
+                "file": "classify-cp/decisionTree/parlay/internal/sequence_base.h", 
+                "col": 17
+            }
+        ], 
+        "dac": 17150, 
+        "caller_EF": [
+            {
+                "inlineHistory": "", 
+                "ln": 145, 
+                "caller": "copy_from", 
+                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseIiNS_9allocatorIiEELb0EE12storage_impl9copy_fromERKS5_", 
+                "file": "classify-cp/decisionTree/parlay/internal/sequence_base.h", 
+                "col": 17
+            }
+        ], 
+        "ef": 1, 
+        "col": 5, 
+        "ln": 364, 
+        "file": "classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h", 
+        "prr": "both", 
+        "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseIiNS_9allocatorIiEELb0EE12storage_impl9copy_fromERKS6_EUlmE_EEvmmT_lb"
     }, 
     {
         "caller_DAC": null, 
@@ -1046,19 +1095,19 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
-                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>", 
-                "mangled_name": "_ZN6parlay8sequenceISt4pairIllENS_9allocatorIS2_EELb0EEC2IZNS_8internal7delayed20block_delayed_scan_tIRNS_16delayed_sequenceIS2_S2_ZNS_10map_tokensIRNS_5sliceIPKcSE_EERZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_10RZ9read_dataSM_E3$_8EEDaOT_OT0_OT1_EUlmE1_EELb0EZNSB_ISG_SO_SQ_EEDaSS_SU_SW_EUlS2_S2_E_S2_EC1ISZ_EESS_S10_S2_EUlmE_EEmSS_NS5_18_from_function_tagEm", 
-                "file": "classify-cp/bench/parlay/sequence.h", 
-                "col": 5
+                "ln": 173, 
+                "caller": "sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:365:30)>", 
+                "mangled_name": "_ZN6parlay8internal10sliced_forIZNS0_10filter_mapINS_5sliceIPhS4_EEZ12timeClassifyRKNS_8sequenceI7featureNS_9allocatorIS7_EELb0EEERKNS6_INS6_IhNS8_IhEELb0EEENS8_ISE_EELb0EEERKSE_ibPcE3$_2RZNS0_6filterIS5_SM_EENS6_INT_10value_typeENS8_ISP_EEXsr3std7is_sameISP_cEE5valueEEERKSO_OT0_EUlOSO_E_EEDaST_SV_OT1_EUlmmmE_EEvmmST_j", 
+                "file": "classify-cp/bench/parlay/internal/delayed/../sequence_ops.h", 
+                "col": 3
             }
         ], 
-        "ef": 2, 
+        "ef": 1, 
         "col": 5, 
         "ln": 364, 
         "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
         "prr": "defef", 
-        "ID": "_ZN6parlay12parallel_forIZNS_8sequenceISt4pairIllENS_9allocatorIS3_EELb0EEC1IZNS_8internal7delayed20block_delayed_scan_tIRNS_16delayed_sequenceIS3_S3_ZNS_10map_tokensIRNS_5sliceIPKcSF_EERZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_10RZ9read_dataSN_E3$_8EEDaOT_OT0_OT1_EUlmE1_EELb0EZNSC_ISH_SP_SR_EEDaST_SV_SX_EUlS3_S3_E_S3_EC1IS10_EEST_S11_S3_EUlmE_EEmST_NS6_18_from_function_tagEmEUlmE_EEvmmSS_lb"
+        "ID": "_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_10filter_mapINS_5sliceIPhS5_EEZ12timeClassifyRKNS_8sequenceI7featureNS_9allocatorIS8_EELb0EEERKNS7_INS7_IhNS9_IhEELb0EEENS9_ISF_EELb0EEERKSF_ibPcE3$_2RZNS1_6filterIS6_SN_EENS7_INT_10value_typeENS9_ISQ_EEXsr3std7is_sameISQ_cEE5valueEEERKSP_OT0_EUlOSP_E_EEDaSU_SW_OT1_EUlmmmE_EEvmmSU_jEUlmE_EEvmmSP_lb"
     }, 
     {
         "caller_DAC": [
@@ -1093,30 +1142,21 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 541, 
-                "caller": "initialize_fill", 
-                "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EE15initialize_fillEmRKm", 
-                "file": "classify-cp/decisionTree/parlay/sequence.h", 
+                "ln": 384, 
+                "caller": "uninitialized_relocate_n_a<unsigned long *, unsigned long *, std::allocator<unsigned long> >", 
+                "mangled_name": "_ZN6parlay26uninitialized_relocate_n_aIPmS1_SaImEEEvT_T0_mRT1_", 
+                "file": "classify-cp/bench/parlay/internal/delayed/../../utilities.h", 
                 "col": 5
             }
         ], 
-        "dac": 24348, 
-        "caller_EF": [
-            {
-                "inlineHistory": "", 
-                "ln": 541, 
-                "caller": "initialize_fill", 
-                "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EE15initialize_fillEmRKm", 
-                "file": "classify-cp/decisionTree/parlay/sequence.h", 
-                "col": 5
-            }
-        ], 
-        "ef": 1, 
+        "dac": 2, 
+        "caller_EF": null, 
+        "ef": 0, 
         "col": 5, 
         "ln": 364, 
-        "file": "classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h", 
-        "prr": "both", 
-        "ID": "_ZN6parlay12parallel_forIZNS_8sequenceImNS_9allocatorImEELb0EE15initialize_fillEmRKmEUlmE_EEvmmT_lb"
+        "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
+        "prr": "defdac", 
+        "ID": "_ZN6parlay12parallel_forIZNS_26uninitialized_relocate_n_aIPmS2_SaImEEEvT_T0_mRT1_EUlmE_EEvmmS4_lb"
     }, 
     {
         "caller_DAC": null, 
@@ -1145,25 +1185,16 @@
                 "ln": 128, 
                 "caller": "storage_impl", 
                 "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseIhNS_9allocatorIhEELb0EE12storage_implC2ERKS5_", 
-                "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
+                "file": "classify-cp/decisionTree/parlay/internal/sequence_base.h", 
                 "col": 9
             }
         ], 
-        "dac": 3366551, 
-        "caller_EF": [
-            {
-                "inlineHistory": "", 
-                "ln": 128, 
-                "caller": "storage_impl", 
-                "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseIhNS_9allocatorIhEELb0EE12storage_implC2ERKS5_", 
-                "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
-                "col": 9
-            }
-        ], 
-        "ef": 3, 
+        "dac": 3347905, 
+        "caller_EF": null, 
+        "ef": 0, 
         "col": 5, 
         "ln": 364, 
-        "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
+        "file": "classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h", 
         "prr": "both", 
         "ID": "_ZN6parlay12parallel_forIZNS_17sequence_internal13sequence_baseIhNS_9allocatorIhEELb0EE12storage_implC1ERKS6_EUlmE_EEvmmT_lb"
     }, 
@@ -1193,7 +1224,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 278, 
+                "ln": 316, 
                 "caller": "build_tree", 
                 "mangled_name": "_Z10build_treeRN6parlay8sequenceI7featureNS_9allocatorIS1_EELb0EEEb", 
                 "file": "classify-cp/decisionTree/classify.C", 
@@ -1211,7 +1242,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 192, 
+                "ln": 209, 
                 "caller": "destroy_all", 
                 "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIhNS_9allocatorIhEELb0EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv", 
                 "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
@@ -1222,7 +1253,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 192, 
+                "ln": 209, 
                 "caller": "destroy_all", 
                 "mangled_name": "_ZN6parlay17sequence_internal13sequence_baseINS_8sequenceIhNS_9allocatorIhEELb0EEENS3_IS5_EELb0EE12storage_impl11destroy_allEv", 
                 "file": "classify-cp/bench/parlay/internal/sequence_base.h", 
@@ -1240,7 +1271,7 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceIP4treeNS_9allocatorIS2_EELb0EEC2IZNS_8internal3mapIRNS0_INS0_I7featureNS3_IS9_EELb0EEENS3_ISB_EELb0EEEZ14build_tree_parRSB_bE3$_7EEDaOT_OT0_mEUlmE_EEmSI_NS5_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -1257,10 +1288,30 @@
         "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIP4treeNS_9allocatorIS3_EELb0EEC1IZNS_8internal3mapIRNS1_INS1_I7featureNS4_ISA_EELb0EEENS4_ISC_EELb0EEEZ14build_tree_parRSC_bE3$_7EEDaOT_OT0_mEUlmE_EEmSJ_NS6_18_from_function_tagEmEUlmE_EEvmmSI_lb"
     }, 
     {
+        "caller_DAC": null, 
+        "dac": 0, 
+        "caller_EF": [
+            {
+                "inlineHistory": "", 
+                "ln": 527, 
+                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>", 
+                "mangled_name": "_ZN6parlay8sequenceISt4pairIllENS_9allocatorIS2_EELb0EEC2IZNS_8internal7delayed20block_delayed_scan_tIRNS_16delayed_sequenceIS2_S2_ZNS_10map_tokensIRNS_5sliceIPKcSE_EERZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_10RZ9read_dataSM_E3$_8EEDaOT_OT0_OT1_EUlmE1_EELb0EZNSB_ISG_SO_SQ_EEDaSS_SU_SW_EUlS2_S2_E_S2_EC1ISZ_EESS_S10_S2_EUlmE_EEmSS_NS5_18_from_function_tagEm", 
+                "file": "classify-cp/bench/parlay/sequence.h", 
+                "col": 5
+            }
+        ], 
+        "ef": 2, 
+        "col": 5, 
+        "ln": 364, 
+        "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
+        "prr": "defef", 
+        "ID": "_ZN6parlay12parallel_forIZNS_8sequenceISt4pairIllENS_9allocatorIS3_EELb0EEC1IZNS_8internal7delayed20block_delayed_scan_tIRNS_16delayed_sequenceIS3_S3_ZNS_10map_tokensIRNS_5sliceIPKcSF_EERZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_10RZ9read_dataSN_E3$_8EEDaOT_OT0_OT1_EUlmE1_EELb0EZNSC_ISH_SP_SR_EEDaST_SV_SX_EUlS3_S3_E_S3_EC1IS10_EEST_S11_S3_EUlmE_EEmST_NS6_18_from_function_tagEmEUlmE_EEvmmSS_lb"
+    }, 
+    {
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 570, 
+                "ln": 582, 
                 "caller": "initialize_range<char *>", 
                 "mangled_name": "_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE16initialize_rangeIPcEEvT_S6_St26random_access_iterator_tag", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -1282,7 +1333,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 541, 
+                "ln": 553, 
                 "caller": "initialize_fill", 
                 "mangled_name": "_ZN6parlay8sequenceIcNS_9allocatorIcEELb1EE15initialize_fillEmRKc", 
                 "file": "classify-cp/bench/parlay/sequence.h", 
@@ -1322,7 +1373,7 @@
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
+                "ln": 527, 
                 "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>", 
                 "mangled_name": "_ZN6parlay8sequenceIhNS_9allocatorIhEELb0EEC2IZNS_8internal3mapIRS3_Z10build_treeRNS0_I7featureNS1_IS8_EELb0EEEbE4$_11EEDaOT_OT0_mEUlmE_EEmSE_NS3_18_from_function_tagEm", 
                 "file": "classify-cp/decisionTree/parlay/sequence.h", 
@@ -1340,40 +1391,29 @@
         "caller_DAC": [
             {
                 "inlineHistory": "", 
-                "ln": 384, 
-                "caller": "uninitialized_relocate_n_a<unsigned long *, unsigned long *, std::allocator<unsigned long> >", 
-                "mangled_name": "_ZN6parlay26uninitialized_relocate_n_aIPmS1_SaImEEEvT_T0_mRT1_", 
-                "file": "classify-cp/bench/parlay/internal/delayed/../../utilities.h", 
+                "ln": 553, 
+                "caller": "initialize_fill", 
+                "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EE15initialize_fillEmRKm", 
+                "file": "classify-cp/decisionTree/parlay/sequence.h", 
                 "col": 5
             }
         ], 
-        "dac": 2, 
-        "caller_EF": null, 
-        "ef": 0, 
-        "col": 5, 
-        "ln": 364, 
-        "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
-        "prr": "defdac", 
-        "ID": "_ZN6parlay12parallel_forIZNS_26uninitialized_relocate_n_aIPmS2_SaImEEEvT_T0_mRT1_EUlmE_EEvmmS4_lb"
-    }, 
-    {
-        "caller_DAC": null, 
-        "dac": 0, 
+        "dac": 24348, 
         "caller_EF": [
             {
                 "inlineHistory": "", 
-                "ln": 515, 
-                "caller": "sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:56:59)>", 
-                "mangled_name": "_ZN6parlay8sequenceIiNS_9allocatorIiEELb0EEC2IZ14report_correctNS0_IhNS1_IhEELb0EEES6_E3$_1EEmOT_NS3_18_from_function_tagEm", 
-                "file": "classify-cp/bench/parlay/sequence.h", 
+                "ln": 553, 
+                "caller": "initialize_fill", 
+                "mangled_name": "_ZN6parlay8sequenceImNS_9allocatorImEELb0EE15initialize_fillEmRKm", 
+                "file": "classify-cp/decisionTree/parlay/sequence.h", 
                 "col": 5
             }
         ], 
         "ef": 1, 
         "col": 5, 
         "ln": 364, 
-        "file": "classify-cp/bench/parlay/internal/scheduler_plugins/opencilk.h", 
-        "prr": "defef", 
-        "ID": "_ZN6parlay12parallel_forIZNS_8sequenceIiNS_9allocatorIiEELb0EEC1IZ14report_correctNS1_IhNS2_IhEELb0EEES7_E3$_1EEmOT_NS4_18_from_function_tagEmEUlmE_EEvmmS9_lb"
+        "file": "classify-cp/decisionTree/parlay/internal/scheduler_plugins/opencilk.h", 
+        "prr": "both", 
+        "ID": "_ZN6parlay12parallel_forIZNS_8sequenceImNS_9allocatorImEELb0EE15initialize_fillEmRKmEUlmE_EEvmmT_lb"
     }
 ]
