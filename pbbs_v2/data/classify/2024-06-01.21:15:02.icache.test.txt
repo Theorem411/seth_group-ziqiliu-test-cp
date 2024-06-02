@@ -1,0 +1,78 @@
+== CILK_WORKERS = 1 ===================================
+
+ Performance counter stats for './classify -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/covtype.data':
+
+        54,981,413      icache.misses:u                                             
+    26,017,866,720      icache.hit:u                                                
+
+     156.428103386 seconds time elapsed
+
+     155.923187000 seconds user
+       0.516030000 seconds sys
+
+
+== CILK_WORKERS = 2 ===================================
+
+ Performance counter stats for './classify -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/covtype.data':
+
+        59,567,712      icache.misses:u                                             
+    26,743,558,530      icache.hit:u                                                
+
+      81.919794846 seconds time elapsed
+
+     163.018853000 seconds user
+       0.763046000 seconds sys
+
+
+== CILK_WORKERS = 4 ===================================
+
+ Performance counter stats for './classify -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/covtype.data':
+
+        65,531,592      icache.misses:u                                             
+    26,893,672,943      icache.hit:u                                                
+
+      43.138881859 seconds time elapsed
+
+     171.371168000 seconds user
+       0.889057000 seconds sys
+
+
+== CILK_WORKERS = 8 ===================================
+
+ Performance counter stats for './classify -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/covtype.data':
+
+        69,183,715      icache.misses:u                                             
+    27,190,214,044      icache.hit:u                                                
+
+      23.773916948 seconds time elapsed
+
+     188.239027000 seconds user
+       0.970005000 seconds sys
+
+
+== CILK_WORKERS = 14 ===================================
+
+ Performance counter stats for './classify -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/covtype.data':
+
+        79,617,289      icache.misses:u                                             
+    27,570,257,363      icache.hit:u                                                
+
+      14.476845328 seconds time elapsed
+
+     198.840318000 seconds user
+       1.220965000 seconds sys
+
+
+== CILK_WORKERS = 28 ===================================
+
+ Performance counter stats for './classify -r 20 -i /afs/ece/project/seth_group/pakha/pbbsbench/testData/sequenceData/data/covtype.data':
+
+       115,625,879      icache.misses:u                                             
+    28,835,356,402      icache.hit:u                                                
+
+       8.409932742 seconds time elapsed
+
+     225.497157000 seconds user
+       2.039860000 seconds sys
+
+
