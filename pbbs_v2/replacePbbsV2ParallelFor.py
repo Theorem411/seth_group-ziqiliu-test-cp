@@ -502,10 +502,10 @@ def interpretProfilingResults(args, workdir=None, test=None, major_files=None, m
     print('-- orig: ')
     print_perfLogs(perfLogs=perfLogs_orig, indent=1)
     # print performance profiling results for parallel_for_ef or parallel_for_dac
-    # print('-- ef: ')
-    # print_perfLogs(perfLogs=perfLogs_EF, indent=1)
-    # print('-- dac: ')
-    # print_perfLogs(perfLogs=perfLogs_DAC, indent=1)
+    print('-- ef: ')
+    print_perfLogs(perfLogs=perfLogs_EF, indent=1)
+    print('-- dac: ')
+    print_perfLogs(perfLogs=perfLogs_DAC, indent=1)
 
 if __name__ == "__main__":
     # take current timestamp
