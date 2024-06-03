@@ -23,30 +23,30 @@ worklist:
 		defdac  classify-cp/bench/parlay/primitives.h:1107:5	caller: map_tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:111:21) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
 		defdac  classify-cp/bench/classifyTime.C:118:14	caller: operator()<parlay::slice<const char *, const char *> >
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8internal7delayed11to_sequenceINS2_25block_delayed_filter_op_tINS_16delayed_sequenceImmZNS_4iotaImEEDaT_EUlmE_EEZNS1_16map_tokens_smallIRNS_5sliceIPKcSD_EERZNS_6tokensISF_RZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_11EENS_8sequenceINSP_IcNS_9allocatorIcEELb1EEENSQ_ISS_EELb0EEEOS7_OT0_EUlSV_E_SO_EEDaSV_SX_OT1_EUlmE_EELi0EEEDaSV_EUlmE_EEvmmS7_lb
 	ef	classify-cp/bench/parlay/internal/delayed/terminal.h:51:3	caller: to_sequence<parlay::internal::delayed::block_delayed_filter_op_t<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:966:44)>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1037:34)>, 0>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/primitives.h:1034:32	caller: map_tokens_small<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1125:19) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
 		defef  classify-cp/bench/parlay/primitives.h:1126:38	caller: tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
 		defef  classify-cp/bench/classifyTime.C:108:28	caller: read_data
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceI7featureNS_9allocatorIS2_EELb0EEC1IZNS_8internal3mapIRS5_Z10build_treeS9_bE4$_12EEDaOT_OT0_mEUlmE_EEmSC_NS5_18_from_function_tagEmEUlmE_EEvmmSB_lb
 	ef	classify-cp/decisionTree/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/decisionTree/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<feature, parlay::allocator<feature>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:314:25)>
 		defef  classify-cp/decisionTree/classify.C:314:18	caller: build_tree
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceINS1_IcNS_9allocatorIcEELb1EEENS2_IS4_EELb0EEC1IZNS_8internal16map_tokens_smallIRNS_5sliceIPKcSC_EERZNS_6tokensISE_RZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_11EES6_OT_OT0_EUlSP_E_SN_EEDaSP_SR_OT1_EUlmE0_EEmSP_NS6_18_from_function_tagEmEUlmE_EEvmmSO_lb
 	ef	classify-cp/bench/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1054:43)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1054:43)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1054:43)>
 		defef  classify-cp/bench/parlay/primitives.h:1054:12	caller: map_tokens_small<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1125:19) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
@@ -107,7 +107,7 @@ worklist:
 		defdac  classify-cp/bench/parlay/primitives.h:1095:25	caller: map_tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:111:21) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
 		defdac  classify-cp/bench/classifyTime.C:118:14	caller: operator()<parlay::slice<const char *, const char *> >
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceImNS_9allocatorImEELb0EE16initialize_rangeINS_16delayed_sequenceImmZNS_8internal11delayed_mapIRNS1_IS4_NS2_IS4_EELb0EEEZNS7_7delayed23block_delayed_flatten_tISA_E20initialize_iteratorsEvEUlOT_E_Li0EEEDaSG_T0_EUlmE_E8iteratorEEEvSF_SF_St26random_access_iterator_tagEUlmE_EEvmmSF_lb
 	ef	classify-cp/bench/parlay/sequence.h:582:5	caller: initialize_range<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>
 
@@ -124,7 +124,7 @@ worklist:
 		untouched  classify-cp/bench/parlay/primitives.h:1126:38	caller: tokens<parlay::file_map &, benchIO::(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/IO.h:41:19) &>
 		untouched  classify-cp/bench/common/IO.h:212:15	caller: get_tokens
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:598:5	caller: initialize_dispatch<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>
 		defef  classify-cp/bench/parlay/sequence.h:217:5	caller: sequence<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>
 		defef  classify-cp/bench/parlay/sequence.h:766:10	caller: to_sequence<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)> >
@@ -137,7 +137,7 @@ worklist:
 		defef  classify-cp/bench/parlay/primitives.h:1126:38	caller: tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
 		defef  classify-cp/bench/classifyTime.C:108:28	caller: read_data
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:598:5	caller: initialize_dispatch<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>
 		defef  classify-cp/bench/parlay/sequence.h:217:5	caller: sequence<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)>::iterator>
 		defef  classify-cp/bench/parlay/sequence.h:766:10	caller: to_sequence<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:129:30)> >
@@ -260,11 +260,11 @@ worklist:
 		defdac  classify-cp/bench/parlay/primitives.h:102:10	caller: reduce<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> &, parlay::maxm<char>, 0>
 		defdac  classify-cp/bench/classifyTime.C:131:16	caller: operator()
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceIcNS_9allocatorIcEELb1EEC1IZNS_8internal3mapINS1_IS4_NS2_IS4_EELb0EEEZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3$_9EEDaOT_OT0_mEUlmE_EEmSI_NS4_18_from_function_tagEmEUlmE_EEvmmSH_lb
 	ef	classify-cp/bench/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:108:59)>
@@ -288,21 +288,21 @@ worklist:
 		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:250:39)>
 		defdac  classify-cp/decisionTree/classify.C:250:19	caller: build_tree_par
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceIhNS_9allocatorIhEELb0EEC1IZNS_8internal3mapINS1_INS1_IcNS2_IcEELb1EEENS2_IS9_EELb0EEEZ8read_rowNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3$_6EEDaOT_OT0_mEUlmE_EEmSK_NS4_18_from_function_tagEmEUlmE_EEvmmSJ_lb
 	ef	classify-cp/bench/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<char, parlay::allocator<char>, true>, parlay::allocator<parlay::sequence<char, parlay::allocator<char>, true> >, false>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:97:8)>
 		defef  classify-cp/bench/classifyTime.C:96:10	caller: read_row
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_5scan_INS_5sliceIPSt4pairIllES7_EES8_NS_6monoidIZNS_10map_tokensIRNS4_IPKcSC_EERZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_10RZ9read_dataSK_E3$_8EEDaOT_OT0_OT1_EUlS6_S6_E_S6_vEEEEDaRKSP_SR_SU_jbEUlmmmE_EEvmmSY_jEUlmE_EEvmmSP_lb
 	ef	classify-cp/bench/parlay/internal/sequence_ops.h:173:3	caller: sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:248:30)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:248:3	caller: scan_<parlay::slice<std::pair<long, long> *, std::pair<long, long> *>, parlay::slice<std::pair<long, long> *, std::pair<long, long> *>, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>, void> >
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:262:10	caller: scan_inplace<std::pair<long, long> *, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>, void> >
 		defef  classify-cp/bench/parlay/internal/delayed/scan.h:61:15	caller: block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &>
@@ -310,21 +310,21 @@ worklist:
 		defef  classify-cp/bench/parlay/primitives.h:1095:25	caller: map_tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:110:23) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:102:18) &>
 		defef  classify-cp/bench/classifyTime.C:120:27	caller: read_data
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_10filter_mapINS_5sliceIPhS5_EEZ12timeClassifyRKNS_8sequenceI7featureNS_9allocatorIS8_EELb0EEERKNS7_INS7_IhNS9_IhEELb0EEENS9_ISF_EELb0EEERKSF_ibPcE3$_2RZNS1_6filterIS6_SN_EENS7_INT_10value_typeENS9_ISQ_EEXsr3std7is_sameISQ_cEE5valueEEERKSP_OT0_EUlOSP_E_EEDaSU_SW_OT1_EUlmmmE0_EEvmmSU_jEUlmE_EEvmmSP_lb
 	ef	classify-cp/bench/parlay/internal/sequence_ops.h:173:3	caller: sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:372:30)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:372:3	caller: filter_map<parlay::slice<unsigned char *, unsigned char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:80:35), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:381:19) &>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:382:10	caller: filter<parlay::slice<unsigned char *, unsigned char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:80:35)>
 		defef  classify-cp/bench/parlay/primitives.h:259:10	caller: filter<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:80:35)>
 		defef  classify-cp/bench/classifyTime.C:80:12	caller: timeClassify
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceIbNS_9allocatorIbEELb0EE18initialize_defaultEmEUlmE_EEvmmT_lb
 	ef	classify-cp/bench/parlay/sequence.h:544:5	caller: initialize_default
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:208:56	caller: sequence
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:364:18	caller: filter_map<parlay::slice<unsigned char *, unsigned char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:80:35), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:381:19) &>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:382:10	caller: filter<parlay::slice<unsigned char *, unsigned char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:80:35)>
@@ -347,21 +347,21 @@ worklist:
 		defdac  classify-cp/decisionTree/parlay/internal/group_by.h:324:12	caller: group_by_index<int, parlay::delayed_sequence<std::pair<unsigned char, unsigned char>, std::pair<unsigned char, unsigned char>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:85:37)> >
 		defdac  classify-cp/decisionTree/classify.C:317:16	caller: operator()
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceIP4treeNS_9allocatorIS3_EELb0EEC1IZNS_8internal3mapIRNS1_INS1_I7featureNS4_ISA_EELb0EEENS4_ISC_EELb0EEEZ10build_treeRSC_bE4$_13EEDaOT_OT0_mEUlmE_EEmSJ_NS6_18_from_function_tagEmEUlmE_EEvmmSI_lb
 	ef	classify-cp/decisionTree/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/decisionTree/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:322:28)>
 		defef  classify-cp/decisionTree/classify.C:322:21	caller: build_tree
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceIiNS_9allocatorIiEELb0EEC1IZ14report_correctRNS1_IhNS2_IhEELb0EEES8_E3$_1EEmOT_NS4_18_from_function_tagEmEUlmE_EEvmmSA_lb
 	ef	classify-cp/bench/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:58:59)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:58:59)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:58:59)>
 		defef  classify-cp/bench/classifyTime.C:58:39	caller: report_correct
@@ -375,11 +375,11 @@ worklist:
 		defdac  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:130:44)>
 		defdac  classify-cp/bench/classifyTime.C:130:17	caller: operator()
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceINS1_ImNS_9allocatorImEELb0EEENS2_IS4_EELb0EEC1IZNS_8internal7delayed25block_delayed_filter_op_tINS_16delayed_sequenceImmZNS_4iotaImEEDaT_EUlmE_EEZNS8_16map_tokens_smallIRNS_5sliceIPKcSJ_EERZNS_6tokensISL_RZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_11EENS1_INS1_IcNS2_IcEELb1EEENS2_ISW_EELb0EEEOSD_OT0_EUlSZ_E_SU_EEDaSZ_S11_OT1_EUlmE_E13filter_blocksIRSF_S16_EEDaSZ_S11_EUlmE_EEmSZ_NS6_18_from_function_tagEmEUlmE_EEvmmSD_lb
 	ef	classify-cp/bench/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/filter_op.h:69:54)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/filter_op.h:69:54)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/filter_op.h:69:54)>
 		defef  classify-cp/bench/parlay/internal/delayed/filter_op.h:69:12	caller: filter_blocks<parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:966:44)> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1037:34)>
@@ -389,11 +389,11 @@ worklist:
 		defef  classify-cp/bench/parlay/primitives.h:1126:38	caller: tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
 		defef  classify-cp/bench/classifyTime.C:108:28	caller: read_data
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceISt4pairIllENS_9allocatorIS3_EELb0EEC1IZNS_8internal7delayed20block_delayed_scan_tIRNS_16delayed_sequenceIS3_S3_ZNS_10map_tokensIRNS1_IcNS4_IcEELb1EEERZNS_6tokensISF_RZ8read_rowNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3$_7EENS1_ISE_NS4_ISE_EELb0EEEOT_OT0_EUlSS_E_SO_EEDaSS_SU_OT1_EUlmE1_EELb0EZNSC_ISF_SW_SO_EEDaSS_SU_SY_EUlS3_S3_E_S3_EC1IS11_EESS_S12_S3_EUlmE_EEmSS_NS6_18_from_function_tagEmEUlmE_EEvmmSR_lb
 	ef	classify-cp/bench/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>
 		defef  classify-cp/bench/parlay/internal/delayed/scan.h:52:20	caller: block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &>
@@ -412,11 +412,11 @@ worklist:
 	- [ ] --
 		defdac  classify-cp/decisionTree/classify.C:322:67	caller: operator()
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceI7featureNS_9allocatorIS2_EELb0EEC1IRZ16rows_to_featuresNS1_IcNS3_IcEELb1EEERKNS1_INS1_IhNS3_IhEELb0EEENS3_ISA_EELb0EEEE4$_12EEmOT_NS5_18_from_function_tagEmEUlmE_EEvmmSH_lb
 	ef	classify-cp/bench/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:127:22) &>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:127:22) &>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:127:22) &>
 		defef  classify-cp/bench/classifyTime.C:140:10	caller: rows_to_features
@@ -431,11 +431,11 @@ worklist:
 		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<feature, parlay::allocator<feature>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:253:25)>
 		defdac  classify-cp/decisionTree/classify.C:253:18	caller: build_tree_par
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceIhNS_9allocatorIhEELb0EEC1IZNS_8internal3mapIRKNS1_IS4_NS2_IS4_EELb0EEEZ8classifyRKNS1_I7featureNS2_ISC_EELb0EEESB_bE4$_15EEDaOT_OT0_mEUlmE_EEmSJ_NS4_18_from_function_tagEmEUlmE_EEvmmSI_lb
 	ef	classify-cp/decisionTree/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/decisionTree/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<const parlay::sequence<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false>, parlay::allocator<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:350:20)>
@@ -464,11 +464,11 @@ worklist:
 		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:189:33)>
 		defdac  classify-cp/decisionTree/classify.C:189:17	caller: cond_info_discrete
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceISt5tupleIJdiiEENS_9allocatorIS3_EELb0EEC1IZ10build_treeRNS1_I7featureNS4_IS8_EELb0EEEbE3$_9EEmOT_NS6_18_from_function_tagEmEUlmE_EEvmmSD_lb
 	ef	classify-cp/decisionTree/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:279:43)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/decisionTree/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:279:43)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:279:43)>
 		defef  classify-cp/decisionTree/classify.C:279:16	caller: build_tree
@@ -482,20 +482,20 @@ worklist:
 		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:218:43)>
 		defdac  classify-cp/decisionTree/classify.C:218:16	caller: build_tree_par
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8internal7delayed8for_eachIRNS2_19block_delayed_zip_tIJRNS2_20block_delayed_scan_tIRNS_16delayed_sequenceISt4pairIllES8_ZNS_10map_tokensIRNS_5sliceIPKcSC_EERZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_10RZ9read_dataSK_E3$_8EEDaOT_OT0_OT1_EUlmE1_EELb0EZNS9_ISE_SM_SO_EEDaSQ_SS_SU_EUlS8_S8_E_S8_EENS6_ImmZNS_4iotaImEEDaSP_EUlmE_EEEEEZNS9_ISE_SM_SO_EEDaSQ_SS_SU_EUlSQ_E_Li0EEEvSQ_SS_EUlmE_EEvmmSP_lb
 	ef	classify-cp/bench/parlay/internal/delayed/terminal.h:147:3	caller: for_each<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long> > &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:966:44)> > &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1107:33), 0>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/internal/delayed/terminal.h:159:3	caller: apply<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long> > &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:966:44)> > &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1107:33)>
 		defef  classify-cp/bench/parlay/primitives.h:1107:5	caller: map_tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:110:23) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:102:18) &>
 		defef  classify-cp/bench/classifyTime.C:120:27	caller: read_data
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_5scan_INS_5sliceIPSt4pairIllES7_EES8_NS_6monoidIZNS_10map_tokensIRNS4_IPKcSC_EERZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_10RZ9read_dataSK_E3$_8EEDaOT_OT0_OT1_EUlS6_S6_E_S6_vEEEEDaRKSP_SR_SU_jbEUlmmmE0_EEvmmSY_jEUlmE_EEvmmSP_lb
 	ef	classify-cp/bench/parlay/internal/sequence_ops.h:173:3	caller: sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:252:30)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:252:3	caller: scan_<parlay::slice<std::pair<long, long> *, std::pair<long, long> *>, parlay::slice<std::pair<long, long> *, std::pair<long, long> *>, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>, void> >
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:262:10	caller: scan_inplace<std::pair<long, long> *, parlay::monoid<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long>, void> >
 		defef  classify-cp/bench/parlay/internal/delayed/scan.h:61:15	caller: block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &>
@@ -503,11 +503,11 @@ worklist:
 		defef  classify-cp/bench/parlay/primitives.h:1095:25	caller: map_tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:110:23) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:102:18) &>
 		defef  classify-cp/bench/classifyTime.C:120:27	caller: read_data
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8internal10sliced_forIZNS1_10filter_mapINS_5sliceIPhS5_EEZ12timeClassifyRKNS_8sequenceI7featureNS_9allocatorIS8_EELb0EEERKNS7_INS7_IhNS9_IhEELb0EEENS9_ISF_EELb0EEERKSF_ibPcE3$_2RZNS1_6filterIS6_SN_EENS7_INT_10value_typeENS9_ISQ_EEXsr3std7is_sameISQ_cEE5valueEEERKSP_OT0_EUlOSP_E_EEDaSU_SW_OT1_EUlmmmE_EEvmmSU_jEUlmE_EEvmmSP_lb
 	ef	classify-cp/bench/parlay/internal/sequence_ops.h:173:3	caller: sliced_for<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:365:30)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:365:3	caller: filter_map<parlay::slice<unsigned char *, unsigned char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:80:35), (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/../sequence_ops.h:381:19) &>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:382:10	caller: filter<parlay::slice<unsigned char *, unsigned char *>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:80:35)>
 		defef  classify-cp/bench/parlay/primitives.h:259:10	caller: filter<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:80:35)>
@@ -565,11 +565,11 @@ worklist:
 		defef  classify-cp/bench/parlay/primitives.h:1126:38	caller: tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
 		defef  classify-cp/bench/classifyTime.C:108:28	caller: read_data
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8internal7delayed8for_eachIRNS2_19block_delayed_zip_tIJRNS2_20block_delayed_scan_tIRNS_16delayed_sequenceISt4pairIllES8_ZNS_10map_tokensIRNS_8sequenceIcNS_9allocatorIcEELb1EEERZNS_6tokensISE_RZ8read_rowNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE3$_7EENSA_ISD_NSB_ISD_EELb0EEEOT_OT0_EUlSR_E_SN_EEDaSR_ST_OT1_EUlmE1_EELb0EZNS9_ISE_SV_SN_EEDaSR_ST_SX_EUlS8_S8_E_S8_EENS6_ImmZNS_4iotaImEEDaSQ_EUlmE_EEEEEZNS9_ISE_SV_SN_EEDaSR_ST_SX_EUlSR_E_Li0EEEvSR_ST_EUlmE_EEvmmSQ_lb
 	ef	classify-cp/bench/parlay/internal/delayed/terminal.h:147:3	caller: for_each<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long> > &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:966:44)> > &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1107:33), 0>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/internal/delayed/terminal.h:159:3	caller: apply<parlay::internal::delayed::block_delayed_zip_t<parlay::internal::delayed::block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &, false, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1091:12), std::pair<long, long> > &, parlay::delayed_sequence<unsigned long, unsigned long, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:966:44)> > &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1107:33)>
 		defef  classify-cp/bench/parlay/primitives.h:1107:5	caller: map_tokens<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1125:19) &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:94:18) &>
 		defef  classify-cp/bench/parlay/primitives.h:1127:15	caller: tokens<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:94:18) &>
@@ -589,11 +589,11 @@ worklist:
 		defdac  classify-cp/decisionTree/parlay/internal/group_by.h:324:12	caller: group_by_index<int, parlay::delayed_sequence<std::pair<unsigned char, unsigned char>, std::pair<unsigned char, unsigned char>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:85:37)> >
 		defdac  classify-cp/decisionTree/classify.C:317:16	caller: operator()
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZ10build_treeRNS_8sequenceI7featureNS_9allocatorIS2_EELb0EEEbE4$_14EEvmmT_lb
 	ef	classify-cp/decisionTree/classify.C:316:5	caller: build_tree
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/decisionTree/classify.C:347:13	caller: classify
 
 - [ ] ======================================
@@ -606,11 +606,11 @@ worklist:
 		defdac  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<parlay::sequence<feature, parlay::allocator<feature>, false>, parlay::allocator<parlay::sequence<feature, parlay::allocator<feature>, false> >, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:261:28)>
 		defdac  classify-cp/decisionTree/classify.C:261:21	caller: build_tree_par
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceISt4pairIllENS_9allocatorIS3_EELb0EEC1IZNS_8internal7delayed20block_delayed_scan_tIRNS_16delayed_sequenceIS3_S3_ZNS_10map_tokensIRNS_5sliceIPKcSF_EERZ9read_dataNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE4$_10RZ9read_dataSN_E3$_8EEDaOT_OT0_OT1_EUlmE1_EELb0EZNSC_ISH_SP_SR_EEDaST_SV_SX_EUlS3_S3_E_S3_EC1IS10_EEST_S11_S3_EUlmE_EEmST_NS6_18_from_function_tagEmEUlmE_EEvmmSS_lb
 	ef	classify-cp/bench/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/bench/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>
 		defef  classify-cp/bench/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/parlay/internal/delayed/scan.h:52:59)>
 		defef  classify-cp/bench/parlay/internal/delayed/scan.h:52:20	caller: block_delayed_scan_t<parlay::delayed_sequence<std::pair<long, long>, std::pair<long, long>, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/common/../parlay/primitives.h:1093:47)> &>
@@ -658,7 +658,7 @@ worklist:
 		defef  classify-cp/bench/parlay/primitives.h:1127:15	caller: tokens<parlay::sequence<char, parlay::allocator<char>, true> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:94:18) &>
 		defef  classify-cp/bench/classifyTime.C:96:22	caller: read_row
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8internal7delayed23block_delayed_flatten_tINS_8sequenceINS4_ImNS_9allocatorImEELb0EEENS5_IS7_EELb0EEEE20initialize_iteratorsEvEUlmE_EEvmmT_lb
 	ef	classify-cp/bench/parlay/internal/delayed/flatten.h:171:7	caller: initialize_iterators
 
@@ -686,11 +686,11 @@ worklist:
 		defef  classify-cp/bench/parlay/primitives.h:1126:38	caller: tokens<parlay::slice<const char *, const char *> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/bench/classifyTime.C:103:18) &>
 		defef  classify-cp/bench/classifyTime.C:108:28	caller: read_data
 
-- [x] ======================================
+- [ ] ======================================
 	_ZN6parlay12parallel_forIZNS_8sequenceIhNS_9allocatorIhEELb0EEC1IZNS_8internal3mapIRS4_Z10build_treeRNS1_I7featureNS2_IS9_EELb0EEEbE4$_11EEDaOT_OT0_mEUlmE_EEmSF_NS4_18_from_function_tagEmEUlmE_EEvmmSE_lb
 	ef	classify-cp/decisionTree/parlay/sequence.h:527:5	caller: sequence<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 
-	- [x] --
+	- [ ] --
 		defef  classify-cp/decisionTree/parlay/sequence.h:483:12	caller: from_function<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:30:10	caller: tabulate<(lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/parlay/internal/delayed/../sequence_ops.h:52:36)>
 		defef  classify-cp/decisionTree/parlay/internal/sequence_ops.h:52:10	caller: map<parlay::sequence<unsigned char, parlay::allocator<unsigned char>, false> &, (lambda at /afs/ece/project/seth_group/ziqiliu/test-cp/pbbs_v2/classify-cp/decisionTree/classify.C:311:39)>
