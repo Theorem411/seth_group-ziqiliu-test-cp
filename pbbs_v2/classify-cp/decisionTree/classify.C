@@ -64,22 +64,12 @@ tree* Leaf(int best) {
   if (best > max_value) abort();
   return new tree(best);
 }
-/** DEBUG: */
-tree* Leaf_par(int best) {
-  if (best > max_value) abort();
-  return new tree(best);
-}
 
 tree* Internal(int i, int cut, int majority, sequence<tree*> children) {
   return new tree(i, cut, majority, children);
 }
-/** DEBUG: */
-tree* Internal_par(int i, int cut, int majority, sequence<tree*> children) {
-  return new tree(i, cut, majority, children);
-}
 
 // To be put into parlay
-
 template <typename S1, typename S2>
 auto delayed_zip(S1 const &a, S2 const &b) {
   return delayed_tabulate(a.size(), [&] (size_t i) {return std::pair(a[i],b[i]);});
@@ -89,21 +79,9 @@ template <typename S1>
 auto all_equal(S1 const &a) {
   return (a.size() == 0) || (count(a, a[0]) == a.size());
 }
-/** DEBUG: */
-template <typename S1>
-auto all_equal_par(S1 const &a) {
-  return (a.size() == 0) || (count(a, a[0]) == a.size());
-}
 
 template <typename S1>
 auto majority(S1 const &a, size_t m) {
-  auto x = histogram_by_index(a,m);
-  return max_element(x) - x.begin();
-}
-
-/** DEBUG: */
-template <typename S1>
-auto majority_par(S1 const &a, size_t m) {
   auto x = histogram_by_index(a,m);
   return max_element(x) - x.begin();
 }
@@ -117,14 +95,6 @@ double entropy(Seq a, int total) {
   return ecost + reduce(delayed_map(a, [=] (int l) {
       return (l > 0) ? -(l * log2(float(l)/total)) : 0.0;}));
 }
-/** DEBUG: simluate copy constructor, separate ef callpath from dac ones */
-template <typename Seq>
-double entropy_ref(Seq &&a, int total) {
-  double ecost = encode_node_factor * log2(float(1 + total)); // to prevent overfitting
-  return ecost + reduce(delayed_map(a, [=] (int l) {
-      return (l > 0) ? -(l * log2(float(l)/total)) : 0.0;}));
-}
-
 
 auto cond_info_continuous(feature const &a, feature const &b) {
   int num_buckets = a.num * b.num;
@@ -154,30 +124,11 @@ auto cond_info_continuous(feature const &a, feature const &b) {
 }
 
 // information content of s (i.e. entropy * size)
-/// DEBUG: disable dflt copy ctor to enable our substituted ones 
-double info(/** DEBUG: originally 'row s' */row &s, int num_vals) {
+double info(row s, int num_vals) {
   size_t n = s.size();
   if (n == 0) return 0.0;
   auto x = histogram_by_index(s, num_vals);
-  /** ORIGINAL: */
-  // return entropy(x, n);
-  /** DEBUG: simulate copy constructor; goal is to separate ef callpath from dac ones */
-  sequence<int> x_cp;
-  x_cp.copy_from(x);
-  return entropy_ref(x_cp, n);
-}
-/** DEBUG: parallel version */
-// double info_par(row s, int num_vals) {
-double info_par(/** DEBUG: originally 'row s' */row &s, int num_vals) {
-  size_t n = s.size();
-  if (n == 0) return 0.0;
-  auto x = histogram_by_index(s, num_vals);
-  /** ORIGINAL: */
-  // return entropy(x, n);
-  /** DEBUG: simulate copy constructor; goal is to separate ef callpath from dac ones */
-  sequence<int> x_cp;
-  x_cp.copy_from(x);
-  return entropy_ref(x_cp, n);
+  return entropy(x, n);
 }
 
 // info of a conditioned on b
@@ -196,85 +147,13 @@ double node_cost(int n, int num_features, int num_groups) {
   return log2(float(num_features));
 }
 
-/** DEBUG: since build_tree recursively calls itself inside a parallel_for (passing lambda) 
- *      while being called at an EF callsite in classify, it becomes a Both and 
- *      propagate Both dataflow to its SCC. To prevent this we divide the parallel
- *      recursive call into a separate function to prevent DAC dataflow from reaching
- *      the build_tree callnode. 
-*/ 
-auto build_tree_par(features &A, bool verbose) {
-  int num_features = A.size();
-  int num_entries = A[0].vals.size();
-  int majority_value = (num_entries == 0) ? -1 : /** DEBUG: */majority_par(A[0].vals, A[0].num);
-  if (num_entries < 2 || /** DEBUG: */all_equal_par(A[0].vals))
-    return /** DEBUG: */Leaf_par(majority_value);
-  /** ORIGINAL: */
-  // double label_info = /** DEBUG: */info_par(A[0].vals,A[0].num);
-  /** DEBUG: bypass default copy ctor to diverge DAC call path from EF ones */
-  sequence<unsigned char> vals_cp;
-  vals_cp.copy_from(A[0].vals);
-  double label_info = /** DEBUG: */info_par(vals_cp,A[0].num);
-
-  auto costs = tabulate(num_features - 1, [&] (int i) {
-      if (A[i+1].discrete) {
-	return std::tuple(cond_info_discrete(A[0], A[i+1]), i+1, -1);
-      } else {
-	//auto [info, cut] = cond_info_continuous(A[0], A[i+1]);
-	auto info_cut = cond_info_continuous(A[0], A[i+1]);
-	return std::tuple(info_cut.first, i+1, info_cut.second);
-      }},1);
-
-  auto min1 = [&] (auto a, auto b) {return (std::get<0>(a) < std::get<0>(b)) ? a : b;};
-  auto min_m = make_monoid(min1, std::tuple(infinity, 0, 0));
-  auto [best_info, best_i, cutx] = reduce(costs, min_m);
-  auto cut = cutx;
-  double threshold = log2(float(num_features));
-
-  if (verbose)
-    cout << num_entries << ", " << best_i << ", " << cut << ", " << label_info << ", " 
-	 << best_info << endl;
-
-  if (label_info - best_info < threshold)
-    return /** DEBUG: */Leaf_par(majority_value);
-  else {
-    int m;
-    row split_on;
-    if (A[best_i].discrete) {
-      m = A[best_i].num;
-      /** ORIGINAL: */
-      // split_on = A[best_i].vals; /** TODO: bypass default copy ctor */
-      /** DEBUG: bypass default copy ctor */
-      split_on.copy_from(A[best_i].vals);
-    } else {
-      m = 2;
-      split_on =  map(A[best_i].vals, [&] (value x) -> value {return x >= cut;});
-    }
-
-    features F = map(A, [&] (feature a) {return feature(a.discrete, a.num);});
-    sequence<features> B(m, F);
-    parallel_for (0, num_features, [&] (size_t j) {
-      auto x = group_by_index(delayed_zip(split_on, A[j].vals), m);
-      for (int i=0; i < m; i++) B[i][j].vals = std::move(x[i]);
-    }, 1);
-    //A.clear();
-
-    auto children = map(B, [&] (features &a) {return build_tree_par(a, verbose);}, 1);
-    return /** DEBUG: */Internal_par(best_i - 1, cut, majority_value, children); //-1 since first is label
-  }
-}
-
 auto build_tree(features &A, bool verbose) {
   int num_features = A.size();
   int num_entries = A[0].vals.size();
   int majority_value = (num_entries == 0) ? -1 : majority(A[0].vals, A[0].num);
   if (num_entries < 2 || all_equal(A[0].vals))
     return Leaf(majority_value);
-  /** ORIGINAL: */
-  // double label_info = info(A[0].vals,A[0].num);
-  /** DEBUG: mimic copy simulator to diverge ef call paths from dac ones */
-  sequence<unsigned char> vals_cp;
-  vals_cp.copy_from(A[0].vals);
-  double label_info = info(vals_cp, A[0].num);
+  double label_info = info(A[0].vals,A[0].num);
 
   auto costs = tabulate(num_features - 1, [&] (int i) {
       if (A[i+1].discrete) {
@@ -302,10 +181,7 @@ auto build_tree(features &A, bool verbose) {
     row split_on;
     if (A[best_i].discrete) {
       m = A[best_i].num;
-      /** ORIGINAL: mimic copy ctor to separate EF callpath from DAC ones */
-      // split_on = A[best_i].vals;
-      /** DEBUG: */
-      split_on.copy_from(A[best_i].vals);
+      split_on = A[best_i].vals;
     } else {
       m = 2;
       split_on =  map(A[best_i].vals, [&] (value x) -> value {return x >= cut;});
@@ -319,7 +195,7 @@ auto build_tree(features &A, bool verbose) {
     }, 1);
     //A.clear();
 
-    auto children = map(B, [&] (features &a) {return /** DEBUG: */build_tree_par(a, verbose);}, 1);
+    auto children = map(B, [&] (features &a) {return build_tree(a, verbose);}, 1);
     return Internal(best_i - 1, cut, majority_value, children); //-1 since first is label
   }
 }
