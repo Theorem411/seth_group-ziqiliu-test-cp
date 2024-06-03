@@ -1,0 +1,7 @@
+# parallel_for manual substitution project
+**GOAL**: reduce data redundancy caused by global counter <u>*delegate_work*</u><br>
+PBBS_V2 benchmarks <u>(classify, delaunayTriangulation, wordCounts here)</u> uses **parallel_for** as a wrapper for **cilk_for**, which internally uses **delegate_work** counter (aka. parallel region depth) to choose between **parallel_for_EF** and **parallel_for_dac**.<br>
+
+This project uses a static analysis (**prr**) to migrate *delegate_work*'s functionality from the dynamic phase to static LLVM analysis pass. An static-phase instrumentation pass finds all parallel_for called dynamically in the source code with definite static results (e.g. definitely EF or DAC), and uses **LLVM's source-level debug metadata** to backtrack parlay library functions that use them as well as their eventual callsites in <u>classify.C</u> or <u>classifyTime.C</u>. This project manually replicates the parlay functions mentioned in the callpaths into EF and DAC clones, and finally replace their callsites with version befitting their static analysis results.
+
+Then finally a dynamic-phase instrumentation pass is run to analyze metrics of the susbtituted **parallel_for**'s, e.g. dynamic entry count, average tripcount and granularity (arguments of parallel_for calls).
