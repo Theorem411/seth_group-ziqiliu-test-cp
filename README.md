@@ -24,3 +24,20 @@ A dynamic-phase instrumentation pass is run to analyze metrics of the substitute
 - Dynamic entry count
 - Average trip count
 - Granularity (arguments of `parallel_for` calls)
+
+
+## Stage 4
+
+- **Implementation details**: bypass default copy constructor to diverge EF and DAC callpaths. (callsite with the most higest dynmamic entry count inside `timeLoop`)
+- **Library Changes**: Parlay library changes in the test group are preserved.
+
+### stage 4 result: 
+#### **static**: 
+32 instrumentation cilkfor results
+- 6 ef cilkfors
+- 12 dac cilkfors
+- 14 both cilkfors
+- 0 untouched cilkfors
+
+#### **dynamic**:
+8 EF, 24477641 DAC, 6122152 not substituted
