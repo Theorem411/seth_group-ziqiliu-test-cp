@@ -223,5 +223,5 @@ row classify(features const &Train, rows const &Test, bool verbose) {
   tree* T = build_tree(A, verbose);
   if (true) cout << "Tree size = " << T->size << endl;
   int num_features = Test[0].size();
-  return map(Test, [&] (row const& r) -> value {return classify_row(T, r);});
+  return /** PRR: EF */map_ef(Test, [&] (row const& r) -> value {return classify_row(T, r);});
 }
