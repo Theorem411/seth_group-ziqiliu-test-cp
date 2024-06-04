@@ -39,4 +39,4 @@ A dynamic-phase instrumentation pass is run to analyze metrics of the substitute
 - 13 both cilkfors
 - 0 untouched cilkfors
 #### **dynamic**:
-6 EF, 2831695 DAC, 27750947 not substituted
+7 EF, 2833081 DAC, 27749561 not substituted
