@@ -47,9 +47,7 @@ sequence<char> csv_row(Seq const &e) {
   return parlay::flatten(ss);
 };
 
-/** DEBUG: argument type changed to reference to bypass default copy ctor
- * ORIGINAL: void report_correct(row result, row labels) { */
-void report_correct(row& result, row& labels) {
+void report_correct(row result, row labels) {
   size_t n = result.size();
   if (n != labels.size()) {
     cout << "size mismatch of results and labels" << endl;
@@ -78,14 +76,7 @@ void timeClassify(features const &Train, rows const &Test, row const &labels,
   cout << endl;
 
   auto x = parlay::filter(result, [] (long i) {return (i > 9) || (i < 0);});
-  /** ORIGINAL: */
-//   report_correct(result, labels);
-  /** DEBUG: bypass default copy ctor to diverge EF callpath from DAC ones */
-  row result_cp;
-  result_cp.copy_from(result);
-  row labels_cp;
-  labels_cp.copy_from(labels);
-  report_correct(result_cp, labels_cp);
+  report_correct(result, labels);
 
   if (outFile != NULL) parlay::chars_to_file(csv_row(result), outFile);
 }
@@ -129,12 +120,7 @@ auto rows_to_features(sequence<char> types, rows const &A) {
     bool is_discrete = (types[i] == 'd');
     auto vals = parlay::tabulate(num_rows, [&] (size_t j) -> value {return A[j][i];});
     int maxv = parlay::reduce(vals, parlay::maxm<char>());
-    /** ORIGINAL: */
-    // return feature(is_discrete, maxv+1, vals); /** TODO: vals bypass default copy ctor */
-    /** DEBUG: bypass default copy ctor */
-    row vals_cp;
-    vals_cp.copy_from(vals);
-    return feature(is_discrete, maxv+1, vals_cp);
+    return feature(is_discrete, maxv+1, vals); /** TODO: vals bypass default copy ctor */
   };
 
   return parlay::tabulate(num_features, get_feature);
