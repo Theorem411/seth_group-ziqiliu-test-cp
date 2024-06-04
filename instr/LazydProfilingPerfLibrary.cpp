@@ -128,6 +128,13 @@ public:
     Log LOG;
 };
 
+/******************************************************************************
+ * boolean switch shared with <pbbsv2-testname>Time.C, where only cilkfors in timeloop are instrumented
+ *******************************************************************************/
+bool instrumentTimeLoopOnly = false;
+/******************************************************************************
+ * main Log datastructure 
+ *******************************************************************************/
 LazydProfilingPerfLibrary library;
 
 extern "C" {
@@ -135,11 +142,17 @@ __attribute__((used))
 void lazydProfilingPerf (int vers, unsigned long tripcount, size_t granularity, int depth, 
                         const char *srcCallerName, 
                         const char *srcDiloc, const char *inlineDiloc) {
+    if (!instrumentTimeLoopOnly)
+        return;
+    
     auto *entry = new LogEntryIntrinsic(vers, tripcount, granularity, depth, srcCallerName, srcDiloc, inlineDiloc);
     library.LOG.emit(entry);
 }
 
 void lazydProfilingCall (const char *calleeLink, const char *callsiteLoc, const char *callerLink) {
+    if (!instrumentTimeLoopOnly)
+        return;
+    
     /// DEBUG: only emit Calledat log when it's at EF callsite
     auto *entry = new LogEntryCallsite(calleeLink, callsiteLoc, callerLink, delegate_work);
     library.LOG.emit(entry);
