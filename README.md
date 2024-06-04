@@ -1,4 +1,4 @@
-# Parallel_for Manual Substitution Project
+# `parallel_for` Manual Substitution Project
 
 ## Goal
 
