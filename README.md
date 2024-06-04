@@ -33,10 +33,10 @@ A dynamic-phase instrumentation pass is run to analyze metrics of the substitute
 
 ### stage 2 result: 
 #### **static**:
-397 static cilkfor results
-- 40 ef results
-- 202 dac results
-- 147 both results
-- 8 untouched results
+30 instrumentation cilkfor results
+- 6 ef cilkfors
+- 11 dac cilkfors
+- 13 both cilkfors
+- 0 untouched cilkfors
 #### **dynamic**:
 6 EF, 2831695 DAC, 27750947 not substituted
