@@ -223,17 +223,23 @@ int classify_row(tree* T, row const&r) {
 
 row classify(features const &Train, rows const &Test, bool verbose) {
   features A = Train;
+
+  auto start1 = std::chrono::high_resolution_clock::now();
   tree* T = build_tree(A, verbose);
+  auto end1 = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double, std::milli> duration1 = end1 - start1;
+  std::cout << "build_tree elapsed time: " << duration1.count() << "ms" << std::endl;
+
   if (true) cout << "Tree size = " << T->size << endl;
   int num_features = Test[0].size();
   /** ORIGINAL: */
   // return map(Test, [&] (row const& r) -> value {return classify_row(T, r);});
 
-  auto start = std::chrono::high_resolution_clock::now();
+  auto start2 = std::chrono::high_resolution_clock::now();
   auto res = map(Test, [&] (row const& r) -> value {return classify_row(T, r);});
-  auto end = std::chrono::high_resolution_clock::now();
+  auto end2 = std::chrono::high_resolution_clock::now();
   
-  std::chrono::duration<double, std::milli> duration = end - start;
-  std::cout << "map func elapsed time: " << duration.count() << "ms" << std::endl;
+  std::chrono::duration<double, std::milli> duration2 = end2 - start2;
+  std::cout << "map func elapsed time: " << duration2.count() << "ms" << std::endl;
   return res;
 }
