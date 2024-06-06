@@ -34,6 +34,9 @@
 #include "parlay/internal/get_time.h"
 #include "classify.h"
 
+/** DBEUG: my own timer code */
+  #include <chrono> 
+
 using namespace parlay;
 using std::cout;
 using std::endl;
@@ -223,5 +226,15 @@ row classify(features const &Train, rows const &Test, bool verbose) {
   tree* T = build_tree(A, verbose);
   if (true) cout << "Tree size = " << T->size << endl;
   int num_features = Test[0].size();
-  return /** PRR: EF */map_ef(Test, [&] (row const& r) -> value {return classify_row(T, r);});
+  
+  /** ORIGINAL: */
+  // return /** PRR: EF */map_ef(Test, [&] (row const& r) -> value {return classify_row(T, r);});
+
+  auto start = std::chrono::high_resolution_clock::now();
+  auto res =/** PRR: EF */map_ef(Test, [&] (row const& r) -> value {return classify_row(T, r);});
+  auto end = std::chrono::high_resolution_clock::now();
+  
+  std::chrono::duration<double, std::milli> duration = end - start;
+  std::cout << "map_ef func elapsed time: " << duration.count() << "ms" << std::endl;
+  return res;
 }
