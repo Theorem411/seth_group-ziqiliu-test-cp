@@ -220,8 +220,24 @@ int classify_row(tree* T, row const&r) {
 
 row classify(features const &Train, rows const &Test, bool verbose) {
   features A = Train;
+  /** ORIGINAL: */
+  // tree* T = build_tree(A, verbose);
+  /** DEBUG: */
+  auto start1 = std::chrono::high_resolution_clock::now();
   tree* T = build_tree(A, verbose);
+  auto end1 = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double, std::milli> duration1 = end1-start1;
+  std::cout << "build_tree exec time: " << duration1.count() << std::endl;
+
   if (true) cout << "Tree size = " << T->size << endl;
   int num_features = Test[0].size();
-  return map(Test, [&] (row const& r) -> value {return classify_row(T, r);});
+  /** ORIGINAL: */
+  // return map(Test, [&] (row const& r) -> value {return classify_row(T, r);});
+  /** DEBUG: */
+  auto start2 = std::chrono::high_resolution_clock::now();
+  auto res = map(Test, [&] (row const& r) -> value {return classify_row(T, r);});
+  auto end2 = std::chrono::high_resolution_clock::now();
+  std::chrono::duration<double, std::milli> duration2 = end2-start2;
+  std::cout << "map func exec time: " << duration2.count() << std::endl;
+  return res;
 }
