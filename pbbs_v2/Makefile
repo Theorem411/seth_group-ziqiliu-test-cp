@@ -18,6 +18,10 @@ CXXFLAGS = -DPARLAY_OPENCILK -mllvm -experimental-debug-variable-locations=false
 		   --opencilk-resource-dir=$(CHEETAH_DIR) --gcc-toolchain=$(GCC_TOOLCHAIN) \
            -fforkd=lazy -ftapir=serial -mcx16 -O3 -std=c++17 -DNDEBUG -I . -ldl -fuse-ld=lld
 
+ifdef IF_VERSION
+	CXXFLAGS += DIF_VERSION
+endif
+
 CXXFLAGS_INSTR = $(CXXFLAGS) -gdwarf-2 -fno-inline -DBUILTIN -Xclang -fpass-plugin=$(INSTR_DIR)/LazydInstrumentLoopPlugin.so
 # ifeq ($(PERF), 0)
 # 	CXXFLAGS_INSTR += -fno-inline -DBUILTIN -Xclang -fpass-plugin=$(INSTR_DIR)/LazydInstrumentLoopPlugin.so
