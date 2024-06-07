@@ -63,14 +63,14 @@ void report_correct(row result, row labels) {
 void timeClassify(features const &Train, rows const &Test, row const &labels,
 		  int rounds, bool verbose, char* outFile) {
   row result;
-  #ifdef BUILTIN
+  #ifdef ASSERT
   instrumentTimeLoopOnly = true;
   #endif
   time_loop(rounds, 0.0, // 2.0,
 	    [&] () {},
 	    [&] () {result = classify(Train, Test, verbose);},
 	    [&] () {});
-  #ifdef BUILTIN
+  #ifdef ASSERT
   instrumentTimeLoopOnly = false;
   #endif
   cout << endl;
