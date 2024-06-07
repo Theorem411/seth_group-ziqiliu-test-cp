@@ -16,7 +16,7 @@ WORK_DIR = $(BASE_DIR)/test-cp/pbbs_v2
 # Clang++ flags and load dynamic library flags
 CXXFLAGS = -DPARLAY_OPENCILK -mllvm -experimental-debug-variable-locations=false \
 		   --opencilk-resource-dir=$(CHEETAH_DIR) --gcc-toolchain=$(GCC_TOOLCHAIN) \
-           -fforkd=lazy -ftapir=serial -mcx16 -O3 -std=c++17 -I . -ldl -fuse-ld=lld # -DNDEBUG
+           -fforkd=lazy -ftapir=serial -mcx16 -O3 -std=c++17 -DNDEBUG -I . -ldl -fuse-ld=lld
 
 CXXFLAGS_INSTR = $(CXXFLAGS) -gdwarf-2 -fno-inline -DBUILTIN -Xclang -fpass-plugin=$(INSTR_DIR)/LazydInstrumentLoopPlugin.so
 # ifeq ($(PERF), 0)
