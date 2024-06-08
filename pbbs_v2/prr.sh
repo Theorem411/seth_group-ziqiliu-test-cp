@@ -37,7 +37,7 @@ compileAnalysis() {
 
     pushd $SRC_ORIG_PATH > /dev/null
     # ParallelForDebugInfo: output .cilkfor.json containing all static cilkfor result
-    echo -e "\n   deriving ${TESTNAME}.cilkfor.json ..."
+    echo -e "\n   deriving ${testname}.cilkfor.json ..."
     export TESTNAME=$testname
     opt -load $PRR_DIR/libParallelForDebugInfo.so -load-pass-plugin $PRR_DIR/libParallelForDebugInfo.so \
         -passes="pbbsv2-dbg" ${EXE}Link.ll --disable-output \
@@ -49,7 +49,7 @@ compileAnalysis() {
 
     # CallgraphExplain: use reverse callgraph showing calling history in source code
     # output .cg.json
-    echo -e "\n   deriving ${TESTNAME}.cg.json ..."
+    echo -e "\n   deriving ${testname}.cg.json ..."
     export TESTNAME=$testname
     opt -load $PRR_DIR/libCallgraphExplain.so -load-pass-plugin $PRR_DIR/libCallgraphExplain.so \
         -passes="callgraph-explain" ${EXE}Link.ll --disable-output
