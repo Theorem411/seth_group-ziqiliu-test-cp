@@ -224,7 +224,7 @@ int classify_row(tree* T, row const&r) {
 row classify(features const &Train, rows const &Test, bool verbose) {
   features A = Train;
   /** ORIGINAL: */
-  tree* T = build_tree(A, verbose);
+  //  tree* T = build_tree(A, verbose);
   /** DEBUG: */
   auto start1 = std::chrono::high_resolution_clock::now();
   tree* T = build_tree(A, verbose);
