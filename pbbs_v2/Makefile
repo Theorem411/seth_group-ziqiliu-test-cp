@@ -22,6 +22,10 @@ ifdef IF_VERSION
 	CXXFLAGS += -DIF_VERSION
 endif
 
+ifdef NO_DAC
+	CXXFLAGS += -DNO_DAC
+endif
+
 CXXFLAGS_INSTR = $(CXXFLAGS) -gdwarf-2 -fno-inline -DBUILTIN -Xclang -fpass-plugin=$(INSTR_DIR)/LazydInstrumentLoopPlugin.so
 # ifeq ($(PERF), 0)
 # 	CXXFLAGS_INSTR += -fno-inline -DBUILTIN -Xclang -fpass-plugin=$(INSTR_DIR)/LazydInstrumentLoopPlugin.so
